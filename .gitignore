@@ -1,0 +1,23 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+logs/
+.DS_Store
+Thumbs.db
+
+# paper build artifacts
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.pdf
+paper/*.synctex.gz
+
+# never commit data we do not redistribute, or credentials
+# (anchored with "/": the */results/ folders of the experiments ARE part of the release)
+/external/
+/results/
+*.env
+.env
+kaggle.json

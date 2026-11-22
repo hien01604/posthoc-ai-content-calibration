@@ -1,0 +1,24 @@
+\begin{table}[t]
+\caption{Interval coverage (\%) on documents containing AI: $k{=}20$ human
+segments from one real paper, $\pi k$ of them replaced by AI scores.}
+\label{tab:mixed}
+% SOURCE: make_table_mixed.py <- f6_coverage_mixed_emp.csv (f6_mixed_pi_empirical_ci.py)
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3.2pt}
+\begin{tabular}{@{}rccccc@{}}
+\toprule
+& \multicolumn{3}{c}{Empirical, calibrated at} & \multicolumn{2}{c}{Gaussian} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-6}
+$\pi$ & $\pi{=}0$ & $\hat{\pi}$ (plug-in) & true $\pi$ & $+$deff & plain \\
+\midrule
+0.00 & 94.6 & 93.0 & 94.6 & 94.0 & 87.7 \\
+0.25 & 79.6 & 93.2 & 95.1 & 95.9 & 85.7 \\
+0.50 & 72.5 & 94.1 & 94.9 & 97.2 & 84.7 \\
+0.75 & 76.4 & 93.7 & 94.9 & 98.7 & 86.9 \\
+1.00 & 67.2 & 93.8 & 94.7 & 97.4 & 86.4 \\
+\midrule
+\multicolumn{6}{@{}l@{}}{\footnotesize Plug-in half-width narrows $0.147\rightarrow0.101$ as $\hat{\pi}$ goes $0\rightarrow1$.}\\
+\bottomrule
+\end{tabular}
+\end{table}

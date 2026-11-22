@@ -1,0 +1,777 @@
+\documentclass[10pt,conference,a4paper]{IEEEtran}
+\pdfminorversion=6
+
+\usepackage[T1]{fontenc}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{url}
+\usepackage[stretch=50,shrink=50,step=1]{microtype}
+\setlength{\columnsep}{0.2in}
+\setlength{\textfloatsep}{4pt plus 2pt minus 2pt}
+\setlength{\floatsep}{4pt plus 2pt minus 2pt}
+\setlength{\intextsep}{4pt plus 2pt minus 2pt}
+\setlength{\abovecaptionskip}{3pt}
+\setlength{\belowcaptionskip}{2pt}
+
+\newcommand{\sect}[1]{\S#1}
+
+\begin{document}
+
+\title{Post-Hoc Calibration of AI-Content Estimates\\Across Document Length}
+
+\author{
+\IEEEauthorblockN{
+Pham Quang Dai Phuc,
+Pham Thi Minh Hien,
+Nguyen Dinh Thuan$^{\ddagger}$
+}
+\IEEEauthorblockA{
+University of Information Technology, Ho Chi Minh City, Vietnam\\
+Vietnam National University, Ho Chi Minh City, Vietnam\\
+22521137@gm.uit.edu.vn \quad
+22520422@gm.uit.edu.vn \quad
+thuannd@uit.edu.vn \\
+\textsuperscript{$\ddagger$} Corresponding author
+}
+}
+
+
+\maketitle
+
+\begin{abstract}
+As AI-assisted writing spreads, the useful question is what proportion of a document is
+AI-generated --- the percentage Turnitin and Pangram report. Without retraining any
+detector, we study how segment scores from 16 existing checkpoints are aggregated into
+two outputs: an \emph{estimate} $\hat{\pi}$ of how far a document resembles AI writing
+(not the proportion an AI typed), and a \emph{decision} to flag it at a fixed
+false-positive rate (FPR). Because segment scores are strongly skewed, both degrade with
+document length $k$ when built on the raw score scale. On arXiv Computer Science text,
+$\hat{\pi}$ is accurately centered out of sample, but its nominal 95\% Gaussian interval
+covers only 86.7\% by $k{=}20$; a distribution-free interval holds coverage if
+calibrated near the reported value, but is wide.
+Raw-scale thresholds miss a 1\% FPR target in both directions, whereas converting scores
+to $z$-scores against human text \emph{before} correcting for within-document
+correlation holds FPR near target at every length tested, calibrating on human text
+alone; the order matters, as the correlation more than doubles on the transformed
+scale, though the gain over the best raw-scale rule is modest. FPR is measured on
+full-length human papers; power on full-length AI documents remains unmeasured.
+\end{abstract}
+
+\begin{IEEEkeywords}
+post-hoc calibration, AI-generated text detection, mixture proportion estimation,
+design-effect correction, within-document correlation, document length
+\end{IEEEkeywords}
+
+\section{Introduction}
+
+As AI-assisted writing spreads, how much of a document is AI-generated is more useful
+than whether it ``contains AI,'' and cannot be answered by simply averaging segment
+scores.
+
+We neither train nor modify detectors. We convert their segment scores into a
+document-level estimate and decision that remain calibrated with length
+(Fig.~\ref{fig:pipe}); the 16 checkpoints of \sect{III-B} are inputs, not contributions.
+
+One claim unifies both results: raw-scale intervals and thresholds fail across document
+length because they impose a Gaussian shape on skewed segment scores. Although more
+segments should make the mean more Gaussian, neither result improves on real documents
+(\sect{V-A}).
+
+\subsection{Background}
+Turnitin and Pangram report text percentages; GPTZero instead reports a document-level
+authorship probability. These appear only in product documentation, and no examined
+public corpus supports evaluation at submission length: median 5{,}560 words
+(19 chunks; upper quartile 27; \sect{III-C}). OpAI-Bench (244--367 words) and ARB are
+about one chunk; FABTAB, RAID and M4GT-Bench cannot be grouped into documents.
+DAGPap24 is long (5{,}400 words) but leaks construction artifacts: a 22-feature model
+using no words reaches AUROC 0.9991.
+
+\subsection{Contributions}
+\begin{enumerate}
+\item \textbf{An interval for $\hat{\pi}$ across length.} We retain the estimator
+(\sect{II-B}) but add an interval for an individual-document estimate.
+On real documents (\sect{IV-B}), clustering correction is insufficient; only a
+distribution-free interval maintains coverage across $k$. Error skew reverses with
+$\pi$, so human calibration covers only $67.2\%$ at $\pi{=}1$ and requires plug-in
+recalibration at $\hat{\pi}$.
+
+\item \textbf{Correlation depends on aggregation scale.} With one estimator,
+$\rho_{\text{raw}}=0.13$ but $\rho_z=0.30$ (\sect{V-B}). Raw Gaussian and empirical
+quantiles miss a 1\% target in opposite directions; transformed aggregation holds
+0.76--0.97\%, closer to target though only by $0.44$ points ($p=0.044$). Correlation
+remains
+essential (18.3\% without it): transformation relocates rather than replaces the design
+effect (\sect{V-A}). The ingredients are standard; their ordering is consequential.
+\end{enumerate}
+
+\noindent\textbf{Procedure in brief.} The two outputs answer different questions and
+never feed each other: the \emph{estimate}, $\hat{\pi}$ with an interval, says how
+AI-like a document is; the \emph{decision} says whether to flag it, at an FPR fixed at
+any length. Calibration is done once per detector: (i)~human and AI mean segment scores
+$\mu_0,\mu_1$ from labeled validation data; (ii)~from about 200 human documents, a pool
+of human segment scores and the correlation $\rho_z$ of their transformed scores
+(\sect{V-B}); (iii)~error percentiles of $\hat{\pi}$ on mixtures with AI segments at
+several known $\pi$ (\sect{IV-B}). For a new document of $k$ segments, report
+$\hat{\pi}$ with the interval calibrated at the $\pi$ nearest to it; to decide,
+$z$-score each segment against the human pool and flag if the sum exceeds
+$2.33\sqrt{k(1+(k-1)\rho_z)}$ (1\% FPR, \eqref{eq:hartung-threshold}).
+
+Three scope conditions apply. The domain is arXiv Computer Science only, deliberately:
+$\rho_z$ reflects writing style, and pooling domains would average it away. FPR is
+measured at deployment length, but power needs full-length AI papers and remains future
+work. Rates assume a clean human/AI dichotomy; on lightly AI-edited human text a nominal
+1\% rule operates nearer 5--10\% at segment level (\sect{VI}).
+
+\section{Related Work}
+
+\subsection{Watermarking and distribution-free FPR control}
+WaterSeeker~\cite{waterseeker2025} and Zhao et al.~\cite{zhao2025acl} localize
+watermarked spans analytically, but dependent overlapping windows preclude deriving
+document FPR from window FPR. Multiscale conformal prediction~\cite{mcp2025acl} instead
+selects thresholds by length bin; \sect{V-D} adapts it as a baseline. We study empirical
+aggregation for learned detectors without analytical nulls, where score skew makes the
+apparent intra-document correlation scale-dependent (\sect{V-B}).
+
+\subsection{Estimating AI content proportions at the document or corpus level}
+Class-proportion estimation from classifier outputs is \emph{quantification
+learning}~\cite{forman2008,hopkinsking2010,gonzalez2017}. PACC~\cite{bella2010} linearly
+anchors the two class mean scores; Forman instead corrects hard-positive counts by TPR
+and FPR. We retain PACC (\sect{III-D}) and add its document-level interval. Liang et
+al.~\cite{liang2024monitoring} work at corpus level, avoiding within-document
+correlation; HACo-Det~\cite{haco2025} is the only known peer-reviewed individual-document
+study. Neither anticipates that scale dependence, nor the length-dependent
+miscalibration it causes.
+
+\subsection{Benchmarks and the length gap}
+Sci-SpanDet~\cite{scispandet2026} and DAMASHA~\cite{damasha2026} address span reliability
+and authorship transitions, not document proportions. OpAI-Bench (arXiv:2606.06481) and
+ARB (arXiv:2607.29539) are unreviewed and cited only as motivation; their 15--23$\times$ length gap from real
+papers hides the effect of \sect{V}.
+
+\section{Dataset and Setup}
+
+\subsection{Dataset Construction}
+This corpus exists to \emph{evaluate} the post-processing of \sect{IV}--\sect{V}; the
+detectors trained on it are inputs. Its design matters only in that shortcuts would
+inflate every downstream rate.
+From each full-text arXiv paper we extract the abstract and two body paragraphs. Each
+human segment is paired with output from 21 models across OpenAI, Anthropic, Google,
+Meta, Mistral, DeepSeek and Qwen; hashed segment identifiers fix prompt, mode and
+temperature ($0.3$--$1.1$). Identical normalization converts typography to ASCII and
+removes introductory phrases, closing a shortcut: print punctuation occurs in 37\% of
+AI samples but no LaTeX-derived human sample.
+
+\begin{table}[t]
+\caption{Data schema for the corpus.}
+\label{tab:fields}
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Field & Values & Why it is there \\
+\midrule
+paper identifier & arXiv ID & keys the split, and groups \\
+                 &          & every document-level statistic \\
+region           & abstract, 2 body paragraphs & fixes what is compared \\
+label            & human / AI & --- \\
+edit degree      & 0 human, 1 polished, & separates wholly AI text from \\
+                 & 3 rewrite, 4 de novo & lightly edited human text \\
+generator        & 21 models, 7 providers & --- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\caption{Corpus splits, the share of papers assigned to each by hash, and their use.
+The names in the first column are used throughout the paper.}
+\label{tab:splits}
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Split & Share & What it is for \\
+\midrule
+training              & \multirow{2}{*}{70\%} & fitting the detectors \\
+validation            &                       & anchors $\mu_0,\mu_1$, nothing else \\
+held-out generator    & 15\%                  & human/AI pairs; Google, DeepSeek only here \\
+false positive        & 15\%                  & 3{,}335 human, 955 lightly edited \\
+full-length corpus    & separate              & 1{,}200 papers, human only (\sect{III-C}) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:fields} lists what each row records and Table~\ref{tab:splits} how the
+corpus is divided. A rule fitted and scored within one split uses random
+\emph{calibration} and \emph{evaluation halves} of its papers; each repetition is a
+\emph{resample}, not a new split. Pairs are
+sentence-truncated to matched budgets, discarding the 15\%
+with
+largest symbol, number and proper-noun discrepancies. Surface-model AUROC then falls
+from 0.9343 to 0.8909, and to 0.545 on a length/surface-matched subset of the
+held-out-generator split (1{,}206 segments), while the 16 detectors retain
+0.927--0.965. Surface cues therefore no longer separate the classes, so what
+\sect{IV}--\sect{V} measure is post-processing rather than a corpus artifact.
+
+\subsection{Detector inputs: 16 checkpoints and reference baselines}
+All methods in \sect{IV}--\sect{V} post-process detector outputs. The 16 inputs are
+three seeds each of
+RoBERTa-large~\cite{roberta2019}, DeBERTa-v3-large~\cite{deberta2023},
+XLM-R-large~\cite{xlmr2020} and ModernBERT-large~\cite{modernbert2024}, plus four
+GREATER/RADAR adversarial variants~\cite{greater2025,radar2023}. Held-out-generator AUROC is
+0.9746--0.9875 and TPR 0.8435--0.9254 at validation-calibrated $\alpha=1\%$; TF-IDF and
+surface baselines reach 0.9491 and 0.8715. Four zero-shot detectors score only
+0.40--0.53, which we attribute to matching away the length and token cues curvature
+scores use; two are sign-reversed. We neither flip nor retune them, and claim no
+comparison. Supplementary Tables S1a--S1b give checkpoint metrics, anchors, $\rho_z$ and
+document rates.
+
+\subsection{Full document-level test set}
+The full-length human corpus contains pre-ChatGPT arXiv Computer Science papers from
+2010--2015, excluding all other splits. The same 275-word sentence-boundary segmentation retains
+every eligible segment: 27{,}119 from 1{,}200 papers (median 19, mean 22.6, maximum 262).
+Its human-only labels permit document FPR but not TPR measurement (\sect{VI}).
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{fig2_pipeline.pdf}
+\caption{Pipeline for post-processing. The detector is fixed.}
+\label{fig:pipe}
+% SOURCE: make_fig2.py
+\end{figure}
+
+\subsection{Estimator for $\hat{\pi}$}
+Let $\bar{s}$ be the raw mean segment score, unlike the transformed mean $Z_k$ of
+\sect{V-B}. The document's AI-like fraction is
+\begin{equation}
+\hat{\pi}=\frac{\bar{s}-\mu_0}{\mu_1-\mu_0},
+\end{equation}
+where validation-only $\mu_0,\mu_1$ are wholly human/AI means, independent of both test
+sets; evaluation anchoring would make centering tautological. Its expectation equals the
+share of AI-written segments only when each segment is wholly human or wholly AI;
+otherwise, as for lightly edited text (\sect{VI}), $\hat{\pi}$ measures how closely the
+document resembles AI writing, not the share an AI typed. A representative
+RoBERTa-large checkpoint has $\mu_0=0.0658$, $\mu_1=0.9643$. Because $\hat{\pi}$ is
+unbounded, we clip only for display; all results use it unclipped.
+
+\section{Result 1 --- $\hat{\pi}$ Is Correctly Centered, but Its Interval and Its Threshold Both Depend on $k$}
+
+\subsection{$\hat{\pi}$ matches ground truth: out-of-sample measurement}
+% SOURCE: output/pihat_sanity_16models.csv (paper_level_pihat.py)
+For each of the 16 checkpoints we compute $\hat{\pi}$ for every sample in
+the held-out-generator split using $\mu_0,\mu_1$ estimated exclusively from validation,
+giving 637 documents per class; means are computed per checkpoint, then averaged, while
+medians and percentiles pool all $10{,}192$ checkpoint--document predictions. Mean
+$\hat{\pi}$ is $0.007$ for human and
+$0.982$ for AI documents (checkpoint ranges $[-0.009,0.021]$, $[0.966,0.995]$): the
+estimator is correctly centered at both extremes though the anchors never saw the
+evaluation set. The medians, $-0.038$ and $1.045$, deviate from the means in opposite
+directions: the AI distribution is left-skewed with a long left tail ($p_5=0.531$), the
+human one right-skewed ($p_{95}=0.325$). This is the first evidence for the central
+claim of \sect{V}: segment scores are strongly non-Gaussian, and $5\%$ of wholly human
+documents already report above $\hat{\pi}=0.32$.
+
+Centering at the endpoints does not establish accuracy in between, so we built
+$k{=}20$ documents replacing a controlled random fraction of segments by their AI
+counterparts, which that split supplies for the same 1{,}514 slots.
+Across $\pi\in\{0,0.1,0.25,0.5,0.75,0.9,1\}$ mean $\hat{\pi}$ is $0.007$, $0.104$,
+$0.246$, $0.492$, $0.737$, $0.878$ and $0.977$ (median absolute error $0.039$).
+Linearity is a property of an affine estimator, not a finding; what the endpoints
+cannot predict is the error's size, almost entirely dispersion rather than bias
+(median $|\text{bias}|/\mathrm{SD}=0.15$).
+
+\subsection{An interval for $\hat{\pi}$, and what it costs}
+A point estimate needs uncertainty. As a cluster sample, a document's segments give
+$\hat{\pi}$ the design effect \sect{V} applies to a threshold:
+\begin{equation}
+\widehat{\mathrm{SE}}(\hat{\pi})=\frac{1}{\mu_1-\mu_0}
+\sqrt{\frac{\hat{\sigma}^2}{k}\bigl(1+(k-1)\rho_{\text{raw}}\bigr)},
+\label{eq:pi-se}
+\end{equation}
+with $\hat{\sigma}^2$ the pooled segment-score variance and $\rho_{\text{raw}}$ the
+raw-scale intra-class correlation (median $0.132$, range 0.087--0.167), both estimated
+on a calibration half of the full-length corpus, disjoint from the documents measured.
+We compare $\hat{\pi}\pm z_{0.975}\widehat{\mathrm{SE}}$, with and without the clustering
+factor, against a distribution-free interval taking empirical $2.5$/$97.5$ percentiles
+on the same half.
+
+\begin{table}[t]
+\caption{Coverage and width of a nominal $95\%$ interval for $\hat{\pi}$ on human
+documents.}
+\label{tab:pici}
+% SOURCE: final_experiments_rivf2026/results/f1_coverage_null.csv (f1_pihat_ci.py)
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}rccccc@{}}
+\toprule
+& \multicolumn{3}{c}{Coverage (\%)} & \multicolumn{2}{c}{Half-width} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-6}
+$k$ & Gaussian & $+$design eff. & Empirical & Gauss. & Emp. \\
+\midrule
+1  & 95.7 & 95.7 & 94.8 & 0.368 & 0.493 \\
+5  & 90.5 & 93.3 & 94.8 & 0.165 & 0.198 \\
+10 & 89.5 & 93.5 & 94.8 & 0.116 & 0.163 \\
+20 & 86.7 & 93.8 & 94.8 & 0.082 & 0.152 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:pici} gives that coverage, measured on the 576 papers of the full-length corpus with
+at least 20 segments --- the controlled population of \sect{V-A}, where within-document
+correlation is genuine rather than simulated. The Gaussian interval is correct at
+$k{=}1$ and decays to $86.7\%$ at $k{=}20$; the design effect recovers most of that gap
+without closing it; only the distribution-free interval holds $94.8\%$ at every $k$,
+and it also varies least across checkpoints ($93.5$--$95.6\%$ at $k{=}20$).
+
+The honest interval is the wide one: a full paper admits about $\pm0.15$, so
+$\hat{\pi}=0.30$ and $0.55$ are not reliably distinguishable, and more text barely helps
+(half-width $0.198$, $0.163$, $0.152$ at $k{=}5,10,20$). That is four times the MAE of
+\sect{IV-A}, whose mixtures draw segments from different papers and so lack
+within-document correlation: synthetic error understates real uncertainty.
+
+% SOURCE: final_experiments_rivf2026/results/f6_coverage_mixed_emp.csv (f6_mixed_pi_empirical_ci.py)
+
+
+% >>> TABLE_MIXED_BEGIN -- sinh boi make_table_mixed.py, DUNG sua tay
+\begin{table}[t]
+\caption{Interval coverage (\%) on documents containing AI: $k{=}20$ human
+segments from one real paper, $\pi k$ of them replaced by AI scores.}
+\label{tab:mixed}
+% SOURCE: make_table_mixed.py <- f6_coverage_mixed_emp.csv (f6_mixed_pi_empirical_ci.py)
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3.2pt}
+\begin{tabular}{@{}rccccc@{}}
+\toprule
+& \multicolumn{3}{c}{Empirical, calibrated at} & \multicolumn{2}{c}{Gaussian} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-6}
+$\pi$ & $\pi{=}0$ & $\hat{\pi}$ (plug-in) & true $\pi$ & $+$deff & plain \\
+\midrule
+0.00 & 94.6 & 93.0 & 94.6 & 94.0 & 87.7 \\
+0.25 & 79.6 & 93.2 & 95.1 & 95.9 & 85.7 \\
+0.50 & 72.5 & 94.1 & 94.9 & 97.2 & 84.7 \\
+0.75 & 76.4 & 93.7 & 94.9 & 98.7 & 86.9 \\
+1.00 & 67.2 & 93.8 & 94.7 & 97.4 & 86.4 \\
+\midrule
+\multicolumn{6}{@{}l@{}}{\footnotesize Plug-in half-width narrows $0.147\rightarrow0.101$ as $\hat{\pi}$ goes $0\rightarrow1$.}\\
+\bottomrule
+\end{tabular}
+\end{table}
+% <<< TABLE_MIXED_END
+
+Table~\ref{tab:pici} covers human documents only. Table~\ref{tab:mixed} repeats the
+measurement on documents that do contain AI, and gives the cost:
+an interval calibrated there collapses once a document contains AI. Width is not the
+cause, that interval being the widest at $\pm0.147$; position is. Error skew is
+right-tailed under a human null and left-tailed under an AI one, so calibration at one
+end misfits the other. As $\pi$ is unknown in deployment, the plug-in $\hat{\pi}$
+interval holds throughout. A reported percentage should carry an interval calibrated at
+that percentage.
+
+\subsection{Incorrectly set thresholds fail in opposite directions}
+% SOURCE: output/mean_ktransfer_16models.csv; ranges -> s4_ranges_main_tables.csv
+
+
+A decision rule can be miscalibrated even when $\hat{\pi}$ is centered, because the
+right threshold depends on the length of the population used to set it.
+% >>> TABLE_KTRANSFER_BEGIN -- sinh boi make_table_ktransfer.py, DUNG sua tay
+\begin{table}[t]
+\caption{Cost of pinning the threshold at the wrong length. Only $k{\approx}2.38$
+matches the split it is scored on. Percentages.}
+\label{tab:ktransfer}
+% SOURCE: make_table_ktransfer.py <- output/mean_ktransfer_16models.csv
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+& \multicolumn{2}{c}{$k{\approx}1$} & \multicolumn{2}{c}{$k{\approx}22.6$} & \multicolumn{2}{c}{$k{\approx}2.38$} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+Model & FPR & Miss & FPR & Miss & FPR & Miss \\
+\midrule
+RoBERTa-large (s44) & 0.00 & 16.33 & 3.77 & 2.04 & 1.26 & 6.16 \\
+RoBERTa-large (s43) & 0.00 & 16.33 & 4.40 & 1.10 & 1.30 & 3.87 \\
+GREATER + RoBERTa-large (s42) & 0.16 & 16.80 & 4.08 & 2.04 & 1.30 & 5.30 \\
+XLM-R-large (s42) & 0.16 & 19.15 & 4.87 & 1.10 & 1.32 & 6.22 \\
+XLM-R-large (s44) & 0.16 & 19.31 & 5.18 & 1.26 & 1.23 & 10.17 \\
+GREATER + XLM-R-large (s42) & 0.16 & 19.78 & 6.59 & 0.94 & 1.24 & 5.56 \\
+XLM-R-large (s43) & 0.16 & 19.94 & 4.08 & 0.94 & 1.27 & 6.68 \\
+RADAR (s42) & 0.16 & 21.04 & 6.28 & 1.57 & 1.30 & 4.51 \\
+DeBERTa-v3-large (s42) & 0.31 & 13.50 & 6.75 & 0.63 & 1.32 & 8.56 \\
+DeBERTa-v3-large (s44) & 0.31 & 15.07 & 5.34 & 1.26 & 1.37 & 10.74 \\
+ModernBERT-large (s43) & 0.31 & 16.17 & 4.71 & 0.94 & 1.40 & 6.16 \\
+ModernBERT-large (s44) & 0.31 & 18.84 & 7.85 & 0.78 & 1.32 & 3.85 \\
+DeBERTa-v3-large (s43) & 0.47 & 15.86 & 5.97 & 0.63 & 1.31 & 5.17 \\
+RoBERTa-large (s42) & 0.47 & 17.74 & 5.02 & 1.88 & 1.34 & 11.61 \\
+ModernBERT-large (s42) & 0.47 & 17.90 & 4.40 & 0.78 & 1.29 & 4.84 \\
+RADAR + XLM-R-large (s42) & 0.63 & 24.80 & 5.34 & 4.40 & 1.37 & 20.50 \\
+\midrule
+\textbf{Median} & \textbf{0.24} & \textbf{17.82} & \textbf{5.10} & \textbf{1.10} & \textbf{1.31} & \textbf{6.16} \\
+\bottomrule
+\end{tabular}
+\end{table}
+% <<< TABLE_KTRANSFER_END
+
+Table~\ref{tab:ktransfer} scores three sources for $\tau$ on the same split
+(held-out-generator, $k\approx2.38$, 637 pairs): a segment-level threshold from
+validation ($k\approx1$), one pinned at $k\approx22.6$ on the full-length corpus, and
+one calibrated at the evaluation length itself (fitted on a calibration half, scored on
+the other over 200 resamples; the first two on all 637 pairs). All three lie on one
+trade-off curve, so the failure is not a worse curve but that pinning $\tau$ at the
+wrong $k$ lands far from the $\alpha$ requested, too strict from below and too
+permissive from above. That holds for every checkpoint, and the spread is wide enough
+that the median understates the risk: the correct-$k$ control misses
+$3.85$--$20.50\%$.
+
+
+\section{Result 2 --- $z$-Transformation First, Correlation Adjustment Later}
+
+\subsection{Why direct Gaussian design-effect adjustment fails on the raw scale}
+We use a controlled design over the same 576 documents throughout, those with at least
+20 segments --- $48\%$ of the corpus, long enough for the full grid. Only $k$ changes,
+by within-document subsampling; no document enters or leaves. Results aggregate across
+16 checkpoints and five resamples.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{fig1_fpr_curve.png}
+\caption{Document-level FPR against a $1\%$ target.}
+\label{fig:fpr}
+% SOURCE: make_fig1.py <- final_experiments_rivf2026/results/f7_cluster_marginal_ci.csv
+%         (static, emp_deff, zscale) + output/pihat_static_vs_corrected_by_k.csv (Gauss)
+\end{figure}
+
+Both raw-scale rules threshold the document mean $\bar{s}$ at
+\begin{equation}
+\tau(k)=\mu_0+(q-\mu_0)\sqrt{\frac{1+(k-1)\rho_{\text{raw}}}{k}},
+\label{eq:raw-rule}
+\end{equation}
+differing only in $q$: the Gaussian variant sets $q=\mu_0+z_{1-\alpha}\hat{\sigma}$,
+the empirical one the observed $99$th percentile of a single calibration segment. As Fig.~\ref{fig:fpr} shows, the Gaussian variant never brings FPR
+near $1\%$: it jumps to $6.78\%$ at $k{=}2$ then settles around $5.4\%$, five times the
+target, with no sign of improving as $k$ grows. The factor $1+(k-1)\rho_{\text{raw}}$
+corrects only the variance; the threshold built from it still assumes a Gaussian null.
+Under that null $\mu_0\approx0.07$ while the right tail reaches nearly $1$, so
+$z_{1-\alpha}\sigma$ falls well short of the true $99$th percentile.
+
+That averaging never rescues it follows from \eqref{eq:raw-rule}, whose factor is not
+$1/\sqrt{k}$ but $\sqrt{(1+(k-1)\rho)/k}\to\sqrt{\rho}$: $\tau(k)$ flattens to a floor
+$\mu_0+(q-\mu_0)\sqrt{\rho}$ set by $\rho$ alone, which is why the curve plateaus. With
+$\rho_{\text{raw}}=0.13$ that floor retains $36\%$ of the distance from $\mu_0$ to $q$,
+applied to a $q$ already short; on the $z$-scale $\rho_z=0.303$ puts it at $55\%$. The
+central limit theorem improves the shape of $\bar{s}$, but not fast enough to overcome a
+threshold converging to the wrong place.
+
+% SOURCE: final_experiments_rivf2026/results/f5_deff_necessity.csv (f5_deff_necessity.py)
+To isolate the ingredients, replacing the Gaussian quantile by the empirical $99$th
+percentile of a single segment, with design effect and raw scale untouched, fixes the
+skew but overcorrects: FPR falls to $0.33$--$0.47\%$ for every $k>1$, a third of target.
+Both variants scale $q$ by the same Gaussian-motivated shrinkage term of
+\eqref{eq:raw-rule}, so choosing $q$ empirically cannot repair it; the two raw-scale
+quantiles miss in opposite directions. Deleting the clustering factor instead ($\rho=0$,
+the rule otherwise identical) is worse still: on the $z$-scale FPR rises
+$0.97\rightarrow5.40\rightarrow18.28\%$ at $k=1,5,20$, on the raw scale
+$1.10\rightarrow2.54\%$. The factor is necessary on both scales, and does most work on
+the transformed one, where $\rho$ is over twice as large.
+
+At $k{=}1$ the empirical and $z$-scale rules use the same order statistic, so their
+residual gap ($1.10$ against $0.97\%$) is quantile-estimation error; every divergence at
+$k>1$ traces to the averaging scale, and hence to which $\rho$ governs the design effect.
+
+Since both rules score the same papers, we bootstrap their \emph{difference}
+($B{=}2000$), resampling paper clusters because the five evaluation halves overlap. The
+$z$-scale rule is closer to target, but only by $0.44$ points of root-mean-square and
+$0.43$ of worst-case deviation ($[-0.53,-0.02]$, $p=0.044$; $[-0.58,-0.02]$,
+$p=0.047$); both beat the static threshold far more decisively ($p<0.001$). The
+empirical rule errs on the safe side, significantly \emph{below} $1\%$ at every $k>1$,
+while the $z$-scale rule contains the target at every $k$. This ranks calibration, not
+safety; \sect{V-C} adds power at matched FPR.
+
+Every working rule sits slightly \emph{below} target, and the standardized statistic
+$T_k=Z_k/\sqrt{1+(k-1)\rho_z}$ says why: near-Gaussian in shape but under-dispersed at
+$k{=}20$ (sd $0.965$), implying Hartung's estimator overstates $\rho_z$ by about $9\%$.
+The rule is conservative by construction.
+
+\subsection{Mechanism: transformation before correlation adjustment}
+For each segment score $s_i$, we compute a continuity-corrected empirical right-tailed
+$p$-value against a pool of human calibration scores $s^{(0)}_1,\ldots,s^{(0)}_m$
+held out from the documents evaluated, so a small $p_i$ marks a segment scoring higher
+than most human calibration text:
+\begin{equation}
+\begin{aligned}
+p_i&=\frac{\#\{j:s^{(0)}_j\ge s_i\}+\tfrac{1}{2}}{m+1},\\
+z_i&=\Phi^{-1}(1-p_i).
+\end{aligned}
+\label{eq:pit-transform}
+\end{equation}
+Under $H_0$ (all segments human and exchangeable with the calibration population),
+$p_i$ is approximately uniform and $z_i$ therefore approximately $N(0,1)$ by the
+probability integral transform, whatever the skew of the original scores. The pool is
+always disjoint from the documents it is applied to, holding $m\approx9{,}000$ segments
+in \sect{V-A} but only $m{=}438$ in the \sect{V-C} transfer, where just four discrete
+$p$-values fall below $\alpha{=}1\%$ --- a transfer limited by tail resolution as much
+as by sample size.
+
+On this scale, define the aggregated statistic $Z_k=k^{-1/2}\sum_{i=1}^{k}z_i$.
+Write $\rho_z$ for the common within-document correlation \emph{on this transformed
+scale}, against the raw-scale $\rho_{\text{raw}}$ of \eqref{eq:pi-se}; under
+exchangeability the variance of $Z_k$ is multiplied by $1+(k-1)\rho_z$. The resulting decision rule is
+\begin{equation}
+Z_k>z_{1-\alpha}\sqrt{1+(k-1)\rho_z},
+\label{eq:hartung-threshold}
+\end{equation}
+where $z_{1-\alpha}=2.33$ for $\alpha=1\%$. We estimate $\rho_z$ per checkpoint by the
+Hartung formula~\cite{hartung1999}. Averaging the five resample estimates within each
+checkpoint gives median 0.303 and range 0.204--0.401 (the 80 resample-level estimates span
+0.183--0.424): $\rho_z$ is a checkpoint-specific calibration quantity, not a
+universal constant.
+
+% SOURCE: output/rho_compare_16models.csv (paper_level_rho_compare.py); icc.py
+This 0.303 against the $\rho_{\text{raw}}=0.132$ of \eqref{eq:pi-se} is not an artifact
+of two estimators: the same one-way ICC on the same documents and $20$ segments each
+returns 0.296 on transformed scores, so the estimator moves $\rho$ by under a hundredth
+while the scale moves it from 0.132 to 0.296. The correlation a variance-inflation
+formula needs belongs to the scale one aggregates on.
+
+$\rho_z$ must be estimated with care. Perturbing it by $\pm20\%$ moves FPR by under a
+point but the miss rate on half-AI documents from $17.3\%$ to $48.5\%$ at $k{=}20$. Its
+checkpoint range is wider still, so a $\rho_z$ carried to a new checkpoint holds FPR
+without predicting power; those miss rates are optimistic anyway (\sect{VI}).
+
+That fixes a calibration budget. Resampling the calibration half, the $95\%$ interval
+for $\rho_z$ is $\pm54\%$ of its value at 25 human documents, $\pm27\%$ at 100 and
+$\pm17\%$ at 200. Since $\pm20\%$ is the perturbation above, \textbf{roughly 200 human
+documents} is the practical floor for adopting this rule on a new detector, and they
+need no AI labels: $\rho_z$ is estimated under the null.
+
+The reference point is an oracle recalibrated per $k$ on labeled data at the
+deployment length. The paired bootstrap resolves no difference between them: $-0.12$
+points of RMS deviation $[-0.20,+0.14]$, $-0.08$ of worst-case $[-0.26,+0.26]$; since
+non-rejection is not equivalence, we report the interval. The oracle needs labeled data
+at that length; this rule needs none, and its per-checkpoint FPR stays within
+$0.31$--$1.24\%$.
+
+\subsection{Out-of-sample generalization}
+We estimate $\rho_z$ on the full-length corpus and apply it unchanged to the
+held-out-generator split: distinct documents of the same corpus at a natural mean length
+$k\approx2.38$, not used to estimate it.
+
+% SOURCE: output/hartung_ood_16models.csv; ranges -> s4_ranges_main_tables.csv
+
+
+% >>> TABLE_OOD_BEGIN -- sinh boi make_table_ood.py, DUNG sua tay
+\begin{table}[t]
+\caption{$\rho_z$ from the full-length corpus, reused unchanged on the
+held-out-generator split ($k{\approx}2.38$); median [range] over 16 checkpoints.
+Rows 2--4 threshold the raw mean: fitted at this length on calibration halves
+(Table~\ref{tab:ktransfer}), then scored on $Z_k$'s 637 pairs, then re-fitted to
+$Z_k$'s FPR. Wins: checkpoints where $Z_k$ misses fewer.}
+\label{tab:ood}
+% SOURCE: make_table_ood.py <- hartung_ood_16models.csv, mean_ktransfer_16models.csv,
+%          rev3_paired_miss.csv, rev4_fpr_matched.csv
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Rule & FPR (\%) & Miss (\%) & Wins \\
+\midrule
+1. $Z_k$ (proposed) & 1.26\,[0.47,1.88] & 3.77\,[2.67,8.16] & --- \\
+\midrule
+2. Raw mean, fitted here & 1.31\,[1.23,1.40] & 6.16\,[3.85,20.50] & --- \\
+3. Same, on $Z_k$'s pairs & 1.10 & 6.04 & 13/16 \\
+4. Raw mean, FPR of $Z_k$ & \emph{matched} & 5.02 & 14/16 \\
+\bottomrule
+\end{tabular}
+\\[2pt]\footnotesize In row 4, 419 checkpoint--AI-document pairs are flagged only
+by $Z_k$ and 90 only by the raw mean; unadjusted McNemar tests ($5\%$) favour
+$Z_k$ for 7 checkpoints and the raw mean for 1.
+\end{table}
+% <<< TABLE_OOD_END
+
+Table~\ref{tab:ood} reports what survives the move. Calibration carries over, at a lower
+miss rate than a raw-mean threshold fitted at this very length (rows 1--2). Part of
+that gain is a looser operating point, since a lower threshold trades miss against FPR
+mechanically (row 3); re-fitting the raw-mean threshold to flag exactly as many human
+papers as $Z_k$ roughly halves the advantage but does not remove it (row 4). What
+remains is consistent with a change in ranking: the mean of monotonically transformed
+scores is not monotone in the raw mean. $\rho_z$ thus carries its \emph{calibration}
+to another split; power is a different matter, since \sect{V-B} shows $\rho_z$ does not
+predict it.
+
+\subsection{Comparison with per-bin conformal calibration}
+% SOURCE: final_experiments_rivf2026/results/f3_conformal_overall.csv (f3_conformal_bins.py)
+The competitor from prior work is length-binned split conformal calibration, inspired
+by MCP~\cite{mcp2025acl} and run on our own scores at natural length (1{,}200 papers,
+median $k=19$, range 10--262). We bin by equal counts of $k$ rather than MCP's
+equal-width token intervals, so this adapts rather than reproduces that algorithm. With
+five bins it attains median FPR $0.97\%$ $[0.70,1.10]$ against $0.77\%$ $[0.27,1.77]$
+for the proposed rule and $1.25\%$ for a static threshold: a strong baseline we do not
+claim to beat on FPR. Its cost is resolution. A conformal threshold at level $\alpha$
+needs $\lceil 1/\alpha\rceil-1=99$ calibration documents \emph{per bin}, so 600 papers
+cap the design at six; at ten every bin falls short and the rule never flags. The
+proposed rule uses each document's own $k$, tied to neither $\alpha$ nor the budget.
+That, not a lower FPR, is the difference.
+
+\section{Discussion and Limitations}
+Human text lightly edited by AI draws segment-level FPRs 4.7--9.8$\times$ higher than
+purely human text ($n{=}955$ against $3{,}335$). The two-component model places every
+segment at one extreme, whereas polished text lies between --- the reason, noted in
+\sect{III-D}, that $\hat{\pi}$ measures resemblance to AI writing, not authorship. As a validity check, a
+classifier reading only segment counts achieves AUROC 0.5000.
+
+TPR on \emph{real} AI documents at deployment length remains unmeasured: the full-length
+corpus holds only human text, so the miss rates in \sect{IV} and \sect{V-C} come from
+the held-out-generator split at $k\approx2$--3, and the $k{=}20$ figures in \sect{V-B}
+use documents assembled from different papers, whose AI half lacks within-document
+correlation and is thus optimistic. This bounds where the
+contribution applies: at $k\ge8$ our synthetic \emph{fully} AI documents are detected
+almost without error by every rule tested, so a decision rule earns its keep on short
+documents and on mixed $\pi$, not long fully-AI ones. Closing the gap needs full-length
+AI papers rather than reassembled segments, and the count is modest: at an expected
+miss near $4\%$, about 350 such documents pin it to $\pm2$ points and 1{,}400 to
+$\pm1$.
+
+Within arXiv Computer Science, \sect{V-C} shows $\rho_z$ transferring between splits;
+we claim no more, and since $\rho_z$ tracks writing style a new domain would need its
+own estimate --- a recalibration, not a retraining. Every
+result also assumes one segmentation, 275 words at sentence boundaries; since $\rho_z$
+is a correlation between segments, a coarser or finer segmentation would move it, and we have
+not measured by how much. Relatedly, $k$ in
+\sect{V-A} is a subsample size from papers of at least 20 segments, so the $k{=}1$ row
+is one segment of a long paper, not a short submission. FPR also varies by subfield,
+from $0.00\%$ (\texttt{cs.LG}) to $7.21\%$ (\texttt{cs.PL}) over the 19 with at least 20
+papers.
+
+Finally, the human side is arXiv Computer Science 2010--2015, chosen so undisclosed
+LLM assistance is implausible, while the AI side comes from 2024--26 models. Topic is matched but period is not, and \sect{III-A} controls punctuation, symbol and
+length cues rather than era. The 0.97--0.99 AUROC may thus partly reflect an era
+boundary, making miss rates and $\hat{\pi}$ on AI-containing documents look better than they are, though not
+the FPR results, which are calibrated and measured on human text of one period.
+Deployment needs the human side ($\mu_0$, pool, $\rho_z$) re-estimated on contemporary
+writing, without AI labels; otherwise $\mu_0$ may sit below the 2020s human anchor,
+biasing $\hat{\pi}$ upward.
+
+\section{Conclusion}
+$\hat{\pi}$ is accurately centered out of sample, but neither its interval nor a
+decision threshold built on the raw score scale survives a change in document length,
+for one reason: a Gaussian shape assumption over skewed segment scores, whose error
+compounds with $k$. The fault is that assumption, not the clustering correction, which
+stays indispensable; the transform moves the correction onto a scale where $\rho$ is
+over twice as large and a Gaussian quantile is already right.
+
+Under a cluster bootstrap the transform is closer to target than the raw-scale
+empirical rule, though only marginally ($p=0.044$, a gap of $0.44$ points), and matches
+a per-$k$ oracle it never needs, while per-bin
+conformal calibration is better centered where the budget allows. What further
+distinguishes it is power at matched FPR (\sect{V-C}) and length resolution independent
+of that budget (\sect{V-D}). The claim the evidence supports without qualification is
+negative: Gaussian intervals and thresholds read off untransformed scores should not be
+used when documents vary in length, as papers do. Being post-processing, the remedy
+costs no retraining and carries to any scorer exposing per-segment scores: calibration
+reads human text only, so FPR control does not depend on how well the scorer separates.
+Power does, and we tested only scorers above AUROC $0.92$, excluding the four zero-shot
+detectors of \sect{III-B}. The commercial systems of \sect{I} are closed; should they
+expose segment-level scores, the rules apply unchanged. A percentage should be reported
+with an interval, wide at about $\pm0.15$ and calibrated at that percentage.
+
+\noindent\textbf{Reproducibility.} Code, per-checkpoint breakdowns and every analysis
+above are available at \url{https://github.com/hien01604/posthoc-ai-content-calibration}.
+
+\section*{Acknowledgements}
+
+This research was supported by the VNUHCM-University of Information Technology's Scientific Research Support Fund.
+
+\begin{thebibliography}{00}
+
+\bibitem{waterseeker2025}
+L. Pan \textit{et al.}, ``WaterSeeker: Pioneering Efficient Detection of Watermarked
+Segments in Large Documents,'' in \textit{Findings of the Association for Computational
+Linguistics: NAACL 2025}, 2025, pp. 2866--2882.
+
+\bibitem{zhao2025acl}
+X. Zhao \textit{et al.}, ``Efficiently Identifying Watermarked Segments in Mixed-Source
+Texts,'' in \textit{Proc. ACL}, 2025, pp. 6304--6316.
+
+\bibitem{mcp2025acl}
+X. Zhu \textit{et al.}, ``Reliably Bounding False Positives: A Zero-Shot
+Machine-Generated Text Detection Framework via Multiscaled Conformal Prediction,'' in
+\textit{Proc. ACL}, 2025, pp. 12298--12319.
+
+\bibitem{liang2024monitoring}
+W. Liang \textit{et al.}, ``Monitoring AI-Modified Content at Scale: A Case Study on
+the Impact of ChatGPT on AI Conference Peer Reviews,'' in \textit{Proc. ICML}, 2024, pp. 29575--29620.
+
+\bibitem{haco2025}
+Z. Su \textit{et al.}, ``HACo-Det: A Study Towards Fine-Grained Machine-Generated Text
+Detection under Human--AI Coauthoring,'' in \textit{Proc. ACL}, 2025, pp. 22015--22036.
+
+\bibitem{forman2008}
+G. Forman, ``Quantifying Counts and Costs via Classification,'' \textit{Data Mining and
+Knowledge Discovery}, vol. 17, no. 2, pp. 164--206, 2008.
+
+\bibitem{bella2010}
+A. Bella \textit{et al.}, ``Quantification via Probability Estimators,'' in
+\textit{Proc. IEEE ICDM}, 2010, pp. 737--742.
+
+\bibitem{hopkinsking2010}
+D. J. Hopkins and G. King, ``A Method of Automated Nonparametric Content Analysis for
+Social Science,'' \textit{American Journal of Political Science}, vol. 54, no. 1,
+pp. 229--247, 2010.
+
+\bibitem{gonzalez2017}
+P. Gonz\'alez \textit{et al.}, ``A Review on Quantification Learning,'' \textit{ACM
+Computing Surveys}, vol. 50, no. 5, Art. no. 74, 2017.
+
+\bibitem{scispandet2026}
+Z. Yin and S. Wang, ``Span-Level Detection of AI-Generated Scientific Text via
+Contrastive Learning and Structural Calibration,'' \textit{Knowledge-Based Systems},
+vol. 334, Art. no. 115123, 2026.
+
+\bibitem{damasha2026}
+L. D. M. S. Sai Teja \textit{et al.}, ``DAMASHA: Detecting AI in Mixed Adversarial Texts
+via Segmentation with Human-Interpretable Attribution,'' in \textit{Findings of the
+Association for Computational Linguistics: EACL 2026}, 2026, pp. 6189--6206.
+
+\bibitem{hartung1999}
+J. Hartung, ``A Note on Combining Dependent Tests of Significance,'' \textit{Biometrical
+Journal}, vol. 41, no. 7, pp. 849--855, 1999.
+
+\bibitem{roberta2019}
+Y. Liu \textit{et al.}, ``RoBERTa: A Robustly Optimized BERT Pretraining
+Approach,'' arXiv:1907.11692, 2019.
+
+\bibitem{deberta2023}
+P. He \textit{et al.}, ``DeBERTaV3: Improving DeBERTa Using ELECTRA-Style Pre-Training
+With Gradient-Disentangled Embedding Sharing,'' in \textit{Proc. ICLR}, 2023.
+
+\bibitem{xlmr2020}
+A. Conneau \textit{et al.}, ``Unsupervised Cross-lingual Representation Learning at
+Scale,'' in \textit{Proc. ACL}, 2020, pp. 8440--8451.
+
+\bibitem{modernbert2024}
+B. Warner \textit{et al.}, ``Smarter, Better, Faster, Longer: A Modern Bidirectional
+Encoder for Fast, Memory Efficient, and Long Context Finetuning and Inference,'' in
+\textit{Proc. ACL}, 2025, pp. 2526--2547.
+
+\bibitem{radar2023}
+X. Hu \textit{et al.}, ``RADAR: Robust AI-Text Detection via Adversarial Learning,'' in
+\textit{Proc. NeurIPS}, 2023.
+
+\bibitem{greater2025}
+Y. Li \textit{et al.}, ``Iron Sharpens Iron: Defending Against Attacks in
+Machine-Generated Text Detection With Adversarial Training,'' in \textit{Proc. ACL},
+2025, pp. 3091--3113.
+
+\end{thebibliography}
+
+
+
+
+\end{document}

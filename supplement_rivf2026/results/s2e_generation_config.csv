@@ -1,0 +1,11 @@
+setting,key,value,detail,share_pct
+generation mode,B,rewrite the human passage,"templates: B1, B2, B3",55.0
+generation mode,A,write from scratch,"templates: A1, A2",25.0
+generation mode,C,continue the passage,templates: C1,10.0
+generation mode,D,expand from bullet notes,templates: D1,10.0
+temperature,0.3,,"assigned by hash of (paper_id, source)",20.0
+temperature,0.5,,"assigned by hash of (paper_id, source)",20.0
+temperature,0.7,,"assigned by hash of (paper_id, source)",20.0
+temperature,0.9,,"assigned by hash of (paper_id, source)",20.0
+temperature,1.1,,"assigned by hash of (paper_id, source)",20.0
+family quota (train),TRAIN_FAMILY_QUOTA,0.25,soft cap per family,25.0

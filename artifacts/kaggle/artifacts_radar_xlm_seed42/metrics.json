@@ -1,0 +1,89 @@
+{
+  "run": "radar_xlm",
+  "model": "xlm-roberta-large",
+  "method": "radar",
+  "eval_mode": "inductive",
+  "paraphraser": "humarin/chatgpt_paraphraser_on_T5_base",
+  "para_unit": "cau",
+  "tau": 0.988346517086029,
+  "target_fpr": 0.01,
+  "seed": 42,
+  "n_seeds": 1,
+  "sample_weight_used": false,
+  "world_size": 1,
+  "hparams": {
+    "radar_lambda": 0.5,
+    "gamma_entropy": 0.01,
+    "ppo_batch_sentences": 256,
+    "ppo_epochs": 4,
+    "docs_per_step": 24,
+    "top_k": 50,
+    "top_p": 0.95,
+    "init_kl_coef": 0.2,
+    "kl_target": 6.0,
+    "outer_steps_run": 281,
+    "best_val_auroc": 0.9822668418089697
+  },
+  "metrics": [
+    {
+      "split": "val",
+      "n": 876,
+      "n_ai": 438,
+      "auroc": 0.9822668418089697,
+      "auprc": 0.986680544758827,
+      "tpr@fpr0.001": 0.769406392694064,
+      "tpr@fpr0.01": 0.8721461187214612,
+      "tpr@fpr0.05": 0.9406392694063926,
+      "tpr@tau": 0.8721461187214612,
+      "fpr@tau": 0.01141552511415525
+    },
+    {
+      "split": "test_ood_model",
+      "n": 3028,
+      "n_ai": 1514,
+      "auroc": 0.9746354587478557,
+      "auprc": 0.9799236471418964,
+      "tpr@fpr0.001": 0.7311756935270806,
+      "tpr@fpr0.01": 0.8124174372523117,
+      "tpr@fpr0.05": 0.9009247027741083,
+      "tpr@tau": 0.8434610303830912,
+      "fpr@tau": 0.015191545574636724
+    },
+    {
+      "split": "test_fp",
+      "n": 4290,
+      "n_ai": 0,
+      "auroc": NaN,
+      "auprc": NaN,
+      "tpr@fpr0.001": NaN,
+      "tpr@fpr0.01": NaN,
+      "tpr@fpr0.05": NaN,
+      "tpr@tau": NaN,
+      "fpr@tau": 0.03986013986013986
+    },
+    {
+      "split": "val_matched",
+      "n": 296,
+      "n_ai": 148,
+      "auroc": 0.9432523739956172,
+      "auprc": 0.9567465411825251,
+      "tpr@fpr0.001": 0.5472972972972973,
+      "tpr@fpr0.01": 0.668918918918919,
+      "tpr@fpr0.05": 0.8243243243243243,
+      "tpr@tau": 0.7094594594594594,
+      "fpr@tau": 0.02027027027027027
+    },
+    {
+      "split": "test_ood_model_matched",
+      "n": 1206,
+      "n_ai": 603,
+      "auroc": 0.9274027870597262,
+      "auprc": 0.9406971540278446,
+      "tpr@fpr0.001": 0.417910447761194,
+      "tpr@fpr0.01": 0.6119402985074627,
+      "tpr@fpr0.05": 0.7379767827529021,
+      "tpr@tau": 0.6683250414593698,
+      "fpr@tau": 0.02321724709784411
+    }
+  ]
+}

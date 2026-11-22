@@ -1,0 +1,3 @@
+split,tag,n_full,n_matched,retention,surface_auc_full_trainfit,surface_auc_matched_trainfit,surface_auc_full_refit,surface_auc_matched_refit,worst_feature_matched,worst_feature_auc,n_iters,n_bins,random_state,match_target_auc
+val,deconf2,876,296,0.3378995433789954,0.9048601989116156,0.5026935719503287,0.8785709399450976,0.547534749125252,digit_ratio,0.40510591589633443,2,20,42,0.55
+test_ood_model,deconf2,3028,1206,0.39828269484808454,0.8714612537496793,0.5445629783641219,0.8757805095307181,0.4662563677008535,numeric_token_frac,0.45101856869740625,2,20,42,0.55

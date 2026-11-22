@@ -1,0 +1,8 @@
+split,generator_family,n_segments,pct_of_ai
+val,mistral,104,23.744292237442924
+val,openai,99,22.602739726027398
+val,anthropic,96,21.91780821917808
+val,qwen,80,18.264840182648403
+val,meta,59,13.470319634703197
+test_ood_model,google,856,56.53896961690885
+test_ood_model,deepseek,658,43.46103038309115

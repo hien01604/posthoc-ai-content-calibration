@@ -1,0 +1,48 @@
+{
+  "run": "phd",
+  "model": "roberta-base",
+  "tau": -5.042109513370216,
+  "target_fpr": 0.01,
+  "seed": 42,
+  "flipped_sign": false,
+  "training_free": true,
+  "dual_gpu": true,
+  "metrics": [
+    {
+      "split": "val",
+      "n": 873,
+      "n_ai": 437,
+      "auroc": 0.3414675750005249,
+      "auprc": 0.40874328333605514,
+      "tpr@fpr0.001": 0.0,
+      "tpr@fpr0.01": 0.004576659038901602,
+      "tpr@fpr0.05": 0.016018306636155607,
+      "tpr@tau": 0.004576659038901602,
+      "fpr@tau": 0.011467889908256881
+    },
+    {
+      "split": "test_ood_model",
+      "n": 3020,
+      "n_ai": 1510,
+      "auroc": 0.402213280119293,
+      "auprc": 0.4370525965445111,
+      "tpr@fpr0.001": 0.0,
+      "tpr@fpr0.01": 0.001986754966887417,
+      "tpr@fpr0.05": 0.02913907284768212,
+      "tpr@tau": 0.00728476821192053,
+      "fpr@tau": 0.016556291390728478
+    },
+    {
+      "split": "test_fp",
+      "n": 4290,
+      "n_ai": 0,
+      "auroc": NaN,
+      "auprc": NaN,
+      "tpr@fpr0.001": NaN,
+      "tpr@fpr0.01": NaN,
+      "tpr@fpr0.05": NaN,
+      "tpr@tau": NaN,
+      "fpr@tau": 0.01934731934731935
+    }
+  ]
+}

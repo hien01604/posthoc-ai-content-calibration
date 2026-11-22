@@ -1,0 +1,37 @@
+file,field,dtype,n_unique,example,description
+pred_val.parquet,paper_id,object,183,1001.2897,arXiv ID cua bai
+pred_val.parquet,label,int64,2,0,"0 = human, 1 = AI"
+pred_val.parquet,ai_degree,int64,3,0,0 thuan human | 1 AI-polish | 3 AI viet lai | 4 AI viet moi
+pred_val.parquet,generator_family,object,6,human,"ho model sinh AI, hoac 'human'"
+pred_val.parquet,score,float64,539,0.9996155500411987,diem detector (mot checkpoint / file)
+pred_test_ood_model.parquet,paper_id,object,637,1001.1401,arXiv ID cua bai
+pred_test_ood_model.parquet,label,int64,2,0,"0 = human, 1 = AI"
+pred_test_ood_model.parquet,ai_degree,int64,3,0,0 thuan human | 1 AI-polish | 3 AI viet lai | 4 AI viet moi
+pred_test_ood_model.parquet,generator_family,object,3,human,"ho model sinh AI, hoac 'human'"
+pred_test_ood_model.parquet,score,float64,1560,0.0017274586716666818,diem detector (mot checkpoint / file)
+pred_test_fp.parquet,paper_id,object,1529,1001.0529,arXiv ID cua bai
+pred_test_fp.parquet,label,int64,1,0,"0 = human, 1 = AI"
+pred_test_fp.parquet,ai_degree,int64,2,1,0 thuan human | 1 AI-polish | 3 AI viet lai | 4 AI viet moi
+pred_test_fp.parquet,generator_family,object,1,human,"ho model sinh AI, hoac 'human'"
+pred_test_fp.parquet,score,float64,2613,0.021064694970846176,diem detector (mot checkpoint / file)
+pred_test_fp_full.parquet,sample_id,object,27119,1503.08289__full_000,dinh danh doan
+pred_test_fp_full.parquet,paper_id,object,1200,1503.08289,arXiv ID cua bai
+pred_test_fp_full.parquet,source,object,262,full_chunk_000,vi tri doan trong bai (full_chunk_NNN)
+pred_test_fp_full.parquet,label,int64,1,0,"0 = human, 1 = AI"
+pred_test_fp_full.parquet,artifact,object,1,artifacts_roberta_large_seed42,ten artifact checkpoint
+pred_test_fp_full.parquet,branch,object,1,supervised,nhanh huan luyen
+pred_test_fp_full.parquet,model,object,1,roberta_large,ten run
+pred_test_fp_full.parquet,seed,int64,1,42,seed
+pred_test_fp_full.parquet,score,float64,27067,0.002407731954008341,diem detector (mot checkpoint / file)
+dataset_test_fp_full_deconf2.parquet,sample_id,object,27119,1503.08289__full_000,dinh danh doan
+dataset_test_fp_full_deconf2.parquet,paper_id,object,1200,1503.08289,arXiv ID cua bai
+dataset_test_fp_full_deconf2.parquet,source,object,262,full_chunk_000,vi tri doan trong bai (full_chunk_NNN)
+dataset_test_fp_full_deconf2.parquet,human_text,object,27113,"For example, if theta i is considered twice as good as theta",van ban nguoi viet
+dataset_test_fp_full_deconf2.parquet,ai_text,object,0,,van ban AI ghep cap
+dataset_test_fp_full_deconf2.parquet,ai_degree,int64,1,0,0 thuan human | 1 AI-polish | 3 AI viet lai | 4 AI viet moi
+dataset_test_fp_full_deconf2.parquet,sample_weight,float64,1,1.0,trong so can bang
+dataset_test_fp_full_deconf2.parquet,split,object,1,test_fp_full,train / val / test_ood_model / test_fp / test_fp_full
+dataset_test_fp_full_deconf2.parquet,published_year,int64,6,2015,nam cong bo
+dataset_test_fp_full_deconf2.parquet,categories,object,410,cs.AI,danh muc arXiv
+dataset_test_fp_full_deconf2.parquet,notation_gap,float64,0,,chenh lech ky hieu
+dataset_test_fp_full_deconf2.parquet,notation_ok,bool,1,True,co qua bo loc ky hieu khong

@@ -1,0 +1,89 @@
+{
+  "run": "greater_xlm_roberta_large",
+  "model": "xlm-roberta-large",
+  "method": "greater",
+  "eval_mode": "inductive",
+  "surrogate": "roberta-large",
+  "substitution_level": "word",
+  "tau": 0.9316784143447876,
+  "target_fpr": 0.01,
+  "seed": 42,
+  "sample_weight_used": false,
+  "hparams": {
+    "lambda": 0.05,
+    "eps": 0.3,
+    "xi": 0.01,
+    "label_smoothing": 0.1,
+    "k_percent": 0.12,
+    "top_m": 20,
+    "attack_frac": 0.2,
+    "epochs_run": 6,
+    "best_val_auroc": 0.9877634953399638,
+    "effective_batch": 32,
+    "det_lr": 1e-05,
+    "score_lr": 0.001,
+    "max_len": 512
+  },
+  "metrics": [
+    {
+      "split": "val",
+      "n": 876,
+      "n_ai": 438,
+      "auroc": 0.9877634953399638,
+      "auprc": 0.9911707731137901,
+      "tpr@fpr0.001": 0.9041095890410958,
+      "tpr@fpr0.01": 0.9200913242009132,
+      "tpr@fpr0.05": 0.9611872146118722,
+      "tpr@tau": 0.9200913242009132,
+      "fpr@tau": 0.01141552511415525
+    },
+    {
+      "split": "test_ood_model",
+      "n": 3028,
+      "n_ai": 1514,
+      "auroc": 0.9831890466609313,
+      "auprc": 0.9874718685743341,
+      "tpr@fpr0.001": 0.809775429326288,
+      "tpr@fpr0.01": 0.892998678996037,
+      "tpr@fpr0.05": 0.9425363276089829,
+      "tpr@tau": 0.881770145310436,
+      "fpr@tau": 0.007926023778071334
+    },
+    {
+      "split": "test_fp",
+      "n": 4290,
+      "n_ai": 0,
+      "auroc": NaN,
+      "auprc": NaN,
+      "tpr@fpr0.001": NaN,
+      "tpr@fpr0.01": NaN,
+      "tpr@fpr0.05": NaN,
+      "tpr@tau": NaN,
+      "fpr@tau": 0.01818181818181818
+    },
+    {
+      "split": "val_matched",
+      "n": 296,
+      "n_ai": 148,
+      "auroc": 0.9655314097881665,
+      "auprc": 0.9750237194503201,
+      "tpr@fpr0.001": 0.7905405405405406,
+      "tpr@fpr0.01": 0.8175675675675675,
+      "tpr@fpr0.05": 0.8986486486486487,
+      "tpr@tau": 0.8175675675675675,
+      "fpr@tau": 0.013513513513513514
+    },
+    {
+      "split": "test_ood_model_matched",
+      "n": 1206,
+      "n_ai": 603,
+      "auroc": 0.9529535847572531,
+      "auprc": 0.9631416924265536,
+      "tpr@fpr0.001": 0.4842454394693201,
+      "tpr@fpr0.01": 0.714759535655058,
+      "tpr@fpr0.05": 0.8374792703150912,
+      "tpr@tau": 0.7313432835820896,
+      "fpr@tau": 0.014925373134328358
+    }
+  ]
+}

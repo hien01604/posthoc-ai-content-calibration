@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper below."
+title: "Post-Hoc Calibration of AI-Content Estimates Across Document Length"
+type: software
+license: MIT
+repository-code: "https://github.com/hien01604/posthoc-ai-content-calibration"
+authors:
+  - family-names: Pham
+    given-names: Quang Dai Phuc
+  - family-names: Pham
+    given-names: Thi Minh Hien
+  - family-names: Nguyen
+    given-names: Dinh Thuan
+preferred-citation:
+  type: conference-paper
+  title: "Post-Hoc Calibration of AI-Content Estimates Across Document Length"
+  authors:
+    - family-names: Pham
+      given-names: Quang Dai Phuc
+    - family-names: Pham
+      given-names: Thi Minh Hien
+    - family-names: Nguyen
+      given-names: Dinh Thuan
+  collection-title: "Proceedings of the 2026 RIVF International Conference on Computing and Communication Technologies (RIVF)"
+  year: 2026

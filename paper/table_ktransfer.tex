@@ -1,0 +1,41 @@
+\begin{table*}[t]
+\caption{Three threshold sources for the mean statistic, all 16 checkpoints ---
+the per-checkpoint breakdown behind \sect{IV-C}. Evaluated on
+\texttt{test\_ood\_model} (637 papers per class, $k\approx2.38$). Subscripts give the
+length at which $\tau$ was pinned: $1$ is the segment-level threshold from
+\texttt{val}, $22.6$ is \texttt{test\_fp\_full}, and $2.38$ is the control, $\tau$
+fitted on one half of \texttt{test\_ood\_model} and measured on the other over 200
+repetitions. The first two are scored on all 637 pairs.}
+\label{tab:ktransfer}
+% SOURCE: make_table_ktransfer.py <- output/mean_ktransfer_16models.csv
+%          (paper_level_mean_ktransfer.py) -- KHONG go tay, chay lai script de cap nhat
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4.5pt}
+\begin{tabular}{@{}lrrrrrrrrr@{}}
+\toprule
+& \multicolumn{3}{c}{Threshold $\tau$} & \multicolumn{2}{c}{Pinned at $k{\approx}1$} & \multicolumn{2}{c}{Pinned at $k{\approx}22.6$} & \multicolumn{2}{c}{Correct $k{\approx}2.38$} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-6}\cmidrule(lr){7-8}\cmidrule(lr){9-10}
+Model & $\tau_{1}$ & $\tau_{22.6}$ & $\tau_{2.38}$ & FPR & Miss & FPR & Miss & FPR & Miss \\
+\midrule
+RoBERTa-large (s44) & 0.9915 & 0.4192 & 0.6063 & 0.00\% & 16.33\% & 3.77\% & 2.04\% & 1.26\% & 6.16\% \\
+RoBERTa-large (s43) & 0.9910 & 0.3549 & 0.5679 & 0.00\% & 16.33\% & 4.40\% & 1.10\% & 1.30\% & 3.87\% \\
+GREATER + RoBERTa-large (s42) & 0.9433 & 0.3973 & 0.5658 & 0.16\% & 16.80\% & 4.08\% & 2.04\% & 1.30\% & 5.30\% \\
+XLM-R-large (s42) & 0.9989 & 0.3498 & 0.6408 & 0.16\% & 19.15\% & 4.87\% & 1.10\% & 1.32\% & 6.22\% \\
+XLM-R-large (s44) & 0.9992 & 0.4581 & 0.8529 & 0.16\% & 19.31\% & 5.18\% & 1.26\% & 1.23\% & 10.17\% \\
+GREATER + XLM-R-large (s42) & 0.9317 & 0.2967 & 0.5603 & 0.16\% & 19.78\% & 6.59\% & 0.94\% & 1.24\% & 5.56\% \\
+XLM-R-large (s43) & 0.9965 & 0.3497 & 0.6343 & 0.16\% & 19.94\% & 4.08\% & 0.94\% & 1.27\% & 6.68\% \\
+RADAR (s42) & 0.9488 & 0.1389 & 0.4771 & 0.16\% & 21.04\% & 6.28\% & 1.57\% & 1.30\% & 4.51\% \\
+DeBERTa-v3-large (s42) & 0.9204 & 0.2587 & 0.6755 & 0.31\% & 13.50\% & 6.75\% & 0.63\% & 1.32\% & 8.56\% \\
+DeBERTa-v3-large (s44) & 0.9872 & 0.3955 & 0.8475 & 0.31\% & 15.07\% & 5.34\% & 1.26\% & 1.37\% & 10.74\% \\
+ModernBERT-large (s43) & 0.8653 & 0.2646 & 0.5772 & 0.31\% & 16.17\% & 4.71\% & 0.94\% & 1.40\% & 6.16\% \\
+ModernBERT-large (s44) & 0.9747 & 0.2775 & 0.5147 & 0.31\% & 18.84\% & 7.85\% & 0.78\% & 1.32\% & 3.85\% \\
+DeBERTa-v3-large (s43) & 0.9862 & 0.2992 & 0.5894 & 0.47\% & 15.86\% & 5.97\% & 0.63\% & 1.31\% & 5.17\% \\
+RoBERTa-large (s42) & 0.9993 & 0.4837 & 0.8879 & 0.47\% & 17.74\% & 5.02\% & 1.88\% & 1.34\% & 11.61\% \\
+ModernBERT-large (s42) & 0.8383 & 0.2057 & 0.4773 & 0.47\% & 17.90\% & 4.40\% & 0.78\% & 1.29\% & 4.84\% \\
+RADAR + XLM-R-large (s42) & 0.9883 & 0.4811 & 0.8978 & 0.63\% & 24.80\% & 5.34\% & 4.40\% & 1.37\% & 20.50\% \\
+\midrule
+\textbf{Median (16/16)} & --- & --- & --- & \textbf{0.24\%} & \textbf{17.82\%} & \textbf{5.10\%} & \textbf{1.10\%} & \textbf{1.31\%} & \textbf{6.16\%} \\
+\bottomrule
+\end{tabular}
+\end{table*}

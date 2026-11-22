@@ -1,0 +1,1217 @@
+model,method,subfield,n_papers,n_flagged,fpr,k_median
+deberta_v3_large_seed42,z-scale (proposed),cs.AI,65,0,0.0,28.0
+deberta_v3_large_seed42,z-scale (proposed),cs.AR,5,0,0.0,15.0
+deberta_v3_large_seed42,z-scale (proposed),cs.CC,15,0,0.0,20.0
+deberta_v3_large_seed42,z-scale (proposed),cs.CE,15,1,0.06666666666666667,18.0
+deberta_v3_large_seed42,z-scale (proposed),cs.CG,13,1,0.07692307692307693,20.0
+deberta_v3_large_seed42,z-scale (proposed),cs.CL,23,0,0.0,19.0
+deberta_v3_large_seed42,z-scale (proposed),cs.CR,39,0,0.0,19.0
+deberta_v3_large_seed42,z-scale (proposed),cs.CV,77,0,0.0,17.0
+deberta_v3_large_seed42,z-scale (proposed),cs.CY,29,0,0.0,17.0
+deberta_v3_large_seed42,z-scale (proposed),cs.DB,16,0,0.0,18.0
+deberta_v3_large_seed42,z-scale (proposed),cs.DC,27,0,0.0,16.0
+deberta_v3_large_seed42,z-scale (proposed),cs.DL,18,0,0.0,17.5
+deberta_v3_large_seed42,z-scale (proposed),cs.DM,23,0,0.0,23.0
+deberta_v3_large_seed42,z-scale (proposed),cs.DS,34,0,0.0,21.0
+deberta_v3_large_seed42,z-scale (proposed),cs.ET,10,0,0.0,24.5
+deberta_v3_large_seed42,z-scale (proposed),cs.FL,24,0,0.0,19.0
+deberta_v3_large_seed42,z-scale (proposed),cs.GT,25,0,0.0,23.0
+deberta_v3_large_seed42,z-scale (proposed),cs.HC,13,0,0.0,14.0
+deberta_v3_large_seed42,z-scale (proposed),cs.IR,21,1,0.047619047619047616,20.0
+deberta_v3_large_seed42,z-scale (proposed),cs.IT,213,1,0.004694835680751174,19.0
+deberta_v3_large_seed42,z-scale (proposed),cs.LG,33,0,0.0,20.0
+deberta_v3_large_seed42,z-scale (proposed),cs.LO,90,0,0.0,24.5
+deberta_v3_large_seed42,z-scale (proposed),cs.MA,10,0,0.0,22.5
+deberta_v3_large_seed42,z-scale (proposed),cs.MM,7,0,0.0,14.0
+deberta_v3_large_seed42,z-scale (proposed),cs.MS,5,1,0.2,11.0
+deberta_v3_large_seed42,z-scale (proposed),cs.NE,16,0,0.0,16.0
+deberta_v3_large_seed42,z-scale (proposed),cs.NI,91,1,0.01098901098901099,19.0
+deberta_v3_large_seed42,z-scale (proposed),cs.OH,15,0,0.0,17.0
+deberta_v3_large_seed42,z-scale (proposed),cs.OS,1,0,0.0,21.0
+deberta_v3_large_seed42,z-scale (proposed),cs.PF,5,0,0.0,19.0
+deberta_v3_large_seed42,z-scale (proposed),cs.PL,26,1,0.038461538461538464,21.0
+deberta_v3_large_seed42,z-scale (proposed),cs.RO,12,0,0.0,17.5
+deberta_v3_large_seed42,z-scale (proposed),cs.SC,11,0,0.0,17.0
+deberta_v3_large_seed42,z-scale (proposed),cs.SD,7,0,0.0,25.0
+deberta_v3_large_seed42,z-scale (proposed),cs.SE,43,0,0.0,18.0
+deberta_v3_large_seed42,z-scale (proposed),cs.SI,63,0,0.0,18.0
+deberta_v3_large_seed42,z-scale (proposed),eess.SY,46,0,0.0,18.0
+deberta_v3_large_seed42,z-scale (proposed),math.NA,14,1,0.07142857142857142,20.5
+deberta_v3_large_seed42,static (raw scale),cs.AI,65,0,0.0,28.0
+deberta_v3_large_seed42,static (raw scale),cs.AR,5,0,0.0,15.0
+deberta_v3_large_seed42,static (raw scale),cs.CC,15,0,0.0,20.0
+deberta_v3_large_seed42,static (raw scale),cs.CE,15,1,0.06666666666666667,18.0
+deberta_v3_large_seed42,static (raw scale),cs.CG,13,1,0.07692307692307693,20.0
+deberta_v3_large_seed42,static (raw scale),cs.CL,23,0,0.0,19.0
+deberta_v3_large_seed42,static (raw scale),cs.CR,39,0,0.0,19.0
+deberta_v3_large_seed42,static (raw scale),cs.CV,77,0,0.0,17.0
+deberta_v3_large_seed42,static (raw scale),cs.CY,29,1,0.034482758620689655,17.0
+deberta_v3_large_seed42,static (raw scale),cs.DB,16,0,0.0,18.0
+deberta_v3_large_seed42,static (raw scale),cs.DC,27,0,0.0,16.0
+deberta_v3_large_seed42,static (raw scale),cs.DL,18,0,0.0,17.5
+deberta_v3_large_seed42,static (raw scale),cs.DM,23,0,0.0,23.0
+deberta_v3_large_seed42,static (raw scale),cs.DS,34,0,0.0,21.0
+deberta_v3_large_seed42,static (raw scale),cs.ET,10,0,0.0,24.5
+deberta_v3_large_seed42,static (raw scale),cs.FL,24,0,0.0,19.0
+deberta_v3_large_seed42,static (raw scale),cs.GT,25,0,0.0,23.0
+deberta_v3_large_seed42,static (raw scale),cs.HC,13,0,0.0,14.0
+deberta_v3_large_seed42,static (raw scale),cs.IR,21,1,0.047619047619047616,20.0
+deberta_v3_large_seed42,static (raw scale),cs.IT,213,1,0.004694835680751174,19.0
+deberta_v3_large_seed42,static (raw scale),cs.LG,33,0,0.0,20.0
+deberta_v3_large_seed42,static (raw scale),cs.LO,90,0,0.0,24.5
+deberta_v3_large_seed42,static (raw scale),cs.MA,10,0,0.0,22.5
+deberta_v3_large_seed42,static (raw scale),cs.MM,7,0,0.0,14.0
+deberta_v3_large_seed42,static (raw scale),cs.MS,5,1,0.2,11.0
+deberta_v3_large_seed42,static (raw scale),cs.NE,16,0,0.0,16.0
+deberta_v3_large_seed42,static (raw scale),cs.NI,91,1,0.01098901098901099,19.0
+deberta_v3_large_seed42,static (raw scale),cs.OH,15,0,0.0,17.0
+deberta_v3_large_seed42,static (raw scale),cs.OS,1,0,0.0,21.0
+deberta_v3_large_seed42,static (raw scale),cs.PF,5,0,0.0,19.0
+deberta_v3_large_seed42,static (raw scale),cs.PL,26,2,0.07692307692307693,21.0
+deberta_v3_large_seed42,static (raw scale),cs.RO,12,0,0.0,17.5
+deberta_v3_large_seed42,static (raw scale),cs.SC,11,0,0.0,17.0
+deberta_v3_large_seed42,static (raw scale),cs.SD,7,0,0.0,25.0
+deberta_v3_large_seed42,static (raw scale),cs.SE,43,0,0.0,18.0
+deberta_v3_large_seed42,static (raw scale),cs.SI,63,2,0.031746031746031744,18.0
+deberta_v3_large_seed42,static (raw scale),eess.SY,46,0,0.0,18.0
+deberta_v3_large_seed42,static (raw scale),math.NA,14,1,0.07142857142857142,20.5
+deberta_v3_large_seed43,z-scale (proposed),cs.AI,65,0,0.0,28.0
+deberta_v3_large_seed43,z-scale (proposed),cs.AR,5,0,0.0,15.0
+deberta_v3_large_seed43,z-scale (proposed),cs.CC,15,0,0.0,20.0
+deberta_v3_large_seed43,z-scale (proposed),cs.CE,15,1,0.06666666666666667,18.0
+deberta_v3_large_seed43,z-scale (proposed),cs.CG,13,1,0.07692307692307693,20.0
+deberta_v3_large_seed43,z-scale (proposed),cs.CL,23,0,0.0,19.0
+deberta_v3_large_seed43,z-scale (proposed),cs.CR,39,0,0.0,19.0
+deberta_v3_large_seed43,z-scale (proposed),cs.CV,77,0,0.0,17.0
+deberta_v3_large_seed43,z-scale (proposed),cs.CY,29,1,0.034482758620689655,17.0
+deberta_v3_large_seed43,z-scale (proposed),cs.DB,16,0,0.0,18.0
+deberta_v3_large_seed43,z-scale (proposed),cs.DC,27,0,0.0,16.0
+deberta_v3_large_seed43,z-scale (proposed),cs.DL,18,0,0.0,17.5
+deberta_v3_large_seed43,z-scale (proposed),cs.DM,23,0,0.0,23.0
+deberta_v3_large_seed43,z-scale (proposed),cs.DS,34,1,0.029411764705882353,21.0
+deberta_v3_large_seed43,z-scale (proposed),cs.ET,10,0,0.0,24.5
+deberta_v3_large_seed43,z-scale (proposed),cs.FL,24,0,0.0,19.0
+deberta_v3_large_seed43,z-scale (proposed),cs.GT,25,0,0.0,23.0
+deberta_v3_large_seed43,z-scale (proposed),cs.HC,13,0,0.0,14.0
+deberta_v3_large_seed43,z-scale (proposed),cs.IR,21,1,0.047619047619047616,20.0
+deberta_v3_large_seed43,z-scale (proposed),cs.IT,213,2,0.009389671361502348,19.0
+deberta_v3_large_seed43,z-scale (proposed),cs.LG,33,0,0.0,20.0
+deberta_v3_large_seed43,z-scale (proposed),cs.LO,90,0,0.0,24.5
+deberta_v3_large_seed43,z-scale (proposed),cs.MA,10,0,0.0,22.5
+deberta_v3_large_seed43,z-scale (proposed),cs.MM,7,0,0.0,14.0
+deberta_v3_large_seed43,z-scale (proposed),cs.MS,5,1,0.2,11.0
+deberta_v3_large_seed43,z-scale (proposed),cs.NE,16,0,0.0,16.0
+deberta_v3_large_seed43,z-scale (proposed),cs.NI,91,0,0.0,19.0
+deberta_v3_large_seed43,z-scale (proposed),cs.OH,15,0,0.0,17.0
+deberta_v3_large_seed43,z-scale (proposed),cs.OS,1,0,0.0,21.0
+deberta_v3_large_seed43,z-scale (proposed),cs.PF,5,0,0.0,19.0
+deberta_v3_large_seed43,z-scale (proposed),cs.PL,26,2,0.07692307692307693,21.0
+deberta_v3_large_seed43,z-scale (proposed),cs.RO,12,0,0.0,17.5
+deberta_v3_large_seed43,z-scale (proposed),cs.SC,11,0,0.0,17.0
+deberta_v3_large_seed43,z-scale (proposed),cs.SD,7,0,0.0,25.0
+deberta_v3_large_seed43,z-scale (proposed),cs.SE,43,0,0.0,18.0
+deberta_v3_large_seed43,z-scale (proposed),cs.SI,63,4,0.06349206349206349,18.0
+deberta_v3_large_seed43,z-scale (proposed),eess.SY,46,0,0.0,18.0
+deberta_v3_large_seed43,z-scale (proposed),math.NA,14,1,0.07142857142857142,20.5
+deberta_v3_large_seed43,static (raw scale),cs.AI,65,0,0.0,28.0
+deberta_v3_large_seed43,static (raw scale),cs.AR,5,0,0.0,15.0
+deberta_v3_large_seed43,static (raw scale),cs.CC,15,0,0.0,20.0
+deberta_v3_large_seed43,static (raw scale),cs.CE,15,2,0.13333333333333333,18.0
+deberta_v3_large_seed43,static (raw scale),cs.CG,13,1,0.07692307692307693,20.0
+deberta_v3_large_seed43,static (raw scale),cs.CL,23,0,0.0,19.0
+deberta_v3_large_seed43,static (raw scale),cs.CR,39,0,0.0,19.0
+deberta_v3_large_seed43,static (raw scale),cs.CV,77,0,0.0,17.0
+deberta_v3_large_seed43,static (raw scale),cs.CY,29,0,0.0,17.0
+deberta_v3_large_seed43,static (raw scale),cs.DB,16,0,0.0,18.0
+deberta_v3_large_seed43,static (raw scale),cs.DC,27,0,0.0,16.0
+deberta_v3_large_seed43,static (raw scale),cs.DL,18,0,0.0,17.5
+deberta_v3_large_seed43,static (raw scale),cs.DM,23,0,0.0,23.0
+deberta_v3_large_seed43,static (raw scale),cs.DS,34,1,0.029411764705882353,21.0
+deberta_v3_large_seed43,static (raw scale),cs.ET,10,0,0.0,24.5
+deberta_v3_large_seed43,static (raw scale),cs.FL,24,1,0.041666666666666664,19.0
+deberta_v3_large_seed43,static (raw scale),cs.GT,25,0,0.0,23.0
+deberta_v3_large_seed43,static (raw scale),cs.HC,13,0,0.0,14.0
+deberta_v3_large_seed43,static (raw scale),cs.IR,21,1,0.047619047619047616,20.0
+deberta_v3_large_seed43,static (raw scale),cs.IT,213,1,0.004694835680751174,19.0
+deberta_v3_large_seed43,static (raw scale),cs.LG,33,0,0.0,20.0
+deberta_v3_large_seed43,static (raw scale),cs.LO,90,0,0.0,24.5
+deberta_v3_large_seed43,static (raw scale),cs.MA,10,0,0.0,22.5
+deberta_v3_large_seed43,static (raw scale),cs.MM,7,0,0.0,14.0
+deberta_v3_large_seed43,static (raw scale),cs.MS,5,0,0.0,11.0
+deberta_v3_large_seed43,static (raw scale),cs.NE,16,0,0.0,16.0
+deberta_v3_large_seed43,static (raw scale),cs.NI,91,0,0.0,19.0
+deberta_v3_large_seed43,static (raw scale),cs.OH,15,0,0.0,17.0
+deberta_v3_large_seed43,static (raw scale),cs.OS,1,0,0.0,21.0
+deberta_v3_large_seed43,static (raw scale),cs.PF,5,0,0.0,19.0
+deberta_v3_large_seed43,static (raw scale),cs.PL,26,2,0.07692307692307693,21.0
+deberta_v3_large_seed43,static (raw scale),cs.RO,12,0,0.0,17.5
+deberta_v3_large_seed43,static (raw scale),cs.SC,11,0,0.0,17.0
+deberta_v3_large_seed43,static (raw scale),cs.SD,7,0,0.0,25.0
+deberta_v3_large_seed43,static (raw scale),cs.SE,43,0,0.0,18.0
+deberta_v3_large_seed43,static (raw scale),cs.SI,63,2,0.031746031746031744,18.0
+deberta_v3_large_seed43,static (raw scale),eess.SY,46,0,0.0,18.0
+deberta_v3_large_seed43,static (raw scale),math.NA,14,1,0.07142857142857142,20.5
+deberta_v3_large_seed44,z-scale (proposed),cs.AI,65,0,0.0,28.0
+deberta_v3_large_seed44,z-scale (proposed),cs.AR,5,0,0.0,15.0
+deberta_v3_large_seed44,z-scale (proposed),cs.CC,15,0,0.0,20.0
+deberta_v3_large_seed44,z-scale (proposed),cs.CE,15,1,0.06666666666666667,18.0
+deberta_v3_large_seed44,z-scale (proposed),cs.CG,13,1,0.07692307692307693,20.0
+deberta_v3_large_seed44,z-scale (proposed),cs.CL,23,0,0.0,19.0
+deberta_v3_large_seed44,z-scale (proposed),cs.CR,39,0,0.0,19.0
+deberta_v3_large_seed44,z-scale (proposed),cs.CV,77,0,0.0,17.0
+deberta_v3_large_seed44,z-scale (proposed),cs.CY,29,0,0.0,17.0
+deberta_v3_large_seed44,z-scale (proposed),cs.DB,16,0,0.0,18.0
+deberta_v3_large_seed44,z-scale (proposed),cs.DC,27,0,0.0,16.0
+deberta_v3_large_seed44,z-scale (proposed),cs.DL,18,0,0.0,17.5
+deberta_v3_large_seed44,z-scale (proposed),cs.DM,23,0,0.0,23.0
+deberta_v3_large_seed44,z-scale (proposed),cs.DS,34,0,0.0,21.0
+deberta_v3_large_seed44,z-scale (proposed),cs.ET,10,0,0.0,24.5
+deberta_v3_large_seed44,z-scale (proposed),cs.FL,24,0,0.0,19.0
+deberta_v3_large_seed44,z-scale (proposed),cs.GT,25,0,0.0,23.0
+deberta_v3_large_seed44,z-scale (proposed),cs.HC,13,0,0.0,14.0
+deberta_v3_large_seed44,z-scale (proposed),cs.IR,21,1,0.047619047619047616,20.0
+deberta_v3_large_seed44,z-scale (proposed),cs.IT,213,1,0.004694835680751174,19.0
+deberta_v3_large_seed44,z-scale (proposed),cs.LG,33,0,0.0,20.0
+deberta_v3_large_seed44,z-scale (proposed),cs.LO,90,0,0.0,24.5
+deberta_v3_large_seed44,z-scale (proposed),cs.MA,10,0,0.0,22.5
+deberta_v3_large_seed44,z-scale (proposed),cs.MM,7,0,0.0,14.0
+deberta_v3_large_seed44,z-scale (proposed),cs.MS,5,0,0.0,11.0
+deberta_v3_large_seed44,z-scale (proposed),cs.NE,16,0,0.0,16.0
+deberta_v3_large_seed44,z-scale (proposed),cs.NI,91,1,0.01098901098901099,19.0
+deberta_v3_large_seed44,z-scale (proposed),cs.OH,15,0,0.0,17.0
+deberta_v3_large_seed44,z-scale (proposed),cs.OS,1,0,0.0,21.0
+deberta_v3_large_seed44,z-scale (proposed),cs.PF,5,0,0.0,19.0
+deberta_v3_large_seed44,z-scale (proposed),cs.PL,26,1,0.038461538461538464,21.0
+deberta_v3_large_seed44,z-scale (proposed),cs.RO,12,0,0.0,17.5
+deberta_v3_large_seed44,z-scale (proposed),cs.SC,11,0,0.0,17.0
+deberta_v3_large_seed44,z-scale (proposed),cs.SD,7,0,0.0,25.0
+deberta_v3_large_seed44,z-scale (proposed),cs.SE,43,0,0.0,18.0
+deberta_v3_large_seed44,z-scale (proposed),cs.SI,63,1,0.015873015873015872,18.0
+deberta_v3_large_seed44,z-scale (proposed),eess.SY,46,0,0.0,18.0
+deberta_v3_large_seed44,z-scale (proposed),math.NA,14,1,0.07142857142857142,20.5
+deberta_v3_large_seed44,static (raw scale),cs.AI,65,0,0.0,28.0
+deberta_v3_large_seed44,static (raw scale),cs.AR,5,0,0.0,15.0
+deberta_v3_large_seed44,static (raw scale),cs.CC,15,0,0.0,20.0
+deberta_v3_large_seed44,static (raw scale),cs.CE,15,1,0.06666666666666667,18.0
+deberta_v3_large_seed44,static (raw scale),cs.CG,13,1,0.07692307692307693,20.0
+deberta_v3_large_seed44,static (raw scale),cs.CL,23,0,0.0,19.0
+deberta_v3_large_seed44,static (raw scale),cs.CR,39,1,0.02564102564102564,19.0
+deberta_v3_large_seed44,static (raw scale),cs.CV,77,0,0.0,17.0
+deberta_v3_large_seed44,static (raw scale),cs.CY,29,1,0.034482758620689655,17.0
+deberta_v3_large_seed44,static (raw scale),cs.DB,16,1,0.0625,18.0
+deberta_v3_large_seed44,static (raw scale),cs.DC,27,1,0.037037037037037035,16.0
+deberta_v3_large_seed44,static (raw scale),cs.DL,18,0,0.0,17.5
+deberta_v3_large_seed44,static (raw scale),cs.DM,23,0,0.0,23.0
+deberta_v3_large_seed44,static (raw scale),cs.DS,34,0,0.0,21.0
+deberta_v3_large_seed44,static (raw scale),cs.ET,10,0,0.0,24.5
+deberta_v3_large_seed44,static (raw scale),cs.FL,24,0,0.0,19.0
+deberta_v3_large_seed44,static (raw scale),cs.GT,25,0,0.0,23.0
+deberta_v3_large_seed44,static (raw scale),cs.HC,13,0,0.0,14.0
+deberta_v3_large_seed44,static (raw scale),cs.IR,21,1,0.047619047619047616,20.0
+deberta_v3_large_seed44,static (raw scale),cs.IT,213,1,0.004694835680751174,19.0
+deberta_v3_large_seed44,static (raw scale),cs.LG,33,0,0.0,20.0
+deberta_v3_large_seed44,static (raw scale),cs.LO,90,0,0.0,24.5
+deberta_v3_large_seed44,static (raw scale),cs.MA,10,0,0.0,22.5
+deberta_v3_large_seed44,static (raw scale),cs.MM,7,0,0.0,14.0
+deberta_v3_large_seed44,static (raw scale),cs.MS,5,0,0.0,11.0
+deberta_v3_large_seed44,static (raw scale),cs.NE,16,0,0.0,16.0
+deberta_v3_large_seed44,static (raw scale),cs.NI,91,1,0.01098901098901099,19.0
+deberta_v3_large_seed44,static (raw scale),cs.OH,15,0,0.0,17.0
+deberta_v3_large_seed44,static (raw scale),cs.OS,1,0,0.0,21.0
+deberta_v3_large_seed44,static (raw scale),cs.PF,5,0,0.0,19.0
+deberta_v3_large_seed44,static (raw scale),cs.PL,26,2,0.07692307692307693,21.0
+deberta_v3_large_seed44,static (raw scale),cs.RO,12,0,0.0,17.5
+deberta_v3_large_seed44,static (raw scale),cs.SC,11,0,0.0,17.0
+deberta_v3_large_seed44,static (raw scale),cs.SD,7,0,0.0,25.0
+deberta_v3_large_seed44,static (raw scale),cs.SE,43,0,0.0,18.0
+deberta_v3_large_seed44,static (raw scale),cs.SI,63,0,0.0,18.0
+deberta_v3_large_seed44,static (raw scale),eess.SY,46,0,0.0,18.0
+deberta_v3_large_seed44,static (raw scale),math.NA,14,1,0.07142857142857142,20.5
+greater_roberta_large_seed42,z-scale (proposed),cs.AI,65,0,0.0,28.0
+greater_roberta_large_seed42,z-scale (proposed),cs.AR,5,0,0.0,15.0
+greater_roberta_large_seed42,z-scale (proposed),cs.CC,15,0,0.0,20.0
+greater_roberta_large_seed42,z-scale (proposed),cs.CE,15,1,0.06666666666666667,18.0
+greater_roberta_large_seed42,z-scale (proposed),cs.CG,13,0,0.0,20.0
+greater_roberta_large_seed42,z-scale (proposed),cs.CL,23,0,0.0,19.0
+greater_roberta_large_seed42,z-scale (proposed),cs.CR,39,0,0.0,19.0
+greater_roberta_large_seed42,z-scale (proposed),cs.CV,77,0,0.0,17.0
+greater_roberta_large_seed42,z-scale (proposed),cs.CY,29,2,0.06896551724137931,17.0
+greater_roberta_large_seed42,z-scale (proposed),cs.DB,16,0,0.0,18.0
+greater_roberta_large_seed42,z-scale (proposed),cs.DC,27,1,0.037037037037037035,16.0
+greater_roberta_large_seed42,z-scale (proposed),cs.DL,18,0,0.0,17.5
+greater_roberta_large_seed42,z-scale (proposed),cs.DM,23,0,0.0,23.0
+greater_roberta_large_seed42,z-scale (proposed),cs.DS,34,0,0.0,21.0
+greater_roberta_large_seed42,z-scale (proposed),cs.ET,10,0,0.0,24.5
+greater_roberta_large_seed42,z-scale (proposed),cs.FL,24,0,0.0,19.0
+greater_roberta_large_seed42,z-scale (proposed),cs.GT,25,0,0.0,23.0
+greater_roberta_large_seed42,z-scale (proposed),cs.HC,13,0,0.0,14.0
+greater_roberta_large_seed42,z-scale (proposed),cs.IR,21,1,0.047619047619047616,20.0
+greater_roberta_large_seed42,z-scale (proposed),cs.IT,213,1,0.004694835680751174,19.0
+greater_roberta_large_seed42,z-scale (proposed),cs.LG,33,0,0.0,20.0
+greater_roberta_large_seed42,z-scale (proposed),cs.LO,90,0,0.0,24.5
+greater_roberta_large_seed42,z-scale (proposed),cs.MA,10,0,0.0,22.5
+greater_roberta_large_seed42,z-scale (proposed),cs.MM,7,0,0.0,14.0
+greater_roberta_large_seed42,z-scale (proposed),cs.MS,5,1,0.2,11.0
+greater_roberta_large_seed42,z-scale (proposed),cs.NE,16,0,0.0,16.0
+greater_roberta_large_seed42,z-scale (proposed),cs.NI,91,2,0.02197802197802198,19.0
+greater_roberta_large_seed42,z-scale (proposed),cs.OH,15,0,0.0,17.0
+greater_roberta_large_seed42,z-scale (proposed),cs.OS,1,0,0.0,21.0
+greater_roberta_large_seed42,z-scale (proposed),cs.PF,5,0,0.0,19.0
+greater_roberta_large_seed42,z-scale (proposed),cs.PL,26,2,0.07692307692307693,21.0
+greater_roberta_large_seed42,z-scale (proposed),cs.RO,12,0,0.0,17.5
+greater_roberta_large_seed42,z-scale (proposed),cs.SC,11,0,0.0,17.0
+greater_roberta_large_seed42,z-scale (proposed),cs.SD,7,0,0.0,25.0
+greater_roberta_large_seed42,z-scale (proposed),cs.SE,43,1,0.023255813953488372,18.0
+greater_roberta_large_seed42,z-scale (proposed),cs.SI,63,2,0.031746031746031744,18.0
+greater_roberta_large_seed42,z-scale (proposed),eess.SY,46,0,0.0,18.0
+greater_roberta_large_seed42,z-scale (proposed),math.NA,14,2,0.14285714285714285,20.5
+greater_roberta_large_seed42,static (raw scale),cs.AI,65,0,0.0,28.0
+greater_roberta_large_seed42,static (raw scale),cs.AR,5,0,0.0,15.0
+greater_roberta_large_seed42,static (raw scale),cs.CC,15,0,0.0,20.0
+greater_roberta_large_seed42,static (raw scale),cs.CE,15,2,0.13333333333333333,18.0
+greater_roberta_large_seed42,static (raw scale),cs.CG,13,0,0.0,20.0
+greater_roberta_large_seed42,static (raw scale),cs.CL,23,0,0.0,19.0
+greater_roberta_large_seed42,static (raw scale),cs.CR,39,0,0.0,19.0
+greater_roberta_large_seed42,static (raw scale),cs.CV,77,0,0.0,17.0
+greater_roberta_large_seed42,static (raw scale),cs.CY,29,2,0.06896551724137931,17.0
+greater_roberta_large_seed42,static (raw scale),cs.DB,16,0,0.0,18.0
+greater_roberta_large_seed42,static (raw scale),cs.DC,27,1,0.037037037037037035,16.0
+greater_roberta_large_seed42,static (raw scale),cs.DL,18,0,0.0,17.5
+greater_roberta_large_seed42,static (raw scale),cs.DM,23,0,0.0,23.0
+greater_roberta_large_seed42,static (raw scale),cs.DS,34,0,0.0,21.0
+greater_roberta_large_seed42,static (raw scale),cs.ET,10,0,0.0,24.5
+greater_roberta_large_seed42,static (raw scale),cs.FL,24,0,0.0,19.0
+greater_roberta_large_seed42,static (raw scale),cs.GT,25,0,0.0,23.0
+greater_roberta_large_seed42,static (raw scale),cs.HC,13,0,0.0,14.0
+greater_roberta_large_seed42,static (raw scale),cs.IR,21,1,0.047619047619047616,20.0
+greater_roberta_large_seed42,static (raw scale),cs.IT,213,1,0.004694835680751174,19.0
+greater_roberta_large_seed42,static (raw scale),cs.LG,33,0,0.0,20.0
+greater_roberta_large_seed42,static (raw scale),cs.LO,90,0,0.0,24.5
+greater_roberta_large_seed42,static (raw scale),cs.MA,10,0,0.0,22.5
+greater_roberta_large_seed42,static (raw scale),cs.MM,7,0,0.0,14.0
+greater_roberta_large_seed42,static (raw scale),cs.MS,5,0,0.0,11.0
+greater_roberta_large_seed42,static (raw scale),cs.NE,16,0,0.0,16.0
+greater_roberta_large_seed42,static (raw scale),cs.NI,91,0,0.0,19.0
+greater_roberta_large_seed42,static (raw scale),cs.OH,15,0,0.0,17.0
+greater_roberta_large_seed42,static (raw scale),cs.OS,1,0,0.0,21.0
+greater_roberta_large_seed42,static (raw scale),cs.PF,5,0,0.0,19.0
+greater_roberta_large_seed42,static (raw scale),cs.PL,26,2,0.07692307692307693,21.0
+greater_roberta_large_seed42,static (raw scale),cs.RO,12,0,0.0,17.5
+greater_roberta_large_seed42,static (raw scale),cs.SC,11,0,0.0,17.0
+greater_roberta_large_seed42,static (raw scale),cs.SD,7,0,0.0,25.0
+greater_roberta_large_seed42,static (raw scale),cs.SE,43,0,0.0,18.0
+greater_roberta_large_seed42,static (raw scale),cs.SI,63,2,0.031746031746031744,18.0
+greater_roberta_large_seed42,static (raw scale),eess.SY,46,0,0.0,18.0
+greater_roberta_large_seed42,static (raw scale),math.NA,14,1,0.07142857142857142,20.5
+greater_xlm_roberta_large_seed42,z-scale (proposed),cs.AI,65,0,0.0,28.0
+greater_xlm_roberta_large_seed42,z-scale (proposed),cs.AR,5,1,0.2,15.0
+greater_xlm_roberta_large_seed42,z-scale (proposed),cs.CC,15,0,0.0,20.0
+greater_xlm_roberta_large_seed42,z-scale (proposed),cs.CE,15,1,0.06666666666666667,18.0
+greater_xlm_roberta_large_seed42,z-scale (proposed),cs.CG,13,1,0.07692307692307693,20.0
+greater_xlm_roberta_large_seed42,z-scale (proposed),cs.CL,23,0,0.0,19.0
+greater_xlm_roberta_large_seed42,z-scale (proposed),cs.CR,39,0,0.0,19.0
+greater_xlm_roberta_large_seed42,z-scale (proposed),cs.CV,77,0,0.0,17.0
+greater_xlm_roberta_large_seed42,z-scale (proposed),cs.CY,29,0,0.0,17.0
+greater_xlm_roberta_large_seed42,z-scale (proposed),cs.DB,16,0,0.0,18.0
+greater_xlm_roberta_large_seed42,z-scale (proposed),cs.DC,27,0,0.0,16.0
+greater_xlm_roberta_large_seed42,z-scale (proposed),cs.DL,18,0,0.0,17.5
+greater_xlm_roberta_large_seed42,z-scale (proposed),cs.DM,23,0,0.0,23.0
+greater_xlm_roberta_large_seed42,z-scale (proposed),cs.DS,34,0,0.0,21.0
+greater_xlm_roberta_large_seed42,z-scale (proposed),cs.ET,10,0,0.0,24.5
+greater_xlm_roberta_large_seed42,z-scale (proposed),cs.FL,24,1,0.041666666666666664,19.0
+greater_xlm_roberta_large_seed42,z-scale (proposed),cs.GT,25,1,0.04,23.0
+greater_xlm_roberta_large_seed42,z-scale (proposed),cs.HC,13,0,0.0,14.0
+greater_xlm_roberta_large_seed42,z-scale (proposed),cs.IR,21,1,0.047619047619047616,20.0
+greater_xlm_roberta_large_seed42,z-scale (proposed),cs.IT,213,1,0.004694835680751174,19.0
+greater_xlm_roberta_large_seed42,z-scale (proposed),cs.LG,33,0,0.0,20.0
+greater_xlm_roberta_large_seed42,z-scale (proposed),cs.LO,90,0,0.0,24.5
+greater_xlm_roberta_large_seed42,z-scale (proposed),cs.MA,10,0,0.0,22.5
+greater_xlm_roberta_large_seed42,z-scale (proposed),cs.MM,7,0,0.0,14.0
+greater_xlm_roberta_large_seed42,z-scale (proposed),cs.MS,5,0,0.0,11.0
+greater_xlm_roberta_large_seed42,z-scale (proposed),cs.NE,16,0,0.0,16.0
+greater_xlm_roberta_large_seed42,z-scale (proposed),cs.NI,91,0,0.0,19.0
+greater_xlm_roberta_large_seed42,z-scale (proposed),cs.OH,15,0,0.0,17.0
+greater_xlm_roberta_large_seed42,z-scale (proposed),cs.OS,1,0,0.0,21.0
+greater_xlm_roberta_large_seed42,z-scale (proposed),cs.PF,5,0,0.0,19.0
+greater_xlm_roberta_large_seed42,z-scale (proposed),cs.PL,26,1,0.038461538461538464,21.0
+greater_xlm_roberta_large_seed42,z-scale (proposed),cs.RO,12,0,0.0,17.5
+greater_xlm_roberta_large_seed42,z-scale (proposed),cs.SC,11,0,0.0,17.0
+greater_xlm_roberta_large_seed42,z-scale (proposed),cs.SD,7,0,0.0,25.0
+greater_xlm_roberta_large_seed42,z-scale (proposed),cs.SE,43,0,0.0,18.0
+greater_xlm_roberta_large_seed42,z-scale (proposed),cs.SI,63,2,0.031746031746031744,18.0
+greater_xlm_roberta_large_seed42,z-scale (proposed),eess.SY,46,0,0.0,18.0
+greater_xlm_roberta_large_seed42,z-scale (proposed),math.NA,14,1,0.07142857142857142,20.5
+greater_xlm_roberta_large_seed42,static (raw scale),cs.AI,65,1,0.015384615384615385,28.0
+greater_xlm_roberta_large_seed42,static (raw scale),cs.AR,5,1,0.2,15.0
+greater_xlm_roberta_large_seed42,static (raw scale),cs.CC,15,0,0.0,20.0
+greater_xlm_roberta_large_seed42,static (raw scale),cs.CE,15,1,0.06666666666666667,18.0
+greater_xlm_roberta_large_seed42,static (raw scale),cs.CG,13,1,0.07692307692307693,20.0
+greater_xlm_roberta_large_seed42,static (raw scale),cs.CL,23,0,0.0,19.0
+greater_xlm_roberta_large_seed42,static (raw scale),cs.CR,39,0,0.0,19.0
+greater_xlm_roberta_large_seed42,static (raw scale),cs.CV,77,0,0.0,17.0
+greater_xlm_roberta_large_seed42,static (raw scale),cs.CY,29,1,0.034482758620689655,17.0
+greater_xlm_roberta_large_seed42,static (raw scale),cs.DB,16,0,0.0,18.0
+greater_xlm_roberta_large_seed42,static (raw scale),cs.DC,27,0,0.0,16.0
+greater_xlm_roberta_large_seed42,static (raw scale),cs.DL,18,0,0.0,17.5
+greater_xlm_roberta_large_seed42,static (raw scale),cs.DM,23,0,0.0,23.0
+greater_xlm_roberta_large_seed42,static (raw scale),cs.DS,34,0,0.0,21.0
+greater_xlm_roberta_large_seed42,static (raw scale),cs.ET,10,0,0.0,24.5
+greater_xlm_roberta_large_seed42,static (raw scale),cs.FL,24,0,0.0,19.0
+greater_xlm_roberta_large_seed42,static (raw scale),cs.GT,25,1,0.04,23.0
+greater_xlm_roberta_large_seed42,static (raw scale),cs.HC,13,0,0.0,14.0
+greater_xlm_roberta_large_seed42,static (raw scale),cs.IR,21,1,0.047619047619047616,20.0
+greater_xlm_roberta_large_seed42,static (raw scale),cs.IT,213,2,0.009389671361502348,19.0
+greater_xlm_roberta_large_seed42,static (raw scale),cs.LG,33,0,0.0,20.0
+greater_xlm_roberta_large_seed42,static (raw scale),cs.LO,90,0,0.0,24.5
+greater_xlm_roberta_large_seed42,static (raw scale),cs.MA,10,0,0.0,22.5
+greater_xlm_roberta_large_seed42,static (raw scale),cs.MM,7,0,0.0,14.0
+greater_xlm_roberta_large_seed42,static (raw scale),cs.MS,5,0,0.0,11.0
+greater_xlm_roberta_large_seed42,static (raw scale),cs.NE,16,0,0.0,16.0
+greater_xlm_roberta_large_seed42,static (raw scale),cs.NI,91,0,0.0,19.0
+greater_xlm_roberta_large_seed42,static (raw scale),cs.OH,15,0,0.0,17.0
+greater_xlm_roberta_large_seed42,static (raw scale),cs.OS,1,0,0.0,21.0
+greater_xlm_roberta_large_seed42,static (raw scale),cs.PF,5,0,0.0,19.0
+greater_xlm_roberta_large_seed42,static (raw scale),cs.PL,26,2,0.07692307692307693,21.0
+greater_xlm_roberta_large_seed42,static (raw scale),cs.RO,12,0,0.0,17.5
+greater_xlm_roberta_large_seed42,static (raw scale),cs.SC,11,0,0.0,17.0
+greater_xlm_roberta_large_seed42,static (raw scale),cs.SD,7,0,0.0,25.0
+greater_xlm_roberta_large_seed42,static (raw scale),cs.SE,43,0,0.0,18.0
+greater_xlm_roberta_large_seed42,static (raw scale),cs.SI,63,1,0.015873015873015872,18.0
+greater_xlm_roberta_large_seed42,static (raw scale),eess.SY,46,0,0.0,18.0
+greater_xlm_roberta_large_seed42,static (raw scale),math.NA,14,0,0.0,20.5
+modernbert_large_seed42,z-scale (proposed),cs.AI,65,3,0.046153846153846156,28.0
+modernbert_large_seed42,z-scale (proposed),cs.AR,5,1,0.2,15.0
+modernbert_large_seed42,z-scale (proposed),cs.CC,15,0,0.0,20.0
+modernbert_large_seed42,z-scale (proposed),cs.CE,15,1,0.06666666666666667,18.0
+modernbert_large_seed42,z-scale (proposed),cs.CG,13,1,0.07692307692307693,20.0
+modernbert_large_seed42,z-scale (proposed),cs.CL,23,0,0.0,19.0
+modernbert_large_seed42,z-scale (proposed),cs.CR,39,1,0.02564102564102564,19.0
+modernbert_large_seed42,z-scale (proposed),cs.CV,77,0,0.0,17.0
+modernbert_large_seed42,z-scale (proposed),cs.CY,29,2,0.06896551724137931,17.0
+modernbert_large_seed42,z-scale (proposed),cs.DB,16,0,0.0,18.0
+modernbert_large_seed42,z-scale (proposed),cs.DC,27,0,0.0,16.0
+modernbert_large_seed42,z-scale (proposed),cs.DL,18,0,0.0,17.5
+modernbert_large_seed42,z-scale (proposed),cs.DM,23,1,0.043478260869565216,23.0
+modernbert_large_seed42,z-scale (proposed),cs.DS,34,1,0.029411764705882353,21.0
+modernbert_large_seed42,z-scale (proposed),cs.ET,10,0,0.0,24.5
+modernbert_large_seed42,z-scale (proposed),cs.FL,24,3,0.125,19.0
+modernbert_large_seed42,z-scale (proposed),cs.GT,25,1,0.04,23.0
+modernbert_large_seed42,z-scale (proposed),cs.HC,13,0,0.0,14.0
+modernbert_large_seed42,z-scale (proposed),cs.IR,21,1,0.047619047619047616,20.0
+modernbert_large_seed42,z-scale (proposed),cs.IT,213,2,0.009389671361502348,19.0
+modernbert_large_seed42,z-scale (proposed),cs.LG,33,0,0.0,20.0
+modernbert_large_seed42,z-scale (proposed),cs.LO,90,2,0.022222222222222223,24.5
+modernbert_large_seed42,z-scale (proposed),cs.MA,10,1,0.1,22.5
+modernbert_large_seed42,z-scale (proposed),cs.MM,7,0,0.0,14.0
+modernbert_large_seed42,z-scale (proposed),cs.MS,5,1,0.2,11.0
+modernbert_large_seed42,z-scale (proposed),cs.NE,16,0,0.0,16.0
+modernbert_large_seed42,z-scale (proposed),cs.NI,91,0,0.0,19.0
+modernbert_large_seed42,z-scale (proposed),cs.OH,15,0,0.0,17.0
+modernbert_large_seed42,z-scale (proposed),cs.OS,1,0,0.0,21.0
+modernbert_large_seed42,z-scale (proposed),cs.PF,5,0,0.0,19.0
+modernbert_large_seed42,z-scale (proposed),cs.PL,26,3,0.11538461538461539,21.0
+modernbert_large_seed42,z-scale (proposed),cs.RO,12,0,0.0,17.5
+modernbert_large_seed42,z-scale (proposed),cs.SC,11,0,0.0,17.0
+modernbert_large_seed42,z-scale (proposed),cs.SD,7,0,0.0,25.0
+modernbert_large_seed42,z-scale (proposed),cs.SE,43,0,0.0,18.0
+modernbert_large_seed42,z-scale (proposed),cs.SI,63,2,0.031746031746031744,18.0
+modernbert_large_seed42,z-scale (proposed),eess.SY,46,0,0.0,18.0
+modernbert_large_seed42,z-scale (proposed),math.NA,14,2,0.14285714285714285,20.5
+modernbert_large_seed42,static (raw scale),cs.AI,65,0,0.0,28.0
+modernbert_large_seed42,static (raw scale),cs.AR,5,1,0.2,15.0
+modernbert_large_seed42,static (raw scale),cs.CC,15,0,0.0,20.0
+modernbert_large_seed42,static (raw scale),cs.CE,15,1,0.06666666666666667,18.0
+modernbert_large_seed42,static (raw scale),cs.CG,13,0,0.0,20.0
+modernbert_large_seed42,static (raw scale),cs.CL,23,0,0.0,19.0
+modernbert_large_seed42,static (raw scale),cs.CR,39,0,0.0,19.0
+modernbert_large_seed42,static (raw scale),cs.CV,77,0,0.0,17.0
+modernbert_large_seed42,static (raw scale),cs.CY,29,0,0.0,17.0
+modernbert_large_seed42,static (raw scale),cs.DB,16,0,0.0,18.0
+modernbert_large_seed42,static (raw scale),cs.DC,27,0,0.0,16.0
+modernbert_large_seed42,static (raw scale),cs.DL,18,0,0.0,17.5
+modernbert_large_seed42,static (raw scale),cs.DM,23,0,0.0,23.0
+modernbert_large_seed42,static (raw scale),cs.DS,34,0,0.0,21.0
+modernbert_large_seed42,static (raw scale),cs.ET,10,0,0.0,24.5
+modernbert_large_seed42,static (raw scale),cs.FL,24,0,0.0,19.0
+modernbert_large_seed42,static (raw scale),cs.GT,25,0,0.0,23.0
+modernbert_large_seed42,static (raw scale),cs.HC,13,0,0.0,14.0
+modernbert_large_seed42,static (raw scale),cs.IR,21,1,0.047619047619047616,20.0
+modernbert_large_seed42,static (raw scale),cs.IT,213,0,0.0,19.0
+modernbert_large_seed42,static (raw scale),cs.LG,33,0,0.0,20.0
+modernbert_large_seed42,static (raw scale),cs.LO,90,0,0.0,24.5
+modernbert_large_seed42,static (raw scale),cs.MA,10,0,0.0,22.5
+modernbert_large_seed42,static (raw scale),cs.MM,7,0,0.0,14.0
+modernbert_large_seed42,static (raw scale),cs.MS,5,1,0.2,11.0
+modernbert_large_seed42,static (raw scale),cs.NE,16,0,0.0,16.0
+modernbert_large_seed42,static (raw scale),cs.NI,91,1,0.01098901098901099,19.0
+modernbert_large_seed42,static (raw scale),cs.OH,15,0,0.0,17.0
+modernbert_large_seed42,static (raw scale),cs.OS,1,0,0.0,21.0
+modernbert_large_seed42,static (raw scale),cs.PF,5,0,0.0,19.0
+modernbert_large_seed42,static (raw scale),cs.PL,26,3,0.11538461538461539,21.0
+modernbert_large_seed42,static (raw scale),cs.RO,12,0,0.0,17.5
+modernbert_large_seed42,static (raw scale),cs.SC,11,0,0.0,17.0
+modernbert_large_seed42,static (raw scale),cs.SD,7,0,0.0,25.0
+modernbert_large_seed42,static (raw scale),cs.SE,43,0,0.0,18.0
+modernbert_large_seed42,static (raw scale),cs.SI,63,2,0.031746031746031744,18.0
+modernbert_large_seed42,static (raw scale),eess.SY,46,0,0.0,18.0
+modernbert_large_seed42,static (raw scale),math.NA,14,2,0.14285714285714285,20.5
+modernbert_large_seed43,z-scale (proposed),cs.AI,65,3,0.046153846153846156,28.0
+modernbert_large_seed43,z-scale (proposed),cs.AR,5,1,0.2,15.0
+modernbert_large_seed43,z-scale (proposed),cs.CC,15,0,0.0,20.0
+modernbert_large_seed43,z-scale (proposed),cs.CE,15,1,0.06666666666666667,18.0
+modernbert_large_seed43,z-scale (proposed),cs.CG,13,0,0.0,20.0
+modernbert_large_seed43,z-scale (proposed),cs.CL,23,0,0.0,19.0
+modernbert_large_seed43,z-scale (proposed),cs.CR,39,1,0.02564102564102564,19.0
+modernbert_large_seed43,z-scale (proposed),cs.CV,77,1,0.012987012987012988,17.0
+modernbert_large_seed43,z-scale (proposed),cs.CY,29,1,0.034482758620689655,17.0
+modernbert_large_seed43,z-scale (proposed),cs.DB,16,0,0.0,18.0
+modernbert_large_seed43,z-scale (proposed),cs.DC,27,1,0.037037037037037035,16.0
+modernbert_large_seed43,z-scale (proposed),cs.DL,18,0,0.0,17.5
+modernbert_large_seed43,z-scale (proposed),cs.DM,23,1,0.043478260869565216,23.0
+modernbert_large_seed43,z-scale (proposed),cs.DS,34,3,0.08823529411764706,21.0
+modernbert_large_seed43,z-scale (proposed),cs.ET,10,0,0.0,24.5
+modernbert_large_seed43,z-scale (proposed),cs.FL,24,2,0.08333333333333333,19.0
+modernbert_large_seed43,z-scale (proposed),cs.GT,25,2,0.08,23.0
+modernbert_large_seed43,z-scale (proposed),cs.HC,13,0,0.0,14.0
+modernbert_large_seed43,z-scale (proposed),cs.IR,21,2,0.09523809523809523,20.0
+modernbert_large_seed43,z-scale (proposed),cs.IT,213,9,0.04225352112676056,19.0
+modernbert_large_seed43,z-scale (proposed),cs.LG,33,0,0.0,20.0
+modernbert_large_seed43,z-scale (proposed),cs.LO,90,11,0.12222222222222222,24.5
+modernbert_large_seed43,z-scale (proposed),cs.MA,10,1,0.1,22.5
+modernbert_large_seed43,z-scale (proposed),cs.MM,7,0,0.0,14.0
+modernbert_large_seed43,z-scale (proposed),cs.MS,5,1,0.2,11.0
+modernbert_large_seed43,z-scale (proposed),cs.NE,16,0,0.0,16.0
+modernbert_large_seed43,z-scale (proposed),cs.NI,91,1,0.01098901098901099,19.0
+modernbert_large_seed43,z-scale (proposed),cs.OH,15,0,0.0,17.0
+modernbert_large_seed43,z-scale (proposed),cs.OS,1,0,0.0,21.0
+modernbert_large_seed43,z-scale (proposed),cs.PF,5,0,0.0,19.0
+modernbert_large_seed43,z-scale (proposed),cs.PL,26,4,0.15384615384615385,21.0
+modernbert_large_seed43,z-scale (proposed),cs.RO,12,0,0.0,17.5
+modernbert_large_seed43,z-scale (proposed),cs.SC,11,1,0.09090909090909091,17.0
+modernbert_large_seed43,z-scale (proposed),cs.SD,7,0,0.0,25.0
+modernbert_large_seed43,z-scale (proposed),cs.SE,43,0,0.0,18.0
+modernbert_large_seed43,z-scale (proposed),cs.SI,63,3,0.047619047619047616,18.0
+modernbert_large_seed43,z-scale (proposed),eess.SY,46,2,0.043478260869565216,18.0
+modernbert_large_seed43,z-scale (proposed),math.NA,14,3,0.21428571428571427,20.5
+modernbert_large_seed43,static (raw scale),cs.AI,65,0,0.0,28.0
+modernbert_large_seed43,static (raw scale),cs.AR,5,1,0.2,15.0
+modernbert_large_seed43,static (raw scale),cs.CC,15,0,0.0,20.0
+modernbert_large_seed43,static (raw scale),cs.CE,15,1,0.06666666666666667,18.0
+modernbert_large_seed43,static (raw scale),cs.CG,13,0,0.0,20.0
+modernbert_large_seed43,static (raw scale),cs.CL,23,0,0.0,19.0
+modernbert_large_seed43,static (raw scale),cs.CR,39,0,0.0,19.0
+modernbert_large_seed43,static (raw scale),cs.CV,77,0,0.0,17.0
+modernbert_large_seed43,static (raw scale),cs.CY,29,0,0.0,17.0
+modernbert_large_seed43,static (raw scale),cs.DB,16,0,0.0,18.0
+modernbert_large_seed43,static (raw scale),cs.DC,27,0,0.0,16.0
+modernbert_large_seed43,static (raw scale),cs.DL,18,0,0.0,17.5
+modernbert_large_seed43,static (raw scale),cs.DM,23,0,0.0,23.0
+modernbert_large_seed43,static (raw scale),cs.DS,34,0,0.0,21.0
+modernbert_large_seed43,static (raw scale),cs.ET,10,0,0.0,24.5
+modernbert_large_seed43,static (raw scale),cs.FL,24,1,0.041666666666666664,19.0
+modernbert_large_seed43,static (raw scale),cs.GT,25,0,0.0,23.0
+modernbert_large_seed43,static (raw scale),cs.HC,13,0,0.0,14.0
+modernbert_large_seed43,static (raw scale),cs.IR,21,2,0.09523809523809523,20.0
+modernbert_large_seed43,static (raw scale),cs.IT,213,0,0.0,19.0
+modernbert_large_seed43,static (raw scale),cs.LG,33,0,0.0,20.0
+modernbert_large_seed43,static (raw scale),cs.LO,90,0,0.0,24.5
+modernbert_large_seed43,static (raw scale),cs.MA,10,0,0.0,22.5
+modernbert_large_seed43,static (raw scale),cs.MM,7,0,0.0,14.0
+modernbert_large_seed43,static (raw scale),cs.MS,5,0,0.0,11.0
+modernbert_large_seed43,static (raw scale),cs.NE,16,0,0.0,16.0
+modernbert_large_seed43,static (raw scale),cs.NI,91,0,0.0,19.0
+modernbert_large_seed43,static (raw scale),cs.OH,15,0,0.0,17.0
+modernbert_large_seed43,static (raw scale),cs.OS,1,0,0.0,21.0
+modernbert_large_seed43,static (raw scale),cs.PF,5,0,0.0,19.0
+modernbert_large_seed43,static (raw scale),cs.PL,26,3,0.11538461538461539,21.0
+modernbert_large_seed43,static (raw scale),cs.RO,12,0,0.0,17.5
+modernbert_large_seed43,static (raw scale),cs.SC,11,0,0.0,17.0
+modernbert_large_seed43,static (raw scale),cs.SD,7,0,0.0,25.0
+modernbert_large_seed43,static (raw scale),cs.SE,43,0,0.0,18.0
+modernbert_large_seed43,static (raw scale),cs.SI,63,2,0.031746031746031744,18.0
+modernbert_large_seed43,static (raw scale),eess.SY,46,0,0.0,18.0
+modernbert_large_seed43,static (raw scale),math.NA,14,2,0.14285714285714285,20.5
+modernbert_large_seed44,z-scale (proposed),cs.AI,65,0,0.0,28.0
+modernbert_large_seed44,z-scale (proposed),cs.AR,5,1,0.2,15.0
+modernbert_large_seed44,z-scale (proposed),cs.CC,15,0,0.0,20.0
+modernbert_large_seed44,z-scale (proposed),cs.CE,15,1,0.06666666666666667,18.0
+modernbert_large_seed44,z-scale (proposed),cs.CG,13,0,0.0,20.0
+modernbert_large_seed44,z-scale (proposed),cs.CL,23,0,0.0,19.0
+modernbert_large_seed44,z-scale (proposed),cs.CR,39,0,0.0,19.0
+modernbert_large_seed44,z-scale (proposed),cs.CV,77,0,0.0,17.0
+modernbert_large_seed44,z-scale (proposed),cs.CY,29,1,0.034482758620689655,17.0
+modernbert_large_seed44,z-scale (proposed),cs.DB,16,1,0.0625,18.0
+modernbert_large_seed44,z-scale (proposed),cs.DC,27,0,0.0,16.0
+modernbert_large_seed44,z-scale (proposed),cs.DL,18,0,0.0,17.5
+modernbert_large_seed44,z-scale (proposed),cs.DM,23,0,0.0,23.0
+modernbert_large_seed44,z-scale (proposed),cs.DS,34,0,0.0,21.0
+modernbert_large_seed44,z-scale (proposed),cs.ET,10,0,0.0,24.5
+modernbert_large_seed44,z-scale (proposed),cs.FL,24,0,0.0,19.0
+modernbert_large_seed44,z-scale (proposed),cs.GT,25,0,0.0,23.0
+modernbert_large_seed44,z-scale (proposed),cs.HC,13,0,0.0,14.0
+modernbert_large_seed44,z-scale (proposed),cs.IR,21,1,0.047619047619047616,20.0
+modernbert_large_seed44,z-scale (proposed),cs.IT,213,2,0.009389671361502348,19.0
+modernbert_large_seed44,z-scale (proposed),cs.LG,33,0,0.0,20.0
+modernbert_large_seed44,z-scale (proposed),cs.LO,90,5,0.05555555555555555,24.5
+modernbert_large_seed44,z-scale (proposed),cs.MA,10,0,0.0,22.5
+modernbert_large_seed44,z-scale (proposed),cs.MM,7,0,0.0,14.0
+modernbert_large_seed44,z-scale (proposed),cs.MS,5,1,0.2,11.0
+modernbert_large_seed44,z-scale (proposed),cs.NE,16,0,0.0,16.0
+modernbert_large_seed44,z-scale (proposed),cs.NI,91,1,0.01098901098901099,19.0
+modernbert_large_seed44,z-scale (proposed),cs.OH,15,0,0.0,17.0
+modernbert_large_seed44,z-scale (proposed),cs.OS,1,0,0.0,21.0
+modernbert_large_seed44,z-scale (proposed),cs.PF,5,0,0.0,19.0
+modernbert_large_seed44,z-scale (proposed),cs.PL,26,3,0.11538461538461539,21.0
+modernbert_large_seed44,z-scale (proposed),cs.RO,12,0,0.0,17.5
+modernbert_large_seed44,z-scale (proposed),cs.SC,11,0,0.0,17.0
+modernbert_large_seed44,z-scale (proposed),cs.SD,7,0,0.0,25.0
+modernbert_large_seed44,z-scale (proposed),cs.SE,43,0,0.0,18.0
+modernbert_large_seed44,z-scale (proposed),cs.SI,63,2,0.031746031746031744,18.0
+modernbert_large_seed44,z-scale (proposed),eess.SY,46,0,0.0,18.0
+modernbert_large_seed44,z-scale (proposed),math.NA,14,2,0.14285714285714285,20.5
+modernbert_large_seed44,static (raw scale),cs.AI,65,0,0.0,28.0
+modernbert_large_seed44,static (raw scale),cs.AR,5,0,0.0,15.0
+modernbert_large_seed44,static (raw scale),cs.CC,15,0,0.0,20.0
+modernbert_large_seed44,static (raw scale),cs.CE,15,1,0.06666666666666667,18.0
+modernbert_large_seed44,static (raw scale),cs.CG,13,0,0.0,20.0
+modernbert_large_seed44,static (raw scale),cs.CL,23,0,0.0,19.0
+modernbert_large_seed44,static (raw scale),cs.CR,39,0,0.0,19.0
+modernbert_large_seed44,static (raw scale),cs.CV,77,0,0.0,17.0
+modernbert_large_seed44,static (raw scale),cs.CY,29,0,0.0,17.0
+modernbert_large_seed44,static (raw scale),cs.DB,16,0,0.0,18.0
+modernbert_large_seed44,static (raw scale),cs.DC,27,0,0.0,16.0
+modernbert_large_seed44,static (raw scale),cs.DL,18,0,0.0,17.5
+modernbert_large_seed44,static (raw scale),cs.DM,23,0,0.0,23.0
+modernbert_large_seed44,static (raw scale),cs.DS,34,0,0.0,21.0
+modernbert_large_seed44,static (raw scale),cs.ET,10,0,0.0,24.5
+modernbert_large_seed44,static (raw scale),cs.FL,24,0,0.0,19.0
+modernbert_large_seed44,static (raw scale),cs.GT,25,0,0.0,23.0
+modernbert_large_seed44,static (raw scale),cs.HC,13,0,0.0,14.0
+modernbert_large_seed44,static (raw scale),cs.IR,21,1,0.047619047619047616,20.0
+modernbert_large_seed44,static (raw scale),cs.IT,213,1,0.004694835680751174,19.0
+modernbert_large_seed44,static (raw scale),cs.LG,33,0,0.0,20.0
+modernbert_large_seed44,static (raw scale),cs.LO,90,1,0.011111111111111112,24.5
+modernbert_large_seed44,static (raw scale),cs.MA,10,0,0.0,22.5
+modernbert_large_seed44,static (raw scale),cs.MM,7,0,0.0,14.0
+modernbert_large_seed44,static (raw scale),cs.MS,5,1,0.2,11.0
+modernbert_large_seed44,static (raw scale),cs.NE,16,0,0.0,16.0
+modernbert_large_seed44,static (raw scale),cs.NI,91,1,0.01098901098901099,19.0
+modernbert_large_seed44,static (raw scale),cs.OH,15,0,0.0,17.0
+modernbert_large_seed44,static (raw scale),cs.OS,1,0,0.0,21.0
+modernbert_large_seed44,static (raw scale),cs.PF,5,0,0.0,19.0
+modernbert_large_seed44,static (raw scale),cs.PL,26,2,0.07692307692307693,21.0
+modernbert_large_seed44,static (raw scale),cs.RO,12,0,0.0,17.5
+modernbert_large_seed44,static (raw scale),cs.SC,11,0,0.0,17.0
+modernbert_large_seed44,static (raw scale),cs.SD,7,0,0.0,25.0
+modernbert_large_seed44,static (raw scale),cs.SE,43,0,0.0,18.0
+modernbert_large_seed44,static (raw scale),cs.SI,63,2,0.031746031746031744,18.0
+modernbert_large_seed44,static (raw scale),eess.SY,46,0,0.0,18.0
+modernbert_large_seed44,static (raw scale),math.NA,14,2,0.14285714285714285,20.5
+radar_seed42,z-scale (proposed),cs.AI,65,0,0.0,28.0
+radar_seed42,z-scale (proposed),cs.AR,5,0,0.0,15.0
+radar_seed42,z-scale (proposed),cs.CC,15,0,0.0,20.0
+radar_seed42,z-scale (proposed),cs.CE,15,1,0.06666666666666667,18.0
+radar_seed42,z-scale (proposed),cs.CG,13,0,0.0,20.0
+radar_seed42,z-scale (proposed),cs.CL,23,0,0.0,19.0
+radar_seed42,z-scale (proposed),cs.CR,39,0,0.0,19.0
+radar_seed42,z-scale (proposed),cs.CV,77,0,0.0,17.0
+radar_seed42,z-scale (proposed),cs.CY,29,0,0.0,17.0
+radar_seed42,z-scale (proposed),cs.DB,16,0,0.0,18.0
+radar_seed42,z-scale (proposed),cs.DC,27,0,0.0,16.0
+radar_seed42,z-scale (proposed),cs.DL,18,0,0.0,17.5
+radar_seed42,z-scale (proposed),cs.DM,23,0,0.0,23.0
+radar_seed42,z-scale (proposed),cs.DS,34,0,0.0,21.0
+radar_seed42,z-scale (proposed),cs.ET,10,0,0.0,24.5
+radar_seed42,z-scale (proposed),cs.FL,24,0,0.0,19.0
+radar_seed42,z-scale (proposed),cs.GT,25,0,0.0,23.0
+radar_seed42,z-scale (proposed),cs.HC,13,0,0.0,14.0
+radar_seed42,z-scale (proposed),cs.IR,21,1,0.047619047619047616,20.0
+radar_seed42,z-scale (proposed),cs.IT,213,0,0.0,19.0
+radar_seed42,z-scale (proposed),cs.LG,33,0,0.0,20.0
+radar_seed42,z-scale (proposed),cs.LO,90,0,0.0,24.5
+radar_seed42,z-scale (proposed),cs.MA,10,0,0.0,22.5
+radar_seed42,z-scale (proposed),cs.MM,7,0,0.0,14.0
+radar_seed42,z-scale (proposed),cs.MS,5,0,0.0,11.0
+radar_seed42,z-scale (proposed),cs.NE,16,0,0.0,16.0
+radar_seed42,z-scale (proposed),cs.NI,91,0,0.0,19.0
+radar_seed42,z-scale (proposed),cs.OH,15,0,0.0,17.0
+radar_seed42,z-scale (proposed),cs.OS,1,0,0.0,21.0
+radar_seed42,z-scale (proposed),cs.PF,5,0,0.0,19.0
+radar_seed42,z-scale (proposed),cs.PL,26,0,0.0,21.0
+radar_seed42,z-scale (proposed),cs.RO,12,0,0.0,17.5
+radar_seed42,z-scale (proposed),cs.SC,11,0,0.0,17.0
+radar_seed42,z-scale (proposed),cs.SD,7,0,0.0,25.0
+radar_seed42,z-scale (proposed),cs.SE,43,0,0.0,18.0
+radar_seed42,z-scale (proposed),cs.SI,63,0,0.0,18.0
+radar_seed42,z-scale (proposed),eess.SY,46,0,0.0,18.0
+radar_seed42,z-scale (proposed),math.NA,14,1,0.07142857142857142,20.5
+radar_seed42,static (raw scale),cs.AI,65,0,0.0,28.0
+radar_seed42,static (raw scale),cs.AR,5,0,0.0,15.0
+radar_seed42,static (raw scale),cs.CC,15,0,0.0,20.0
+radar_seed42,static (raw scale),cs.CE,15,2,0.13333333333333333,18.0
+radar_seed42,static (raw scale),cs.CG,13,1,0.07692307692307693,20.0
+radar_seed42,static (raw scale),cs.CL,23,0,0.0,19.0
+radar_seed42,static (raw scale),cs.CR,39,0,0.0,19.0
+radar_seed42,static (raw scale),cs.CV,77,0,0.0,17.0
+radar_seed42,static (raw scale),cs.CY,29,0,0.0,17.0
+radar_seed42,static (raw scale),cs.DB,16,0,0.0,18.0
+radar_seed42,static (raw scale),cs.DC,27,0,0.0,16.0
+radar_seed42,static (raw scale),cs.DL,18,0,0.0,17.5
+radar_seed42,static (raw scale),cs.DM,23,0,0.0,23.0
+radar_seed42,static (raw scale),cs.DS,34,0,0.0,21.0
+radar_seed42,static (raw scale),cs.ET,10,0,0.0,24.5
+radar_seed42,static (raw scale),cs.FL,24,0,0.0,19.0
+radar_seed42,static (raw scale),cs.GT,25,0,0.0,23.0
+radar_seed42,static (raw scale),cs.HC,13,0,0.0,14.0
+radar_seed42,static (raw scale),cs.IR,21,1,0.047619047619047616,20.0
+radar_seed42,static (raw scale),cs.IT,213,2,0.009389671361502348,19.0
+radar_seed42,static (raw scale),cs.LG,33,0,0.0,20.0
+radar_seed42,static (raw scale),cs.LO,90,0,0.0,24.5
+radar_seed42,static (raw scale),cs.MA,10,0,0.0,22.5
+radar_seed42,static (raw scale),cs.MM,7,0,0.0,14.0
+radar_seed42,static (raw scale),cs.MS,5,0,0.0,11.0
+radar_seed42,static (raw scale),cs.NE,16,0,0.0,16.0
+radar_seed42,static (raw scale),cs.NI,91,0,0.0,19.0
+radar_seed42,static (raw scale),cs.OH,15,0,0.0,17.0
+radar_seed42,static (raw scale),cs.OS,1,0,0.0,21.0
+radar_seed42,static (raw scale),cs.PF,5,0,0.0,19.0
+radar_seed42,static (raw scale),cs.PL,26,0,0.0,21.0
+radar_seed42,static (raw scale),cs.RO,12,0,0.0,17.5
+radar_seed42,static (raw scale),cs.SC,11,0,0.0,17.0
+radar_seed42,static (raw scale),cs.SD,7,0,0.0,25.0
+radar_seed42,static (raw scale),cs.SE,43,0,0.0,18.0
+radar_seed42,static (raw scale),cs.SI,63,3,0.047619047619047616,18.0
+radar_seed42,static (raw scale),eess.SY,46,1,0.021739130434782608,18.0
+radar_seed42,static (raw scale),math.NA,14,2,0.14285714285714285,20.5
+radar_xlm_seed42,z-scale (proposed),cs.AI,65,2,0.03076923076923077,28.0
+radar_xlm_seed42,z-scale (proposed),cs.AR,5,1,0.2,15.0
+radar_xlm_seed42,z-scale (proposed),cs.CC,15,0,0.0,20.0
+radar_xlm_seed42,z-scale (proposed),cs.CE,15,2,0.13333333333333333,18.0
+radar_xlm_seed42,z-scale (proposed),cs.CG,13,1,0.07692307692307693,20.0
+radar_xlm_seed42,z-scale (proposed),cs.CL,23,0,0.0,19.0
+radar_xlm_seed42,z-scale (proposed),cs.CR,39,0,0.0,19.0
+radar_xlm_seed42,z-scale (proposed),cs.CV,77,2,0.025974025974025976,17.0
+radar_xlm_seed42,z-scale (proposed),cs.CY,29,0,0.0,17.0
+radar_xlm_seed42,z-scale (proposed),cs.DB,16,0,0.0,18.0
+radar_xlm_seed42,z-scale (proposed),cs.DC,27,1,0.037037037037037035,16.0
+radar_xlm_seed42,z-scale (proposed),cs.DL,18,0,0.0,17.5
+radar_xlm_seed42,z-scale (proposed),cs.DM,23,0,0.0,23.0
+radar_xlm_seed42,z-scale (proposed),cs.DS,34,1,0.029411764705882353,21.0
+radar_xlm_seed42,z-scale (proposed),cs.ET,10,0,0.0,24.5
+radar_xlm_seed42,z-scale (proposed),cs.FL,24,2,0.08333333333333333,19.0
+radar_xlm_seed42,z-scale (proposed),cs.GT,25,1,0.04,23.0
+radar_xlm_seed42,z-scale (proposed),cs.HC,13,0,0.0,14.0
+radar_xlm_seed42,z-scale (proposed),cs.IR,21,1,0.047619047619047616,20.0
+radar_xlm_seed42,z-scale (proposed),cs.IT,213,7,0.03286384976525822,19.0
+radar_xlm_seed42,z-scale (proposed),cs.LG,33,0,0.0,20.0
+radar_xlm_seed42,z-scale (proposed),cs.LO,90,5,0.05555555555555555,24.5
+radar_xlm_seed42,z-scale (proposed),cs.MA,10,0,0.0,22.5
+radar_xlm_seed42,z-scale (proposed),cs.MM,7,0,0.0,14.0
+radar_xlm_seed42,z-scale (proposed),cs.MS,5,1,0.2,11.0
+radar_xlm_seed42,z-scale (proposed),cs.NE,16,0,0.0,16.0
+radar_xlm_seed42,z-scale (proposed),cs.NI,91,1,0.01098901098901099,19.0
+radar_xlm_seed42,z-scale (proposed),cs.OH,15,0,0.0,17.0
+radar_xlm_seed42,z-scale (proposed),cs.OS,1,0,0.0,21.0
+radar_xlm_seed42,z-scale (proposed),cs.PF,5,0,0.0,19.0
+radar_xlm_seed42,z-scale (proposed),cs.PL,26,2,0.07692307692307693,21.0
+radar_xlm_seed42,z-scale (proposed),cs.RO,12,1,0.08333333333333333,17.5
+radar_xlm_seed42,z-scale (proposed),cs.SC,11,0,0.0,17.0
+radar_xlm_seed42,z-scale (proposed),cs.SD,7,0,0.0,25.0
+radar_xlm_seed42,z-scale (proposed),cs.SE,43,0,0.0,18.0
+radar_xlm_seed42,z-scale (proposed),cs.SI,63,5,0.07936507936507936,18.0
+radar_xlm_seed42,z-scale (proposed),eess.SY,46,1,0.021739130434782608,18.0
+radar_xlm_seed42,z-scale (proposed),math.NA,14,2,0.14285714285714285,20.5
+radar_xlm_seed42,static (raw scale),cs.AI,65,0,0.0,28.0
+radar_xlm_seed42,static (raw scale),cs.AR,5,0,0.0,15.0
+radar_xlm_seed42,static (raw scale),cs.CC,15,0,0.0,20.0
+radar_xlm_seed42,static (raw scale),cs.CE,15,2,0.13333333333333333,18.0
+radar_xlm_seed42,static (raw scale),cs.CG,13,0,0.0,20.0
+radar_xlm_seed42,static (raw scale),cs.CL,23,0,0.0,19.0
+radar_xlm_seed42,static (raw scale),cs.CR,39,0,0.0,19.0
+radar_xlm_seed42,static (raw scale),cs.CV,77,1,0.012987012987012988,17.0
+radar_xlm_seed42,static (raw scale),cs.CY,29,0,0.0,17.0
+radar_xlm_seed42,static (raw scale),cs.DB,16,0,0.0,18.0
+radar_xlm_seed42,static (raw scale),cs.DC,27,1,0.037037037037037035,16.0
+radar_xlm_seed42,static (raw scale),cs.DL,18,0,0.0,17.5
+radar_xlm_seed42,static (raw scale),cs.DM,23,0,0.0,23.0
+radar_xlm_seed42,static (raw scale),cs.DS,34,0,0.0,21.0
+radar_xlm_seed42,static (raw scale),cs.ET,10,0,0.0,24.5
+radar_xlm_seed42,static (raw scale),cs.FL,24,0,0.0,19.0
+radar_xlm_seed42,static (raw scale),cs.GT,25,0,0.0,23.0
+radar_xlm_seed42,static (raw scale),cs.HC,13,0,0.0,14.0
+radar_xlm_seed42,static (raw scale),cs.IR,21,1,0.047619047619047616,20.0
+radar_xlm_seed42,static (raw scale),cs.IT,213,2,0.009389671361502348,19.0
+radar_xlm_seed42,static (raw scale),cs.LG,33,0,0.0,20.0
+radar_xlm_seed42,static (raw scale),cs.LO,90,1,0.011111111111111112,24.5
+radar_xlm_seed42,static (raw scale),cs.MA,10,0,0.0,22.5
+radar_xlm_seed42,static (raw scale),cs.MM,7,0,0.0,14.0
+radar_xlm_seed42,static (raw scale),cs.MS,5,0,0.0,11.0
+radar_xlm_seed42,static (raw scale),cs.NE,16,0,0.0,16.0
+radar_xlm_seed42,static (raw scale),cs.NI,91,0,0.0,19.0
+radar_xlm_seed42,static (raw scale),cs.OH,15,0,0.0,17.0
+radar_xlm_seed42,static (raw scale),cs.OS,1,0,0.0,21.0
+radar_xlm_seed42,static (raw scale),cs.PF,5,0,0.0,19.0
+radar_xlm_seed42,static (raw scale),cs.PL,26,1,0.038461538461538464,21.0
+radar_xlm_seed42,static (raw scale),cs.RO,12,0,0.0,17.5
+radar_xlm_seed42,static (raw scale),cs.SC,11,0,0.0,17.0
+radar_xlm_seed42,static (raw scale),cs.SD,7,0,0.0,25.0
+radar_xlm_seed42,static (raw scale),cs.SE,43,0,0.0,18.0
+radar_xlm_seed42,static (raw scale),cs.SI,63,1,0.015873015873015872,18.0
+radar_xlm_seed42,static (raw scale),eess.SY,46,0,0.0,18.0
+radar_xlm_seed42,static (raw scale),math.NA,14,2,0.14285714285714285,20.5
+roberta_large_seed42,z-scale (proposed),cs.AI,65,0,0.0,28.0
+roberta_large_seed42,z-scale (proposed),cs.AR,5,1,0.2,15.0
+roberta_large_seed42,z-scale (proposed),cs.CC,15,0,0.0,20.0
+roberta_large_seed42,z-scale (proposed),cs.CE,15,1,0.06666666666666667,18.0
+roberta_large_seed42,z-scale (proposed),cs.CG,13,0,0.0,20.0
+roberta_large_seed42,z-scale (proposed),cs.CL,23,0,0.0,19.0
+roberta_large_seed42,z-scale (proposed),cs.CR,39,1,0.02564102564102564,19.0
+roberta_large_seed42,z-scale (proposed),cs.CV,77,0,0.0,17.0
+roberta_large_seed42,z-scale (proposed),cs.CY,29,3,0.10344827586206896,17.0
+roberta_large_seed42,z-scale (proposed),cs.DB,16,0,0.0,18.0
+roberta_large_seed42,z-scale (proposed),cs.DC,27,1,0.037037037037037035,16.0
+roberta_large_seed42,z-scale (proposed),cs.DL,18,0,0.0,17.5
+roberta_large_seed42,z-scale (proposed),cs.DM,23,0,0.0,23.0
+roberta_large_seed42,z-scale (proposed),cs.DS,34,2,0.058823529411764705,21.0
+roberta_large_seed42,z-scale (proposed),cs.ET,10,0,0.0,24.5
+roberta_large_seed42,z-scale (proposed),cs.FL,24,1,0.041666666666666664,19.0
+roberta_large_seed42,z-scale (proposed),cs.GT,25,1,0.04,23.0
+roberta_large_seed42,z-scale (proposed),cs.HC,13,0,0.0,14.0
+roberta_large_seed42,z-scale (proposed),cs.IR,21,2,0.09523809523809523,20.0
+roberta_large_seed42,z-scale (proposed),cs.IT,213,2,0.009389671361502348,19.0
+roberta_large_seed42,z-scale (proposed),cs.LG,33,0,0.0,20.0
+roberta_large_seed42,z-scale (proposed),cs.LO,90,0,0.0,24.5
+roberta_large_seed42,z-scale (proposed),cs.MA,10,0,0.0,22.5
+roberta_large_seed42,z-scale (proposed),cs.MM,7,0,0.0,14.0
+roberta_large_seed42,z-scale (proposed),cs.MS,5,1,0.2,11.0
+roberta_large_seed42,z-scale (proposed),cs.NE,16,0,0.0,16.0
+roberta_large_seed42,z-scale (proposed),cs.NI,91,2,0.02197802197802198,19.0
+roberta_large_seed42,z-scale (proposed),cs.OH,15,0,0.0,17.0
+roberta_large_seed42,z-scale (proposed),cs.OS,1,0,0.0,21.0
+roberta_large_seed42,z-scale (proposed),cs.PF,5,0,0.0,19.0
+roberta_large_seed42,z-scale (proposed),cs.PL,26,2,0.07692307692307693,21.0
+roberta_large_seed42,z-scale (proposed),cs.RO,12,0,0.0,17.5
+roberta_large_seed42,z-scale (proposed),cs.SC,11,0,0.0,17.0
+roberta_large_seed42,z-scale (proposed),cs.SD,7,0,0.0,25.0
+roberta_large_seed42,z-scale (proposed),cs.SE,43,0,0.0,18.0
+roberta_large_seed42,z-scale (proposed),cs.SI,63,3,0.047619047619047616,18.0
+roberta_large_seed42,z-scale (proposed),eess.SY,46,2,0.043478260869565216,18.0
+roberta_large_seed42,z-scale (proposed),math.NA,14,1,0.07142857142857142,20.5
+roberta_large_seed42,static (raw scale),cs.AI,65,0,0.0,28.0
+roberta_large_seed42,static (raw scale),cs.AR,5,0,0.0,15.0
+roberta_large_seed42,static (raw scale),cs.CC,15,0,0.0,20.0
+roberta_large_seed42,static (raw scale),cs.CE,15,1,0.06666666666666667,18.0
+roberta_large_seed42,static (raw scale),cs.CG,13,0,0.0,20.0
+roberta_large_seed42,static (raw scale),cs.CL,23,0,0.0,19.0
+roberta_large_seed42,static (raw scale),cs.CR,39,0,0.0,19.0
+roberta_large_seed42,static (raw scale),cs.CV,77,0,0.0,17.0
+roberta_large_seed42,static (raw scale),cs.CY,29,1,0.034482758620689655,17.0
+roberta_large_seed42,static (raw scale),cs.DB,16,0,0.0,18.0
+roberta_large_seed42,static (raw scale),cs.DC,27,1,0.037037037037037035,16.0
+roberta_large_seed42,static (raw scale),cs.DL,18,0,0.0,17.5
+roberta_large_seed42,static (raw scale),cs.DM,23,0,0.0,23.0
+roberta_large_seed42,static (raw scale),cs.DS,34,0,0.0,21.0
+roberta_large_seed42,static (raw scale),cs.ET,10,0,0.0,24.5
+roberta_large_seed42,static (raw scale),cs.FL,24,1,0.041666666666666664,19.0
+roberta_large_seed42,static (raw scale),cs.GT,25,0,0.0,23.0
+roberta_large_seed42,static (raw scale),cs.HC,13,0,0.0,14.0
+roberta_large_seed42,static (raw scale),cs.IR,21,1,0.047619047619047616,20.0
+roberta_large_seed42,static (raw scale),cs.IT,213,2,0.009389671361502348,19.0
+roberta_large_seed42,static (raw scale),cs.LG,33,0,0.0,20.0
+roberta_large_seed42,static (raw scale),cs.LO,90,0,0.0,24.5
+roberta_large_seed42,static (raw scale),cs.MA,10,0,0.0,22.5
+roberta_large_seed42,static (raw scale),cs.MM,7,0,0.0,14.0
+roberta_large_seed42,static (raw scale),cs.MS,5,0,0.0,11.0
+roberta_large_seed42,static (raw scale),cs.NE,16,0,0.0,16.0
+roberta_large_seed42,static (raw scale),cs.NI,91,1,0.01098901098901099,19.0
+roberta_large_seed42,static (raw scale),cs.OH,15,0,0.0,17.0
+roberta_large_seed42,static (raw scale),cs.OS,1,0,0.0,21.0
+roberta_large_seed42,static (raw scale),cs.PF,5,0,0.0,19.0
+roberta_large_seed42,static (raw scale),cs.PL,26,2,0.07692307692307693,21.0
+roberta_large_seed42,static (raw scale),cs.RO,12,0,0.0,17.5
+roberta_large_seed42,static (raw scale),cs.SC,11,0,0.0,17.0
+roberta_large_seed42,static (raw scale),cs.SD,7,0,0.0,25.0
+roberta_large_seed42,static (raw scale),cs.SE,43,0,0.0,18.0
+roberta_large_seed42,static (raw scale),cs.SI,63,1,0.015873015873015872,18.0
+roberta_large_seed42,static (raw scale),eess.SY,46,0,0.0,18.0
+roberta_large_seed42,static (raw scale),math.NA,14,1,0.07142857142857142,20.5
+roberta_large_seed43,z-scale (proposed),cs.AI,65,0,0.0,28.0
+roberta_large_seed43,z-scale (proposed),cs.AR,5,0,0.0,15.0
+roberta_large_seed43,z-scale (proposed),cs.CC,15,0,0.0,20.0
+roberta_large_seed43,z-scale (proposed),cs.CE,15,2,0.13333333333333333,18.0
+roberta_large_seed43,z-scale (proposed),cs.CG,13,0,0.0,20.0
+roberta_large_seed43,z-scale (proposed),cs.CL,23,0,0.0,19.0
+roberta_large_seed43,z-scale (proposed),cs.CR,39,1,0.02564102564102564,19.0
+roberta_large_seed43,z-scale (proposed),cs.CV,77,0,0.0,17.0
+roberta_large_seed43,z-scale (proposed),cs.CY,29,1,0.034482758620689655,17.0
+roberta_large_seed43,z-scale (proposed),cs.DB,16,0,0.0,18.0
+roberta_large_seed43,z-scale (proposed),cs.DC,27,1,0.037037037037037035,16.0
+roberta_large_seed43,z-scale (proposed),cs.DL,18,0,0.0,17.5
+roberta_large_seed43,z-scale (proposed),cs.DM,23,0,0.0,23.0
+roberta_large_seed43,z-scale (proposed),cs.DS,34,2,0.058823529411764705,21.0
+roberta_large_seed43,z-scale (proposed),cs.ET,10,0,0.0,24.5
+roberta_large_seed43,z-scale (proposed),cs.FL,24,0,0.0,19.0
+roberta_large_seed43,z-scale (proposed),cs.GT,25,0,0.0,23.0
+roberta_large_seed43,z-scale (proposed),cs.HC,13,0,0.0,14.0
+roberta_large_seed43,z-scale (proposed),cs.IR,21,1,0.047619047619047616,20.0
+roberta_large_seed43,z-scale (proposed),cs.IT,213,1,0.004694835680751174,19.0
+roberta_large_seed43,z-scale (proposed),cs.LG,33,0,0.0,20.0
+roberta_large_seed43,z-scale (proposed),cs.LO,90,0,0.0,24.5
+roberta_large_seed43,z-scale (proposed),cs.MA,10,0,0.0,22.5
+roberta_large_seed43,z-scale (proposed),cs.MM,7,0,0.0,14.0
+roberta_large_seed43,z-scale (proposed),cs.MS,5,1,0.2,11.0
+roberta_large_seed43,z-scale (proposed),cs.NE,16,0,0.0,16.0
+roberta_large_seed43,z-scale (proposed),cs.NI,91,2,0.02197802197802198,19.0
+roberta_large_seed43,z-scale (proposed),cs.OH,15,0,0.0,17.0
+roberta_large_seed43,z-scale (proposed),cs.OS,1,0,0.0,21.0
+roberta_large_seed43,z-scale (proposed),cs.PF,5,0,0.0,19.0
+roberta_large_seed43,z-scale (proposed),cs.PL,26,3,0.11538461538461539,21.0
+roberta_large_seed43,z-scale (proposed),cs.RO,12,0,0.0,17.5
+roberta_large_seed43,z-scale (proposed),cs.SC,11,0,0.0,17.0
+roberta_large_seed43,z-scale (proposed),cs.SD,7,0,0.0,25.0
+roberta_large_seed43,z-scale (proposed),cs.SE,43,0,0.0,18.0
+roberta_large_seed43,z-scale (proposed),cs.SI,63,2,0.031746031746031744,18.0
+roberta_large_seed43,z-scale (proposed),eess.SY,46,0,0.0,18.0
+roberta_large_seed43,z-scale (proposed),math.NA,14,2,0.14285714285714285,20.5
+roberta_large_seed43,static (raw scale),cs.AI,65,0,0.0,28.0
+roberta_large_seed43,static (raw scale),cs.AR,5,0,0.0,15.0
+roberta_large_seed43,static (raw scale),cs.CC,15,0,0.0,20.0
+roberta_large_seed43,static (raw scale),cs.CE,15,2,0.13333333333333333,18.0
+roberta_large_seed43,static (raw scale),cs.CG,13,0,0.0,20.0
+roberta_large_seed43,static (raw scale),cs.CL,23,0,0.0,19.0
+roberta_large_seed43,static (raw scale),cs.CR,39,0,0.0,19.0
+roberta_large_seed43,static (raw scale),cs.CV,77,0,0.0,17.0
+roberta_large_seed43,static (raw scale),cs.CY,29,2,0.06896551724137931,17.0
+roberta_large_seed43,static (raw scale),cs.DB,16,0,0.0,18.0
+roberta_large_seed43,static (raw scale),cs.DC,27,1,0.037037037037037035,16.0
+roberta_large_seed43,static (raw scale),cs.DL,18,0,0.0,17.5
+roberta_large_seed43,static (raw scale),cs.DM,23,0,0.0,23.0
+roberta_large_seed43,static (raw scale),cs.DS,34,0,0.0,21.0
+roberta_large_seed43,static (raw scale),cs.ET,10,0,0.0,24.5
+roberta_large_seed43,static (raw scale),cs.FL,24,0,0.0,19.0
+roberta_large_seed43,static (raw scale),cs.GT,25,0,0.0,23.0
+roberta_large_seed43,static (raw scale),cs.HC,13,0,0.0,14.0
+roberta_large_seed43,static (raw scale),cs.IR,21,0,0.0,20.0
+roberta_large_seed43,static (raw scale),cs.IT,213,1,0.004694835680751174,19.0
+roberta_large_seed43,static (raw scale),cs.LG,33,0,0.0,20.0
+roberta_large_seed43,static (raw scale),cs.LO,90,0,0.0,24.5
+roberta_large_seed43,static (raw scale),cs.MA,10,0,0.0,22.5
+roberta_large_seed43,static (raw scale),cs.MM,7,0,0.0,14.0
+roberta_large_seed43,static (raw scale),cs.MS,5,0,0.0,11.0
+roberta_large_seed43,static (raw scale),cs.NE,16,0,0.0,16.0
+roberta_large_seed43,static (raw scale),cs.NI,91,1,0.01098901098901099,19.0
+roberta_large_seed43,static (raw scale),cs.OH,15,0,0.0,17.0
+roberta_large_seed43,static (raw scale),cs.OS,1,0,0.0,21.0
+roberta_large_seed43,static (raw scale),cs.PF,5,0,0.0,19.0
+roberta_large_seed43,static (raw scale),cs.PL,26,2,0.07692307692307693,21.0
+roberta_large_seed43,static (raw scale),cs.RO,12,0,0.0,17.5
+roberta_large_seed43,static (raw scale),cs.SC,11,0,0.0,17.0
+roberta_large_seed43,static (raw scale),cs.SD,7,0,0.0,25.0
+roberta_large_seed43,static (raw scale),cs.SE,43,0,0.0,18.0
+roberta_large_seed43,static (raw scale),cs.SI,63,1,0.015873015873015872,18.0
+roberta_large_seed43,static (raw scale),eess.SY,46,0,0.0,18.0
+roberta_large_seed43,static (raw scale),math.NA,14,2,0.14285714285714285,20.5
+roberta_large_seed44,z-scale (proposed),cs.AI,65,0,0.0,28.0
+roberta_large_seed44,z-scale (proposed),cs.AR,5,0,0.0,15.0
+roberta_large_seed44,z-scale (proposed),cs.CC,15,0,0.0,20.0
+roberta_large_seed44,z-scale (proposed),cs.CE,15,1,0.06666666666666667,18.0
+roberta_large_seed44,z-scale (proposed),cs.CG,13,0,0.0,20.0
+roberta_large_seed44,z-scale (proposed),cs.CL,23,0,0.0,19.0
+roberta_large_seed44,z-scale (proposed),cs.CR,39,0,0.0,19.0
+roberta_large_seed44,z-scale (proposed),cs.CV,77,0,0.0,17.0
+roberta_large_seed44,z-scale (proposed),cs.CY,29,2,0.06896551724137931,17.0
+roberta_large_seed44,z-scale (proposed),cs.DB,16,0,0.0,18.0
+roberta_large_seed44,z-scale (proposed),cs.DC,27,1,0.037037037037037035,16.0
+roberta_large_seed44,z-scale (proposed),cs.DL,18,0,0.0,17.5
+roberta_large_seed44,z-scale (proposed),cs.DM,23,0,0.0,23.0
+roberta_large_seed44,z-scale (proposed),cs.DS,34,1,0.029411764705882353,21.0
+roberta_large_seed44,z-scale (proposed),cs.ET,10,0,0.0,24.5
+roberta_large_seed44,z-scale (proposed),cs.FL,24,1,0.041666666666666664,19.0
+roberta_large_seed44,z-scale (proposed),cs.GT,25,0,0.0,23.0
+roberta_large_seed44,z-scale (proposed),cs.HC,13,0,0.0,14.0
+roberta_large_seed44,z-scale (proposed),cs.IR,21,2,0.09523809523809523,20.0
+roberta_large_seed44,z-scale (proposed),cs.IT,213,2,0.009389671361502348,19.0
+roberta_large_seed44,z-scale (proposed),cs.LG,33,0,0.0,20.0
+roberta_large_seed44,z-scale (proposed),cs.LO,90,0,0.0,24.5
+roberta_large_seed44,z-scale (proposed),cs.MA,10,0,0.0,22.5
+roberta_large_seed44,z-scale (proposed),cs.MM,7,0,0.0,14.0
+roberta_large_seed44,z-scale (proposed),cs.MS,5,1,0.2,11.0
+roberta_large_seed44,z-scale (proposed),cs.NE,16,0,0.0,16.0
+roberta_large_seed44,z-scale (proposed),cs.NI,91,1,0.01098901098901099,19.0
+roberta_large_seed44,z-scale (proposed),cs.OH,15,0,0.0,17.0
+roberta_large_seed44,z-scale (proposed),cs.OS,1,0,0.0,21.0
+roberta_large_seed44,z-scale (proposed),cs.PF,5,0,0.0,19.0
+roberta_large_seed44,z-scale (proposed),cs.PL,26,2,0.07692307692307693,21.0
+roberta_large_seed44,z-scale (proposed),cs.RO,12,0,0.0,17.5
+roberta_large_seed44,z-scale (proposed),cs.SC,11,0,0.0,17.0
+roberta_large_seed44,z-scale (proposed),cs.SD,7,0,0.0,25.0
+roberta_large_seed44,z-scale (proposed),cs.SE,43,0,0.0,18.0
+roberta_large_seed44,z-scale (proposed),cs.SI,63,4,0.06349206349206349,18.0
+roberta_large_seed44,z-scale (proposed),eess.SY,46,1,0.021739130434782608,18.0
+roberta_large_seed44,z-scale (proposed),math.NA,14,2,0.14285714285714285,20.5
+roberta_large_seed44,static (raw scale),cs.AI,65,0,0.0,28.0
+roberta_large_seed44,static (raw scale),cs.AR,5,0,0.0,15.0
+roberta_large_seed44,static (raw scale),cs.CC,15,0,0.0,20.0
+roberta_large_seed44,static (raw scale),cs.CE,15,2,0.13333333333333333,18.0
+roberta_large_seed44,static (raw scale),cs.CG,13,0,0.0,20.0
+roberta_large_seed44,static (raw scale),cs.CL,23,0,0.0,19.0
+roberta_large_seed44,static (raw scale),cs.CR,39,0,0.0,19.0
+roberta_large_seed44,static (raw scale),cs.CV,77,0,0.0,17.0
+roberta_large_seed44,static (raw scale),cs.CY,29,1,0.034482758620689655,17.0
+roberta_large_seed44,static (raw scale),cs.DB,16,0,0.0,18.0
+roberta_large_seed44,static (raw scale),cs.DC,27,1,0.037037037037037035,16.0
+roberta_large_seed44,static (raw scale),cs.DL,18,0,0.0,17.5
+roberta_large_seed44,static (raw scale),cs.DM,23,0,0.0,23.0
+roberta_large_seed44,static (raw scale),cs.DS,34,0,0.0,21.0
+roberta_large_seed44,static (raw scale),cs.ET,10,0,0.0,24.5
+roberta_large_seed44,static (raw scale),cs.FL,24,0,0.0,19.0
+roberta_large_seed44,static (raw scale),cs.GT,25,0,0.0,23.0
+roberta_large_seed44,static (raw scale),cs.HC,13,0,0.0,14.0
+roberta_large_seed44,static (raw scale),cs.IR,21,1,0.047619047619047616,20.0
+roberta_large_seed44,static (raw scale),cs.IT,213,1,0.004694835680751174,19.0
+roberta_large_seed44,static (raw scale),cs.LG,33,0,0.0,20.0
+roberta_large_seed44,static (raw scale),cs.LO,90,0,0.0,24.5
+roberta_large_seed44,static (raw scale),cs.MA,10,0,0.0,22.5
+roberta_large_seed44,static (raw scale),cs.MM,7,0,0.0,14.0
+roberta_large_seed44,static (raw scale),cs.MS,5,0,0.0,11.0
+roberta_large_seed44,static (raw scale),cs.NE,16,0,0.0,16.0
+roberta_large_seed44,static (raw scale),cs.NI,91,1,0.01098901098901099,19.0
+roberta_large_seed44,static (raw scale),cs.OH,15,0,0.0,17.0
+roberta_large_seed44,static (raw scale),cs.OS,1,0,0.0,21.0
+roberta_large_seed44,static (raw scale),cs.PF,5,0,0.0,19.0
+roberta_large_seed44,static (raw scale),cs.PL,26,2,0.07692307692307693,21.0
+roberta_large_seed44,static (raw scale),cs.RO,12,0,0.0,17.5
+roberta_large_seed44,static (raw scale),cs.SC,11,0,0.0,17.0
+roberta_large_seed44,static (raw scale),cs.SD,7,0,0.0,25.0
+roberta_large_seed44,static (raw scale),cs.SE,43,0,0.0,18.0
+roberta_large_seed44,static (raw scale),cs.SI,63,2,0.031746031746031744,18.0
+roberta_large_seed44,static (raw scale),eess.SY,46,0,0.0,18.0
+roberta_large_seed44,static (raw scale),math.NA,14,1,0.07142857142857142,20.5
+xlm_roberta_large_seed42,z-scale (proposed),cs.AI,65,3,0.046153846153846156,28.0
+xlm_roberta_large_seed42,z-scale (proposed),cs.AR,5,1,0.2,15.0
+xlm_roberta_large_seed42,z-scale (proposed),cs.CC,15,0,0.0,20.0
+xlm_roberta_large_seed42,z-scale (proposed),cs.CE,15,1,0.06666666666666667,18.0
+xlm_roberta_large_seed42,z-scale (proposed),cs.CG,13,1,0.07692307692307693,20.0
+xlm_roberta_large_seed42,z-scale (proposed),cs.CL,23,0,0.0,19.0
+xlm_roberta_large_seed42,z-scale (proposed),cs.CR,39,1,0.02564102564102564,19.0
+xlm_roberta_large_seed42,z-scale (proposed),cs.CV,77,0,0.0,17.0
+xlm_roberta_large_seed42,z-scale (proposed),cs.CY,29,2,0.06896551724137931,17.0
+xlm_roberta_large_seed42,z-scale (proposed),cs.DB,16,1,0.0625,18.0
+xlm_roberta_large_seed42,z-scale (proposed),cs.DC,27,1,0.037037037037037035,16.0
+xlm_roberta_large_seed42,z-scale (proposed),cs.DL,18,0,0.0,17.5
+xlm_roberta_large_seed42,z-scale (proposed),cs.DM,23,0,0.0,23.0
+xlm_roberta_large_seed42,z-scale (proposed),cs.DS,34,1,0.029411764705882353,21.0
+xlm_roberta_large_seed42,z-scale (proposed),cs.ET,10,0,0.0,24.5
+xlm_roberta_large_seed42,z-scale (proposed),cs.FL,24,1,0.041666666666666664,19.0
+xlm_roberta_large_seed42,z-scale (proposed),cs.GT,25,1,0.04,23.0
+xlm_roberta_large_seed42,z-scale (proposed),cs.HC,13,0,0.0,14.0
+xlm_roberta_large_seed42,z-scale (proposed),cs.IR,21,1,0.047619047619047616,20.0
+xlm_roberta_large_seed42,z-scale (proposed),cs.IT,213,2,0.009389671361502348,19.0
+xlm_roberta_large_seed42,z-scale (proposed),cs.LG,33,0,0.0,20.0
+xlm_roberta_large_seed42,z-scale (proposed),cs.LO,90,2,0.022222222222222223,24.5
+xlm_roberta_large_seed42,z-scale (proposed),cs.MA,10,0,0.0,22.5
+xlm_roberta_large_seed42,z-scale (proposed),cs.MM,7,0,0.0,14.0
+xlm_roberta_large_seed42,z-scale (proposed),cs.MS,5,1,0.2,11.0
+xlm_roberta_large_seed42,z-scale (proposed),cs.NE,16,0,0.0,16.0
+xlm_roberta_large_seed42,z-scale (proposed),cs.NI,91,2,0.02197802197802198,19.0
+xlm_roberta_large_seed42,z-scale (proposed),cs.OH,15,0,0.0,17.0
+xlm_roberta_large_seed42,z-scale (proposed),cs.OS,1,0,0.0,21.0
+xlm_roberta_large_seed42,z-scale (proposed),cs.PF,5,0,0.0,19.0
+xlm_roberta_large_seed42,z-scale (proposed),cs.PL,26,3,0.11538461538461539,21.0
+xlm_roberta_large_seed42,z-scale (proposed),cs.RO,12,0,0.0,17.5
+xlm_roberta_large_seed42,z-scale (proposed),cs.SC,11,1,0.09090909090909091,17.0
+xlm_roberta_large_seed42,z-scale (proposed),cs.SD,7,0,0.0,25.0
+xlm_roberta_large_seed42,z-scale (proposed),cs.SE,43,0,0.0,18.0
+xlm_roberta_large_seed42,z-scale (proposed),cs.SI,63,3,0.047619047619047616,18.0
+xlm_roberta_large_seed42,z-scale (proposed),eess.SY,46,0,0.0,18.0
+xlm_roberta_large_seed42,z-scale (proposed),math.NA,14,2,0.14285714285714285,20.5
+xlm_roberta_large_seed42,static (raw scale),cs.AI,65,2,0.03076923076923077,28.0
+xlm_roberta_large_seed42,static (raw scale),cs.AR,5,0,0.0,15.0
+xlm_roberta_large_seed42,static (raw scale),cs.CC,15,0,0.0,20.0
+xlm_roberta_large_seed42,static (raw scale),cs.CE,15,1,0.06666666666666667,18.0
+xlm_roberta_large_seed42,static (raw scale),cs.CG,13,0,0.0,20.0
+xlm_roberta_large_seed42,static (raw scale),cs.CL,23,0,0.0,19.0
+xlm_roberta_large_seed42,static (raw scale),cs.CR,39,0,0.0,19.0
+xlm_roberta_large_seed42,static (raw scale),cs.CV,77,0,0.0,17.0
+xlm_roberta_large_seed42,static (raw scale),cs.CY,29,0,0.0,17.0
+xlm_roberta_large_seed42,static (raw scale),cs.DB,16,0,0.0,18.0
+xlm_roberta_large_seed42,static (raw scale),cs.DC,27,1,0.037037037037037035,16.0
+xlm_roberta_large_seed42,static (raw scale),cs.DL,18,0,0.0,17.5
+xlm_roberta_large_seed42,static (raw scale),cs.DM,23,0,0.0,23.0
+xlm_roberta_large_seed42,static (raw scale),cs.DS,34,0,0.0,21.0
+xlm_roberta_large_seed42,static (raw scale),cs.ET,10,0,0.0,24.5
+xlm_roberta_large_seed42,static (raw scale),cs.FL,24,1,0.041666666666666664,19.0
+xlm_roberta_large_seed42,static (raw scale),cs.GT,25,0,0.0,23.0
+xlm_roberta_large_seed42,static (raw scale),cs.HC,13,0,0.0,14.0
+xlm_roberta_large_seed42,static (raw scale),cs.IR,21,1,0.047619047619047616,20.0
+xlm_roberta_large_seed42,static (raw scale),cs.IT,213,1,0.004694835680751174,19.0
+xlm_roberta_large_seed42,static (raw scale),cs.LG,33,0,0.0,20.0
+xlm_roberta_large_seed42,static (raw scale),cs.LO,90,0,0.0,24.5
+xlm_roberta_large_seed42,static (raw scale),cs.MA,10,0,0.0,22.5
+xlm_roberta_large_seed42,static (raw scale),cs.MM,7,0,0.0,14.0
+xlm_roberta_large_seed42,static (raw scale),cs.MS,5,0,0.0,11.0
+xlm_roberta_large_seed42,static (raw scale),cs.NE,16,0,0.0,16.0
+xlm_roberta_large_seed42,static (raw scale),cs.NI,91,1,0.01098901098901099,19.0
+xlm_roberta_large_seed42,static (raw scale),cs.OH,15,0,0.0,17.0
+xlm_roberta_large_seed42,static (raw scale),cs.OS,1,0,0.0,21.0
+xlm_roberta_large_seed42,static (raw scale),cs.PF,5,0,0.0,19.0
+xlm_roberta_large_seed42,static (raw scale),cs.PL,26,1,0.038461538461538464,21.0
+xlm_roberta_large_seed42,static (raw scale),cs.RO,12,0,0.0,17.5
+xlm_roberta_large_seed42,static (raw scale),cs.SC,11,0,0.0,17.0
+xlm_roberta_large_seed42,static (raw scale),cs.SD,7,0,0.0,25.0
+xlm_roberta_large_seed42,static (raw scale),cs.SE,43,0,0.0,18.0
+xlm_roberta_large_seed42,static (raw scale),cs.SI,63,2,0.031746031746031744,18.0
+xlm_roberta_large_seed42,static (raw scale),eess.SY,46,0,0.0,18.0
+xlm_roberta_large_seed42,static (raw scale),math.NA,14,1,0.07142857142857142,20.5
+xlm_roberta_large_seed43,z-scale (proposed),cs.AI,65,1,0.015384615384615385,28.0
+xlm_roberta_large_seed43,z-scale (proposed),cs.AR,5,1,0.2,15.0
+xlm_roberta_large_seed43,z-scale (proposed),cs.CC,15,0,0.0,20.0
+xlm_roberta_large_seed43,z-scale (proposed),cs.CE,15,1,0.06666666666666667,18.0
+xlm_roberta_large_seed43,z-scale (proposed),cs.CG,13,1,0.07692307692307693,20.0
+xlm_roberta_large_seed43,z-scale (proposed),cs.CL,23,0,0.0,19.0
+xlm_roberta_large_seed43,z-scale (proposed),cs.CR,39,1,0.02564102564102564,19.0
+xlm_roberta_large_seed43,z-scale (proposed),cs.CV,77,0,0.0,17.0
+xlm_roberta_large_seed43,z-scale (proposed),cs.CY,29,0,0.0,17.0
+xlm_roberta_large_seed43,z-scale (proposed),cs.DB,16,1,0.0625,18.0
+xlm_roberta_large_seed43,z-scale (proposed),cs.DC,27,1,0.037037037037037035,16.0
+xlm_roberta_large_seed43,z-scale (proposed),cs.DL,18,0,0.0,17.5
+xlm_roberta_large_seed43,z-scale (proposed),cs.DM,23,0,0.0,23.0
+xlm_roberta_large_seed43,z-scale (proposed),cs.DS,34,0,0.0,21.0
+xlm_roberta_large_seed43,z-scale (proposed),cs.ET,10,0,0.0,24.5
+xlm_roberta_large_seed43,z-scale (proposed),cs.FL,24,1,0.041666666666666664,19.0
+xlm_roberta_large_seed43,z-scale (proposed),cs.GT,25,1,0.04,23.0
+xlm_roberta_large_seed43,z-scale (proposed),cs.HC,13,0,0.0,14.0
+xlm_roberta_large_seed43,z-scale (proposed),cs.IR,21,2,0.09523809523809523,20.0
+xlm_roberta_large_seed43,z-scale (proposed),cs.IT,213,4,0.018779342723004695,19.0
+xlm_roberta_large_seed43,z-scale (proposed),cs.LG,33,0,0.0,20.0
+xlm_roberta_large_seed43,z-scale (proposed),cs.LO,90,1,0.011111111111111112,24.5
+xlm_roberta_large_seed43,z-scale (proposed),cs.MA,10,0,0.0,22.5
+xlm_roberta_large_seed43,z-scale (proposed),cs.MM,7,0,0.0,14.0
+xlm_roberta_large_seed43,z-scale (proposed),cs.MS,5,0,0.0,11.0
+xlm_roberta_large_seed43,z-scale (proposed),cs.NE,16,0,0.0,16.0
+xlm_roberta_large_seed43,z-scale (proposed),cs.NI,91,2,0.02197802197802198,19.0
+xlm_roberta_large_seed43,z-scale (proposed),cs.OH,15,0,0.0,17.0
+xlm_roberta_large_seed43,z-scale (proposed),cs.OS,1,0,0.0,21.0
+xlm_roberta_large_seed43,z-scale (proposed),cs.PF,5,0,0.0,19.0
+xlm_roberta_large_seed43,z-scale (proposed),cs.PL,26,1,0.038461538461538464,21.0
+xlm_roberta_large_seed43,z-scale (proposed),cs.RO,12,0,0.0,17.5
+xlm_roberta_large_seed43,z-scale (proposed),cs.SC,11,0,0.0,17.0
+xlm_roberta_large_seed43,z-scale (proposed),cs.SD,7,0,0.0,25.0
+xlm_roberta_large_seed43,z-scale (proposed),cs.SE,43,0,0.0,18.0
+xlm_roberta_large_seed43,z-scale (proposed),cs.SI,63,4,0.06349206349206349,18.0
+xlm_roberta_large_seed43,z-scale (proposed),eess.SY,46,0,0.0,18.0
+xlm_roberta_large_seed43,z-scale (proposed),math.NA,14,2,0.14285714285714285,20.5
+xlm_roberta_large_seed43,static (raw scale),cs.AI,65,1,0.015384615384615385,28.0
+xlm_roberta_large_seed43,static (raw scale),cs.AR,5,1,0.2,15.0
+xlm_roberta_large_seed43,static (raw scale),cs.CC,15,0,0.0,20.0
+xlm_roberta_large_seed43,static (raw scale),cs.CE,15,2,0.13333333333333333,18.0
+xlm_roberta_large_seed43,static (raw scale),cs.CG,13,0,0.0,20.0
+xlm_roberta_large_seed43,static (raw scale),cs.CL,23,0,0.0,19.0
+xlm_roberta_large_seed43,static (raw scale),cs.CR,39,0,0.0,19.0
+xlm_roberta_large_seed43,static (raw scale),cs.CV,77,0,0.0,17.0
+xlm_roberta_large_seed43,static (raw scale),cs.CY,29,0,0.0,17.0
+xlm_roberta_large_seed43,static (raw scale),cs.DB,16,0,0.0,18.0
+xlm_roberta_large_seed43,static (raw scale),cs.DC,27,1,0.037037037037037035,16.0
+xlm_roberta_large_seed43,static (raw scale),cs.DL,18,0,0.0,17.5
+xlm_roberta_large_seed43,static (raw scale),cs.DM,23,0,0.0,23.0
+xlm_roberta_large_seed43,static (raw scale),cs.DS,34,0,0.0,21.0
+xlm_roberta_large_seed43,static (raw scale),cs.ET,10,0,0.0,24.5
+xlm_roberta_large_seed43,static (raw scale),cs.FL,24,0,0.0,19.0
+xlm_roberta_large_seed43,static (raw scale),cs.GT,25,0,0.0,23.0
+xlm_roberta_large_seed43,static (raw scale),cs.HC,13,0,0.0,14.0
+xlm_roberta_large_seed43,static (raw scale),cs.IR,21,1,0.047619047619047616,20.0
+xlm_roberta_large_seed43,static (raw scale),cs.IT,213,0,0.0,19.0
+xlm_roberta_large_seed43,static (raw scale),cs.LG,33,0,0.0,20.0
+xlm_roberta_large_seed43,static (raw scale),cs.LO,90,0,0.0,24.5
+xlm_roberta_large_seed43,static (raw scale),cs.MA,10,0,0.0,22.5
+xlm_roberta_large_seed43,static (raw scale),cs.MM,7,0,0.0,14.0
+xlm_roberta_large_seed43,static (raw scale),cs.MS,5,0,0.0,11.0
+xlm_roberta_large_seed43,static (raw scale),cs.NE,16,0,0.0,16.0
+xlm_roberta_large_seed43,static (raw scale),cs.NI,91,1,0.01098901098901099,19.0
+xlm_roberta_large_seed43,static (raw scale),cs.OH,15,0,0.0,17.0
+xlm_roberta_large_seed43,static (raw scale),cs.OS,1,0,0.0,21.0
+xlm_roberta_large_seed43,static (raw scale),cs.PF,5,0,0.0,19.0
+xlm_roberta_large_seed43,static (raw scale),cs.PL,26,1,0.038461538461538464,21.0
+xlm_roberta_large_seed43,static (raw scale),cs.RO,12,0,0.0,17.5
+xlm_roberta_large_seed43,static (raw scale),cs.SC,11,0,0.0,17.0
+xlm_roberta_large_seed43,static (raw scale),cs.SD,7,0,0.0,25.0
+xlm_roberta_large_seed43,static (raw scale),cs.SE,43,0,0.0,18.0
+xlm_roberta_large_seed43,static (raw scale),cs.SI,63,3,0.047619047619047616,18.0
+xlm_roberta_large_seed43,static (raw scale),eess.SY,46,0,0.0,18.0
+xlm_roberta_large_seed43,static (raw scale),math.NA,14,1,0.07142857142857142,20.5
+xlm_roberta_large_seed44,z-scale (proposed),cs.AI,65,0,0.0,28.0
+xlm_roberta_large_seed44,z-scale (proposed),cs.AR,5,1,0.2,15.0
+xlm_roberta_large_seed44,z-scale (proposed),cs.CC,15,0,0.0,20.0
+xlm_roberta_large_seed44,z-scale (proposed),cs.CE,15,1,0.06666666666666667,18.0
+xlm_roberta_large_seed44,z-scale (proposed),cs.CG,13,0,0.0,20.0
+xlm_roberta_large_seed44,z-scale (proposed),cs.CL,23,0,0.0,19.0
+xlm_roberta_large_seed44,z-scale (proposed),cs.CR,39,0,0.0,19.0
+xlm_roberta_large_seed44,z-scale (proposed),cs.CV,77,0,0.0,17.0
+xlm_roberta_large_seed44,z-scale (proposed),cs.CY,29,1,0.034482758620689655,17.0
+xlm_roberta_large_seed44,z-scale (proposed),cs.DB,16,1,0.0625,18.0
+xlm_roberta_large_seed44,z-scale (proposed),cs.DC,27,1,0.037037037037037035,16.0
+xlm_roberta_large_seed44,z-scale (proposed),cs.DL,18,0,0.0,17.5
+xlm_roberta_large_seed44,z-scale (proposed),cs.DM,23,0,0.0,23.0
+xlm_roberta_large_seed44,z-scale (proposed),cs.DS,34,0,0.0,21.0
+xlm_roberta_large_seed44,z-scale (proposed),cs.ET,10,0,0.0,24.5
+xlm_roberta_large_seed44,z-scale (proposed),cs.FL,24,0,0.0,19.0
+xlm_roberta_large_seed44,z-scale (proposed),cs.GT,25,0,0.0,23.0
+xlm_roberta_large_seed44,z-scale (proposed),cs.HC,13,0,0.0,14.0
+xlm_roberta_large_seed44,z-scale (proposed),cs.IR,21,1,0.047619047619047616,20.0
+xlm_roberta_large_seed44,z-scale (proposed),cs.IT,213,2,0.009389671361502348,19.0
+xlm_roberta_large_seed44,z-scale (proposed),cs.LG,33,0,0.0,20.0
+xlm_roberta_large_seed44,z-scale (proposed),cs.LO,90,0,0.0,24.5
+xlm_roberta_large_seed44,z-scale (proposed),cs.MA,10,0,0.0,22.5
+xlm_roberta_large_seed44,z-scale (proposed),cs.MM,7,0,0.0,14.0
+xlm_roberta_large_seed44,z-scale (proposed),cs.MS,5,1,0.2,11.0
+xlm_roberta_large_seed44,z-scale (proposed),cs.NE,16,0,0.0,16.0
+xlm_roberta_large_seed44,z-scale (proposed),cs.NI,91,0,0.0,19.0
+xlm_roberta_large_seed44,z-scale (proposed),cs.OH,15,0,0.0,17.0
+xlm_roberta_large_seed44,z-scale (proposed),cs.OS,1,0,0.0,21.0
+xlm_roberta_large_seed44,z-scale (proposed),cs.PF,5,0,0.0,19.0
+xlm_roberta_large_seed44,z-scale (proposed),cs.PL,26,0,0.0,21.0
+xlm_roberta_large_seed44,z-scale (proposed),cs.RO,12,0,0.0,17.5
+xlm_roberta_large_seed44,z-scale (proposed),cs.SC,11,0,0.0,17.0
+xlm_roberta_large_seed44,z-scale (proposed),cs.SD,7,0,0.0,25.0
+xlm_roberta_large_seed44,z-scale (proposed),cs.SE,43,0,0.0,18.0
+xlm_roberta_large_seed44,z-scale (proposed),cs.SI,63,2,0.031746031746031744,18.0
+xlm_roberta_large_seed44,z-scale (proposed),eess.SY,46,0,0.0,18.0
+xlm_roberta_large_seed44,z-scale (proposed),math.NA,14,1,0.07142857142857142,20.5
+xlm_roberta_large_seed44,static (raw scale),cs.AI,65,1,0.015384615384615385,28.0
+xlm_roberta_large_seed44,static (raw scale),cs.AR,5,0,0.0,15.0
+xlm_roberta_large_seed44,static (raw scale),cs.CC,15,0,0.0,20.0
+xlm_roberta_large_seed44,static (raw scale),cs.CE,15,1,0.06666666666666667,18.0
+xlm_roberta_large_seed44,static (raw scale),cs.CG,13,0,0.0,20.0
+xlm_roberta_large_seed44,static (raw scale),cs.CL,23,0,0.0,19.0
+xlm_roberta_large_seed44,static (raw scale),cs.CR,39,0,0.0,19.0
+xlm_roberta_large_seed44,static (raw scale),cs.CV,77,0,0.0,17.0
+xlm_roberta_large_seed44,static (raw scale),cs.CY,29,0,0.0,17.0
+xlm_roberta_large_seed44,static (raw scale),cs.DB,16,1,0.0625,18.0
+xlm_roberta_large_seed44,static (raw scale),cs.DC,27,1,0.037037037037037035,16.0
+xlm_roberta_large_seed44,static (raw scale),cs.DL,18,0,0.0,17.5
+xlm_roberta_large_seed44,static (raw scale),cs.DM,23,0,0.0,23.0
+xlm_roberta_large_seed44,static (raw scale),cs.DS,34,0,0.0,21.0
+xlm_roberta_large_seed44,static (raw scale),cs.ET,10,0,0.0,24.5
+xlm_roberta_large_seed44,static (raw scale),cs.FL,24,0,0.0,19.0
+xlm_roberta_large_seed44,static (raw scale),cs.GT,25,0,0.0,23.0
+xlm_roberta_large_seed44,static (raw scale),cs.HC,13,0,0.0,14.0
+xlm_roberta_large_seed44,static (raw scale),cs.IR,21,1,0.047619047619047616,20.0
+xlm_roberta_large_seed44,static (raw scale),cs.IT,213,1,0.004694835680751174,19.0
+xlm_roberta_large_seed44,static (raw scale),cs.LG,33,0,0.0,20.0
+xlm_roberta_large_seed44,static (raw scale),cs.LO,90,0,0.0,24.5
+xlm_roberta_large_seed44,static (raw scale),cs.MA,10,0,0.0,22.5
+xlm_roberta_large_seed44,static (raw scale),cs.MM,7,0,0.0,14.0
+xlm_roberta_large_seed44,static (raw scale),cs.MS,5,1,0.2,11.0
+xlm_roberta_large_seed44,static (raw scale),cs.NE,16,1,0.0625,16.0
+xlm_roberta_large_seed44,static (raw scale),cs.NI,91,0,0.0,19.0
+xlm_roberta_large_seed44,static (raw scale),cs.OH,15,0,0.0,17.0
+xlm_roberta_large_seed44,static (raw scale),cs.OS,1,0,0.0,21.0
+xlm_roberta_large_seed44,static (raw scale),cs.PF,5,0,0.0,19.0
+xlm_roberta_large_seed44,static (raw scale),cs.PL,26,1,0.038461538461538464,21.0
+xlm_roberta_large_seed44,static (raw scale),cs.RO,12,0,0.0,17.5
+xlm_roberta_large_seed44,static (raw scale),cs.SC,11,0,0.0,17.0
+xlm_roberta_large_seed44,static (raw scale),cs.SD,7,0,0.0,25.0
+xlm_roberta_large_seed44,static (raw scale),cs.SE,43,0,0.0,18.0
+xlm_roberta_large_seed44,static (raw scale),cs.SI,63,2,0.031746031746031744,18.0
+xlm_roberta_large_seed44,static (raw scale),eess.SY,46,0,0.0,18.0
+xlm_roberta_large_seed44,static (raw scale),math.NA,14,1,0.07142857142857142,20.5

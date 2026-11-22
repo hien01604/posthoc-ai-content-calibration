@@ -1,0 +1,20 @@
+property,value
+source corpus,results/with_doi_le_2018.jsonl
+chunker,get-dataset.ipynb split_into_sentence_chunks (copy nguyên văn)
+target words / chunk,275
+min words / chunk,200
+max words / chunk,350
+median words / chunk,290
+drop first chunk,True
+canonicalized,True
+paper_ids excluded from,"train, val, test_ood_model, test_fp"
+published year range,2010-2015
+n papers,1200
+n chunks,27119
+chunks/paper min,10
+chunks/paper p25,14
+chunks/paper median,19
+chunks/paper p75,27
+chunks/paper mean,22.6
+chunks/paper max,262
+label,0 (human) cho MỌI dòng — bài xuất bản trước ChatGPT

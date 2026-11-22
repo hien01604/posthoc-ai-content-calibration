@@ -1,0 +1,3 @@
+used_in,pool,m_median,m_min,m_max,p_min,n_steps_below_alpha,z_max
+Sec V-A / V-C (controlled experiment),human segments in the calibration half of test_fp_full,9027.0,8785,9432,5.538325210456358e-05,90.28,3.8657099746678734
+Sec V-D (out-of-sample transfer),human segments of val,438.0,438,438,0.0011389521640091116,4.39,3.051382173531751

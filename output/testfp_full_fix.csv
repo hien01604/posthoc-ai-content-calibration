@@ -1,0 +1,5 @@
+model,agg,tau_paper,oan_bài_sau_chữa,n_cal,n_test,bài_quyết_định_τ
+roberta_large_seed42,max,0.9999368190765381,0.006666666666666667,600,600,6
+roberta_large_seed42,mean,0.4759544326095945,0.011666666666666667,600,600,6
+roberta_large_seed42,median,0.29235541820526123,0.01,600,600,6
+roberta_large_seed42,top2,0.9997844994068146,0.011666666666666667,600,600,6

@@ -1,0 +1,27 @@
+\begin{table}[t]
+\caption{$\rho_z$ from the full-length corpus, reused unchanged on the
+held-out-generator split ($k{\approx}2.38$); median [range] over 16 checkpoints.
+Rows 2--4 threshold the raw mean: fitted at this length on calibration halves
+(Table~\ref{tab:ktransfer}), then scored on $Z_k$'s 637 pairs, then re-fitted to
+$Z_k$'s FPR. Wins: checkpoints where $Z_k$ misses fewer.}
+\label{tab:ood}
+% SOURCE: make_table_ood.py <- hartung_ood_16models.csv, mean_ktransfer_16models.csv,
+%          rev3_paired_miss.csv, rev4_fpr_matched.csv
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Rule & FPR (\%) & Miss (\%) & Wins \\
+\midrule
+1. $Z_k$ (proposed) & 1.26\,[0.47,1.88] & 3.77\,[2.67,8.16] & --- \\
+\midrule
+2. Raw mean, fitted here & 1.31\,[1.23,1.40] & 6.16\,[3.85,20.50] & --- \\
+3. Same, on $Z_k$'s pairs & 1.10 & 6.04 & 13/16 \\
+4. Raw mean, FPR of $Z_k$ & \emph{matched} & 5.02 & 14/16 \\
+\bottomrule
+\end{tabular}
+\\[2pt]\footnotesize In row 4, 419 checkpoint--AI-document pairs are flagged only
+by $Z_k$ and 90 only by the raw mean; unadjusted McNemar tests ($5\%$) favour
+$Z_k$ for 7 checkpoints and the raw mean for 1.
+\end{table}

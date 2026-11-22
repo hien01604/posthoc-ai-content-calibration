@@ -1,0 +1,6 @@
+split,n_papers,n_segments,n_human,n_ai,k_median,k_mean,k_max,k_p25,k_p75,source
+val,183.0,876,438,438,3.0,2.3934426229508197,3.0,2.0,3.0,scored parquet (measured here)
+test_ood_model,637.0,3028,1514,1514,3.0,2.376766091051805,3.0,2.0,3.0,scored parquet (measured here)
+test_fp,1529.0,4290,4290,0,3.0,2.805755395683453,3.0,3.0,3.0,scored parquet (measured here)
+test_fp_full,1200.0,27119,27119,0,19.0,22.599166666666665,262.0,14.0,27.0,scored parquet (measured here)
+train,,14050,7025,7025,,,,,,REPORT_2026-08-13.md Sec 3.4 (no scored artifact)

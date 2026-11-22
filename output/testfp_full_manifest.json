@@ -1,0 +1,33 @@
+{
+  "built_from": "results/with_doi_le_2018.jsonl",
+  "chunker": "get-dataset.ipynb split_into_sentence_chunks (copy nguyên văn)",
+  "chunker_params": {
+    "target_words": 275,
+    "min_words": 200,
+    "max_words": 350
+  },
+  "drop_first_chunk": true,
+  "canonicalized": true,
+  "excluded_paper_ids_from": [
+    "train",
+    "val",
+    "test_ood_model",
+    "test_fp"
+  ],
+  "n_papers": 1200,
+  "n_chunks": 27119,
+  "chunks_per_paper": {
+    "min": 10,
+    "p25": 14,
+    "median": 19,
+    "p75": 27,
+    "max": 262,
+    "mean": 22.6
+  },
+  "words_per_chunk_median": 290,
+  "published_year_range": [
+    2010,
+    2015
+  ],
+  "label": "0 (human) cho MỌI dòng — bài xuất bản trước ChatGPT"
+}

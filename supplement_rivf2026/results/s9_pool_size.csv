@@ -1,0 +1,9 @@
+pool,n_chunks,pipeline,fpr_median,fpr_min,fpr_max,spread
+val,438,different from deployment,3.983749999999995,0.5983333333333299,9.895,9.29666666666667
+cal subsample,438,same as deployment,3.89833333333333,3.60333333333333,4.2616666666666605,0.6583333333333302
+cal subsample,2000,same as deployment,1.40416666666666,1.23416666666666,1.6316666666666602,0.39750000000000013
+cal full,13960,same as deployment,1.0495833333333302,0.8141666666666599,1.30083333333333,0.48666666666667013
+theoretical floor (k=19),1891,quantile 0.999471,,,,
+theoretical floor (k=20),1991,quantile 0.999498,,,,
+theoretical floor (k=22),2190,quantile 0.999543,,,,
+theoretical floor (k=23),2289,quantile 0.999563,,,,

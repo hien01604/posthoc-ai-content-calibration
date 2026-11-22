@@ -1,0 +1,67 @@
+{
+  "run": "fast_detectgpt_gptj_neo27",
+  "model": "EleutherAI/gpt-j-6b/EleutherAI/gpt-neo-2.7B (sampling/scoring)",
+  "method": "fast_detectgpt",
+  "implementation": "paper-blackbox-analytic-v4-2026-07-28",
+  "paper_analytic_formula": true,
+  "eval_setting": "paper_black_box_surrogate",
+  "score_direction": "paper_fixed_high_is_ai",
+  "tau": 2.3244364261627197,
+  "tau_source": "val_human",
+  "target_fpr": 0.01,
+  "tpr_at_fpr_definition": "split_local_roc_operating_point",
+  "fixed_tau_metrics": [
+    "tpr@tau",
+    "fpr@tau"
+  ],
+  "seed": 42,
+  "deterministic_inference": true,
+  "flipped_sign": false,
+  "training_free": true,
+  "precision": "fp16_weights_fp32_statistics",
+  "gpu_layout": {
+    "cuda:0": "gpt-j-6b_sampling",
+    "cuda:1": "gpt-neo-2.7B_scoring"
+  },
+  "processes": 1,
+  "gpu_count": 2,
+  "checkpoint_rows": 100,
+  "metrics": [
+    {
+      "split": "val",
+      "n": 876,
+      "n_ai": 438,
+      "auroc": 0.45425189216238193,
+      "auprc": 0.5111079138740198,
+      "tpr@fpr0.001": 0.0228310502283105,
+      "tpr@fpr0.01": 0.04337899543378995,
+      "tpr@fpr0.05": 0.0867579908675799,
+      "tpr@tau": 0.04337899543378995,
+      "fpr@tau": 0.01141552511415525
+    },
+    {
+      "split": "test_ood_model",
+      "n": 3028,
+      "n_ai": 1514,
+      "auroc": 0.48491599322222007,
+      "auprc": 0.5071757115461957,
+      "tpr@fpr0.001": 0.0066050198150594455,
+      "tpr@fpr0.01": 0.021796565389696168,
+      "tpr@fpr0.05": 0.05746367239101717,
+      "tpr@tau": 0.02774108322324967,
+      "fpr@tau": 0.016512549537648614
+    },
+    {
+      "split": "test_fp",
+      "n": 4290,
+      "n_ai": 0,
+      "auroc": NaN,
+      "auprc": NaN,
+      "tpr@fpr0.001": NaN,
+      "tpr@fpr0.01": NaN,
+      "tpr@fpr0.05": NaN,
+      "tpr@tau": NaN,
+      "fpr@tau": 0.012587412587412588
+    }
+  ]
+}

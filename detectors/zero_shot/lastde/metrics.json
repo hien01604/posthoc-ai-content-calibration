@@ -1,0 +1,57 @@
+{
+  "run": "lastde_doubleplus_gptj",
+  "model": "EleutherAI/gpt-j-6b",
+  "tau": 1.8193912506103516,
+  "target_fpr": 0.01,
+  "world_size": 2,
+  "seed": 42,
+  "training_free": true,
+  "flipped_sign": false,
+  "impl_version": "lastde-plusplus-paper-faithful-v1",
+  "run_signature": "lastde-plusplus-paper-faithful-v1|EleutherAI/gpt-j-6b|EleutherAI/gpt-j-6b|s4|eps8n|tau15|nsamp100|aggstd|maxlen512|seed42|fp16-weights-fp32-statistics|paper_black_box_proxy",
+  "embed_size": 4,
+  "epsilon_mult": 8,
+  "tau_prime": 15,
+  "n_samples": 100,
+  "agg": "std",
+  "max_len": 512,
+  "score_direction": "high=AI",
+  "metrics": [
+    {
+      "split": "val",
+      "n": 876,
+      "n_ai": 438,
+      "auroc": 0.523784950272096,
+      "auprc": 0.557391608960927,
+      "tpr@fpr0.001": 0.0182648401826484,
+      "tpr@fpr0.01": 0.04794520547945205,
+      "tpr@fpr0.05": 0.1004566210045662,
+      "tpr@tau": 0.04794520547945205,
+      "fpr@tau": 0.01141552511415525
+    },
+    {
+      "split": "test_ood_model",
+      "n": 3028,
+      "n_ai": 1514,
+      "auroc": 0.5259816350783266,
+      "auprc": 0.5484745488971929,
+      "tpr@fpr0.001": 0.008586525759577279,
+      "tpr@fpr0.01": 0.03368560105680317,
+      "tpr@fpr0.05": 0.09709379128137384,
+      "tpr@tau": 0.04821664464993395,
+      "fpr@tau": 0.0178335535006605
+    },
+    {
+      "split": "test_fp",
+      "n": 4290,
+      "n_ai": 0,
+      "auroc": NaN,
+      "auprc": NaN,
+      "tpr@fpr0.001": NaN,
+      "tpr@fpr0.01": NaN,
+      "tpr@fpr0.05": NaN,
+      "tpr@tau": NaN,
+      "fpr@tau": 0.012587412587412588
+    }
+  ]
+}
