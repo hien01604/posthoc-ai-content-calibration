@@ -85,10 +85,10 @@ segments should make the mean more Gaussian, neither result improves on real doc
 Turnitin and Pangram report text percentages; GPTZero instead reports a document-level
 authorship probability. These appear only in product documentation, and no examined
 public corpus supports evaluation at submission length: median 5{,}560 words
-(19 chunks; upper quartile 27; \sect{III-C}). OpAI-Bench (244--367 words) and ARB are
-about one chunk; FABTAB, RAID and M4GT-Bench cannot be grouped into documents.
-DAGPap24 is long (5{,}400 words) but leaks construction artifacts: a 22-feature model
-using no words reaches AUROC 0.9991.
+(19 chunks; upper quartile 27; \sect{III-C}). OpAI-Bench (median 244--367 words) and ARB
+are about one chunk; RAID~\cite{raid2024} and M4GT-Bench~\cite{m4gt2024} cannot be
+grouped into documents. DAGPap24~\cite{dagpap24} is long (5{,}400 words) but leaks
+construction artifacts: a 22-feature model using no words reaches AUROC 0.9991.
 
 \subsection{Contributions}
 \begin{enumerate}
@@ -159,8 +159,8 @@ This corpus exists to \emph{evaluate} the post-processing of \sect{IV}--\sect{V}
 detectors trained on it are inputs. Its design matters only in that shortcuts would
 inflate every downstream rate.
 From each full-text arXiv paper we extract the abstract and two body paragraphs. Each
-human segment is paired with output from 21 models across OpenAI, Anthropic, Google,
-Meta, Mistral, DeepSeek and Qwen; hashed segment identifiers fix prompt, mode and
+human segment is paired with the output of one of 21 models from OpenAI, Anthropic,
+Google, Meta, Mistral, DeepSeek and Qwen; hashed segment identifiers fix prompt, mode and
 temperature ($0.3$--$1.1$). Identical normalization converts typography to ASCII and
 removes introductory phrases, closing a shortcut: print punctuation occurs in 37\% of
 AI samples but no LaTeX-derived human sample.
@@ -219,8 +219,7 @@ held-out-generator split (1{,}206 segments), while the 16 detectors retain
 \sect{IV}--\sect{V} measure is post-processing rather than a corpus artifact.
 
 \subsection{Detector inputs: 16 checkpoints and reference baselines}
-All methods in \sect{IV}--\sect{V} post-process detector outputs. The 16 inputs are
-three seeds each of
+The 16 inputs are three seeds each of
 RoBERTa-large~\cite{roberta2019}, DeBERTa-v3-large~\cite{deberta2023},
 XLM-R-large~\cite{xlmr2020} and ModernBERT-large~\cite{modernbert2024}, plus four
 GREATER/RADAR adversarial variants~\cite{greater2025,radar2023}. Held-out-generator AUROC is
@@ -493,10 +492,9 @@ empirical rule errs on the safe side, significantly \emph{below} $1\%$ at every 
 while the $z$-scale rule contains the target at every $k$. This ranks calibration, not
 safety; \sect{V-C} adds power at matched FPR.
 
-Every working rule sits slightly \emph{below} target, and the standardized statistic
-$T_k=Z_k/\sqrt{1+(k-1)\rho_z}$ says why: near-Gaussian in shape but under-dispersed at
-$k{=}20$ (sd $0.965$), implying Hartung's estimator overstates $\rho_z$ by about $9\%$.
-The rule is conservative by construction.
+Every working rule sits slightly \emph{below} target: $T_k=Z_k/\sqrt{1+(k-1)\rho_z}$ is
+near-Gaussian but under-dispersed at $k{=}20$ (sd $0.965$), so Hartung's estimator
+overstates $\rho_z$ by about $9\%$ and the rule is conservative by construction.
 
 \subsection{Mechanism: transformation before correlation adjustment}
 For each segment score $s_i$, we compute a continuity-corrected empirical right-tailed
@@ -667,33 +665,44 @@ stays indispensable; the transform moves the correction onto a scale where $\rho
 over twice as large and a Gaussian quantile is already right.
 
 Under a cluster bootstrap the transform is closer to target than the raw-scale
-empirical rule, though only marginally ($p=0.044$, a gap of $0.44$ points), and matches
-a per-$k$ oracle it never needs, while per-bin
+empirical rule, though only marginally ($p=0.044$, a gap of $0.44$ points), and is
+indistinguishable from a per-$k$ oracle it never needs, while per-bin
 conformal calibration is better centered where the budget allows. What further
 distinguishes it is power at matched FPR (\sect{V-C}) and length resolution independent
 of that budget (\sect{V-D}). The claim the evidence supports without qualification is
 negative: Gaussian intervals and thresholds read off untransformed scores should not be
 used when documents vary in length, as papers do. Being post-processing, the remedy
-costs no retraining and carries to any scorer exposing per-segment scores: calibration
-reads human text only, so FPR control does not depend on how well the scorer separates.
-Power does, and we tested only scorers above AUROC $0.92$, excluding the four zero-shot
-detectors of \sect{III-B}. The commercial systems of \sect{I} are closed; should they
-expose segment-level scores, the rules apply unchanged. A percentage should be reported
+costs no retraining and carries to any scorer exposing per-segment scores, including the
+closed systems of \sect{I} should they do so: calibration reads human text only, so FPR
+control does not depend on how well the scorer separates. Power does, and we tested only
+scorers above AUROC $0.92$, excluding the zero-shot detectors of \sect{III-B}. A
+percentage should be reported
 with an interval, wide at about $\pm0.15$ and calibrated at that percentage.
 
 \noindent\textbf{Reproducibility.} Code, per-checkpoint breakdowns and every analysis
 above are available at \url{https://github.com/hien01604/posthoc-ai-content-calibration}.
 
-\section*{Acknowledgements}
+\section*{Acknowledgment}
 
 This research was supported by the VNUHCM-University of Information Technology's Scientific Research Support Fund.
 
 \begin{thebibliography}{00}
 
+\bibitem{raid2024}
+L. Dugan \textit{et al.}, ``RAID: A Shared Benchmark for Robust Evaluation of Machine-Generated
+Text Detectors,'' in \textit{Proc. ACL}, 2024, pp. 12463--12492.
+
+\bibitem{m4gt2024}
+Y. Wang \textit{et al.}, ``M4GT-Bench: Evaluation Benchmark for Black-Box Machine-Generated
+Text Detection,'' in \textit{Proc. ACL}, 2024, pp. 3964--3992.
+
+\bibitem{dagpap24}
+S. Chamezopoulos \textit{et al.}, ``Overview of the DagPap24 Shared Task on Detecting
+Automatically Generated Scientific Paper,'' in \textit{Proc. SDP}, 2024, pp. 7--11.
+
 \bibitem{waterseeker2025}
 L. Pan \textit{et al.}, ``WaterSeeker: Pioneering Efficient Detection of Watermarked
-Segments in Large Documents,'' in \textit{Findings of the Association for Computational
-Linguistics: NAACL 2025}, 2025, pp. 2866--2882.
+Segments in Large Documents,'' in \textit{Findings of NAACL}, 2025, pp. 2866--2882.
 
 \bibitem{zhao2025acl}
 X. Zhao \textit{et al.}, ``Efficiently Identifying Watermarked Segments in Mixed-Source
@@ -704,21 +713,9 @@ X. Zhu \textit{et al.}, ``Reliably Bounding False Positives: A Zero-Shot
 Machine-Generated Text Detection Framework via Multiscaled Conformal Prediction,'' in
 \textit{Proc. ACL}, 2025, pp. 12298--12319.
 
-\bibitem{liang2024monitoring}
-W. Liang \textit{et al.}, ``Monitoring AI-Modified Content at Scale: A Case Study on
-the Impact of ChatGPT on AI Conference Peer Reviews,'' in \textit{Proc. ICML}, 2024, pp. 29575--29620.
-
-\bibitem{haco2025}
-Z. Su \textit{et al.}, ``HACo-Det: A Study Towards Fine-Grained Machine-Generated Text
-Detection under Human--AI Coauthoring,'' in \textit{Proc. ACL}, 2025, pp. 22015--22036.
-
 \bibitem{forman2008}
 G. Forman, ``Quantifying Counts and Costs via Classification,'' \textit{Data Mining and
 Knowledge Discovery}, vol. 17, no. 2, pp. 164--206, 2008.
-
-\bibitem{bella2010}
-A. Bella \textit{et al.}, ``Quantification via Probability Estimators,'' in
-\textit{Proc. IEEE ICDM}, 2010, pp. 737--742.
 
 \bibitem{hopkinsking2010}
 D. J. Hopkins and G. King, ``A Method of Automated Nonparametric Content Analysis for
@@ -729,6 +726,18 @@ pp. 229--247, 2010.
 P. Gonz\'alez \textit{et al.}, ``A Review on Quantification Learning,'' \textit{ACM
 Computing Surveys}, vol. 50, no. 5, Art. no. 74, 2017.
 
+\bibitem{bella2010}
+A. Bella \textit{et al.}, ``Quantification via Probability Estimators,'' in
+\textit{Proc. IEEE ICDM}, 2010, pp. 737--742.
+
+\bibitem{liang2024monitoring}
+W. Liang \textit{et al.}, ``Monitoring AI-Modified Content at Scale: A Case Study on
+the Impact of ChatGPT on AI Conference Peer Reviews,'' in \textit{Proc. ICML}, 2024, pp. 29575--29620.
+
+\bibitem{haco2025}
+Z. Su \textit{et al.}, ``HACo-Det: A Study Towards Fine-Grained Machine-Generated Text
+Detection under Human--AI Coauthoring,'' in \textit{Proc. ACL}, 2025, pp. 22015--22036.
+
 \bibitem{scispandet2026}
 Z. Yin and S. Wang, ``Span-Level Detection of AI-Generated Scientific Text via
 Contrastive Learning and Structural Calibration,'' \textit{Knowledge-Based Systems},
@@ -736,12 +745,8 @@ vol. 334, Art. no. 115123, 2026.
 
 \bibitem{damasha2026}
 L. D. M. S. Sai Teja \textit{et al.}, ``DAMASHA: Detecting AI in Mixed Adversarial Texts
-via Segmentation with Human-Interpretable Attribution,'' in \textit{Findings of the
-Association for Computational Linguistics: EACL 2026}, 2026, pp. 6189--6206.
-
-\bibitem{hartung1999}
-J. Hartung, ``A Note on Combining Dependent Tests of Significance,'' \textit{Biometrical
-Journal}, vol. 41, no. 7, pp. 849--855, 1999.
+via Segmentation with Human-Interpretable Attribution,'' in \textit{Findings of EACL},
+2026, pp. 6189--6206.
 
 \bibitem{roberta2019}
 Y. Liu \textit{et al.}, ``RoBERTa: A Robustly Optimized BERT Pretraining
@@ -760,14 +765,18 @@ B. Warner \textit{et al.}, ``Smarter, Better, Faster, Longer: A Modern Bidirecti
 Encoder for Fast, Memory Efficient, and Long Context Finetuning and Inference,'' in
 \textit{Proc. ACL}, 2025, pp. 2526--2547.
 
-\bibitem{radar2023}
-X. Hu \textit{et al.}, ``RADAR: Robust AI-Text Detection via Adversarial Learning,'' in
-\textit{Proc. NeurIPS}, 2023.
-
 \bibitem{greater2025}
 Y. Li \textit{et al.}, ``Iron Sharpens Iron: Defending Against Attacks in
 Machine-Generated Text Detection With Adversarial Training,'' in \textit{Proc. ACL},
 2025, pp. 3091--3113.
+
+\bibitem{radar2023}
+X. Hu \textit{et al.}, ``RADAR: Robust AI-Text Detection via Adversarial Learning,'' in
+\textit{Proc. NeurIPS}, 2023.
+
+\bibitem{hartung1999}
+J. Hartung, ``A Note on Combining Dependent Tests of Significance,'' \textit{Biometrical
+Journal}, vol. 41, no. 7, pp. 849--855, 1999.
 
 \end{thebibliography}
 
